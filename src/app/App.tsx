@@ -1,36 +1,32 @@
+import { Header } from '@/components/layout/Header';
+
 function App() {
   return (
-    <main className="min-h-screen bg-white text-slate-950">
-      <section className="mx-auto flex min-h-screen max-w-7xl items-center px-6 py-24">
-        <div>
-          <p className="mb-4 text-sm font-semibold tracking-[0.25em] text-slate-500 uppercase">
-            Nexus LAB AI
-          </p>
+    <div className="flex min-h-screen flex-col bg-[var(--nexus-bg-primary)] text-[var(--nexus-text-primary)]">
+      <Header currentPath="/" />
 
-          <h1 className="max-w-4xl text-5xl font-semibold tracking-tight sm:text-6xl">
-            AI Systems Innovation Company
-          </h1>
+      <main className="flex-1">
+        <section className="nexus-container flex min-h-[calc(100vh-4rem)] items-center py-24">
+          <div className="nexus-reading-container">
+            <p className="nexus-meta-label mb-4">Nexus LAB AI</p>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            Researching, engineering, and validating durable intelligent-system capabilities.
-          </p>
+            <h1 className="nexus-h1 max-w-4xl font-semibold tracking-tight">
+              AI Systems Innovation Company
+            </h1>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <span className="rounded-full border border-slate-200 px-4 py-2 text-sm text-slate-600">
-              Foundation
-            </span>
+            <p className="nexus-body-lg mt-6 max-w-2xl">
+              Researching, engineering, and validating durable intelligent-system capabilities.
+            </p>
 
-            <span className="rounded-full border border-slate-200 px-4 py-2 text-sm text-slate-600">
-              Research
-            </span>
-
-            <span className="rounded-full border border-slate-200 px-4 py-2 text-sm text-slate-600">
-              Engineering
-            </span>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <span className="nexus-code-inline">01 Foundation 🟢 LOCKED</span>
+              <span className="nexus-code-inline">02 Design System 🟢 LOCKED</span>
+              <span className="nexus-code-inline">03A Header & Navigation 🟢 ACTIVE</span>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
   );
 }
 
