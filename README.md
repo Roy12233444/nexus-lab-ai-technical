@@ -15,15 +15,15 @@ This is **not a conventional marketing website**.
 
 The website is designed as an interactive technical interface through which a technically sophisticated visitor can understand:
 
-* what Nexus LAB AI is building,
-* why the problems matter,
-* how Nexus approaches research and engineering,
-* which research programs are being developed,
-* what has actually been implemented,
-* what has been experimentally verified,
-* what remains experimental or hypothetical,
-* which capabilities may become validated technologies,
-* and what long-horizon problems Nexus intends to investigate.
+- what Nexus LAB AI is building,
+- why the problems matter,
+- how Nexus approaches research and engineering,
+- which research programs are being developed,
+- what has actually been implemented,
+- what has been experimentally verified,
+- what remains experimental or hypothetical,
+- which capabilities may become validated technologies,
+- and what long-horizon problems Nexus intends to investigate.
 
 The website follows an engineering-first principle:
 
@@ -154,8 +154,8 @@ The intended visitor journey is:
 
 The website should support both:
 
-* **rapid scanning**, and
-* **deep technical exploration**.
+- **rapid scanning**, and
+- **deep technical exploration**.
 
 A visitor should be able to understand the core idea quickly while still having a path into detailed architecture and evidence.
 
@@ -347,13 +347,13 @@ Human-authored Nexus knowledge.
 
 Examples:
 
-* mission,
-* vision,
-* methodology,
-* research descriptions,
-* evidence descriptions,
-* philosophy,
-* technology descriptions.
+- mission,
+- vision,
+- methodology,
+- research descriptions,
+- evidence descriptions,
+- philosophy,
+- technology descriptions.
 
 ### `data/`
 
@@ -361,11 +361,11 @@ Structured registries and runtime-oriented datasets.
 
 Examples:
 
-* research program registry,
-* evidence registry,
-* technology registry,
-* product registry,
-* architecture registry.
+- research program registry,
+- evidence registry,
+- technology registry,
+- product registry,
+- architecture registry.
 
 ### `components/`
 
@@ -543,16 +543,16 @@ Dashboard Template
 
 The visual system should prioritize:
 
-* clarity,
-* hierarchy,
-* technical precision,
-* restrained motion,
-* readable typography,
-* diagrams,
-* architecture visualization,
-* evidence states,
-* whitespace,
-* and information density where appropriate.
+- clarity,
+- hierarchy,
+- technical precision,
+- restrained motion,
+- readable typography,
+- diagrams,
+- architecture visualization,
+- evidence states,
+- whitespace,
+- and information density where appropriate.
 
 The initial foundation uses a white visual base.
 
@@ -590,12 +590,12 @@ The rule is:
 
 Animations should support:
 
-* transitions,
-* hierarchy,
-* system relationships,
-* state changes,
-* navigation,
-* progressive disclosure.
+- transitions,
+- hierarchy,
+- system relationships,
+- state changes,
+- navigation,
+- progressive disclosure.
 
 ---
 
@@ -944,19 +944,19 @@ Testing is divided into three layers.
 
 Test isolated:
 
-* components,
-* hooks,
-* utilities,
-* data transformations.
+- components,
+- hooks,
+- utilities,
+- data transformations.
 
 ## Integration
 
 Test interactions between:
 
-* navigation,
-* research,
-* evidence,
-* architecture modules.
+- navigation,
+- research,
+- evidence,
+- architecture modules.
 
 ## End-to-End
 
@@ -1150,14 +1150,14 @@ The Nexus website therefore explains the **organization and innovation system**,
 
 Primary audience:
 
-* senior engineers,
-* systems architects,
-* AI researchers,
-* technical founders,
-* scientists,
-* aerospace/industrial engineering professionals,
-* potential technical collaborators,
-* technically sophisticated evaluators.
+- senior engineers,
+- systems architects,
+- AI researchers,
+- technical founders,
+- scientists,
+- aerospace/industrial engineering professionals,
+- potential technical collaborators,
+- technically sophisticated evaluators.
 
 The website should assume that serious visitors may ask:
 

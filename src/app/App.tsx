@@ -3,7 +3,7 @@ function App() {
     <main className="min-h-screen bg-white text-slate-950">
       <section className="mx-auto flex min-h-screen max-w-7xl items-center px-6 py-24">
         <div>
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">
+          <p className="mb-4 text-sm font-semibold tracking-[0.25em] text-slate-500 uppercase">
             Nexus LAB AI
           </p>
 
@@ -12,8 +12,7 @@ function App() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            Researching, engineering, and validating durable intelligent-system
-            capabilities.
+            Researching, engineering, and validating durable intelligent-system capabilities.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
