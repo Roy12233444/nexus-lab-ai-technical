@@ -1,4 +1,5 @@
 import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
 
 function App() {
   return (
@@ -6,7 +7,7 @@ function App() {
       <Header currentPath="/" />
 
       <main className="flex-1">
-        <section className="nexus-container flex min-h-[calc(100vh-4rem)] items-center py-24">
+        <section className="nexus-container flex min-h-[calc(100vh-16rem)] items-center py-24">
           <div className="nexus-reading-container">
             <p className="nexus-meta-label mb-4">Nexus LAB AI</p>
 
@@ -21,11 +22,14 @@ function App() {
             <div className="mt-10 flex flex-wrap gap-3">
               <span className="nexus-code-inline">01 Foundation 🟢 LOCKED</span>
               <span className="nexus-code-inline">02 Design System 🟢 LOCKED</span>
-              <span className="nexus-code-inline">03A Header & Navigation 🟢 ACTIVE</span>
+              <span className="nexus-code-inline">03A Header & Navigation 🟢 LOCKED</span>
+              <span className="nexus-code-inline">03B Footer & Legal/Meta 🟢 ACTIVE</span>
             </div>
           </div>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }
