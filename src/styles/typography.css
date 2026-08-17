@@ -4,7 +4,7 @@
      ========================================================================== */
 
   /* --------------------------------------------------------------------------
-     1. Font Families
+     1. Font Families (Resilient System & Modern Sans / Mono Stacks)
      -------------------------------------------------------------------------- */
   --nexus-font-sans:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -65,21 +65,28 @@
   --nexus-leading-6xl: 1.05;
 }
 
+/* ============================================================================
+   Semantic Typography Hierarchy & Utility Classes
+   ============================================================================ */
+
 /* ----------------------------------------------------------------------------
-   Semantic Typography Utility Classes
+   Display: Major Conceptual & Mission Statements
    ---------------------------------------------------------------------------- */
 .nexus-display {
   font-family: var(--nexus-font-sans);
-  font-size: var(--nexus-text-6xl);
+  font-size: clamp(2.5rem, 5vw + 1rem, var(--nexus-text-6xl));
   line-height: var(--nexus-leading-6xl);
   font-weight: var(--nexus-weight-semibold);
   letter-spacing: var(--nexus-tracking-tighter);
   color: var(--nexus-text-primary);
 }
 
+/* ----------------------------------------------------------------------------
+   Headings: Structured Document Hierarchy (H1 - H4)
+   ---------------------------------------------------------------------------- */
 .nexus-h1 {
   font-family: var(--nexus-font-sans);
-  font-size: var(--nexus-text-5xl);
+  font-size: clamp(2rem, 4vw + 0.5rem, var(--nexus-text-5xl));
   line-height: var(--nexus-leading-5xl);
   font-weight: var(--nexus-weight-semibold);
   letter-spacing: var(--nexus-tracking-tight);
@@ -88,7 +95,7 @@
 
 .nexus-h2 {
   font-family: var(--nexus-font-sans);
-  font-size: var(--nexus-text-3xl);
+  font-size: clamp(1.5rem, 2.5vw + 0.5rem, var(--nexus-text-3xl));
   line-height: var(--nexus-leading-3xl);
   font-weight: var(--nexus-weight-semibold);
   letter-spacing: var(--nexus-tracking-tight);
@@ -97,7 +104,7 @@
 
 .nexus-h3 {
   font-family: var(--nexus-font-sans);
-  font-size: var(--nexus-text-2xl);
+  font-size: clamp(1.25rem, 1.5vw + 0.5rem, var(--nexus-text-2xl));
   line-height: var(--nexus-leading-2xl);
   font-weight: var(--nexus-weight-semibold);
   letter-spacing: var(--nexus-tracking-tight);
@@ -113,6 +120,9 @@
   color: var(--nexus-text-primary);
 }
 
+/* ----------------------------------------------------------------------------
+   Body: Explanatory & Technical Prose
+   ---------------------------------------------------------------------------- */
 .nexus-body-lg {
   font-family: var(--nexus-font-sans);
   font-size: var(--nexus-text-lg);
@@ -137,6 +147,9 @@
   color: var(--nexus-text-secondary);
 }
 
+/* ----------------------------------------------------------------------------
+   Technical Metadata, Overlines & Labels
+   ---------------------------------------------------------------------------- */
 .nexus-meta-label {
   font-family: var(--nexus-font-sans);
   font-size: var(--nexus-text-xs);
@@ -147,11 +160,40 @@
   color: var(--nexus-text-muted);
 }
 
+.nexus-meta-value {
+  font-family: var(--nexus-font-sans);
+  font-size: var(--nexus-text-sm);
+  line-height: var(--nexus-leading-sm);
+  font-weight: var(--nexus-weight-medium);
+  color: var(--nexus-text-primary);
+}
+
+/* ----------------------------------------------------------------------------
+   Code & Technical Identifiers
+   ---------------------------------------------------------------------------- */
 .nexus-code {
   font-family: var(--nexus-font-mono);
   font-size: var(--nexus-text-sm);
   line-height: var(--nexus-leading-sm);
   font-weight: var(--nexus-weight-regular);
-  background-color: var(--nexus-bg-code);
   color: var(--nexus-text-primary);
+}
+
+.nexus-code-inline {
+  font-family: var(--nexus-font-mono);
+  font-size: 0.85em;
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--nexus-radius-sm);
+  background-color: var(--nexus-bg-code);
+  border: 1px solid var(--nexus-border-default);
+  color: var(--nexus-text-primary);
+}
+
+/* ----------------------------------------------------------------------------
+   Reading Measure Constraint
+   ---------------------------------------------------------------------------- */
+.nexus-reading-container {
+  max-width: var(--nexus-max-width-reading);
+  margin-left: auto;
+  margin-right: auto;
 }
