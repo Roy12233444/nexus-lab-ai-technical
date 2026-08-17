@@ -1,0 +1,157 @@
+:root {
+  /* ==========================================================================
+     NEXUS LAB AI — DESIGN TOKENS: TYPOGRAPHY SYSTEM
+     ========================================================================== */
+
+  /* --------------------------------------------------------------------------
+     1. Font Families
+     -------------------------------------------------------------------------- */
+  --nexus-font-sans:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --nexus-font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+
+  /* --------------------------------------------------------------------------
+     2. Font Weights
+     -------------------------------------------------------------------------- */
+  --nexus-weight-regular: 400;
+  --nexus-weight-medium: 500;
+  --nexus-weight-semibold: 600;
+  --nexus-weight-bold: 700;
+
+  /* --------------------------------------------------------------------------
+     3. Letter Spacing (Tracking)
+     -------------------------------------------------------------------------- */
+  --nexus-tracking-tighter: -0.04em;
+  --nexus-tracking-tight: -0.02em;
+  --nexus-tracking-normal: 0em;
+  --nexus-tracking-wide: 0.05em;
+  --nexus-tracking-wider: 0.15em;
+  --nexus-tracking-widest: 0.25em; /* Technical Metadata & Overlines */
+
+  /* --------------------------------------------------------------------------
+     4. Type Scale (Fluid / Proportional)
+     -------------------------------------------------------------------------- */
+  --nexus-text-xs: 0.75rem; /* 12px */
+  --nexus-leading-xs: 1rem; /* 16px */
+
+  --nexus-text-sm: 0.875rem; /* 14px */
+  --nexus-leading-sm: 1.25rem; /* 20px */
+
+  --nexus-text-base: 1rem; /* 16px */
+  --nexus-leading-base: 1.5rem; /* 24px */
+
+  --nexus-text-lg: 1.125rem; /* 18px */
+  --nexus-leading-lg: 1.75rem; /* 28px */
+
+  --nexus-text-xl: 1.25rem; /* 20px */
+  --nexus-leading-xl: 1.75rem; /* 28px */
+
+  --nexus-text-2xl: 1.5rem; /* 24px */
+  --nexus-leading-2xl: 2rem; /* 32px */
+
+  --nexus-text-3xl: 1.875rem; /* 30px */
+  --nexus-leading-3xl: 2.25rem; /* 36px */
+
+  --nexus-text-4xl: 2.25rem; /* 36px */
+  --nexus-leading-4xl: 2.5rem; /* 40px */
+
+  --nexus-text-5xl: 3rem; /* 48px */
+  --nexus-leading-5xl: 1.1;
+
+  --nexus-text-6xl: 3.75rem; /* 60px */
+  --nexus-leading-6xl: 1.05;
+}
+
+/* ----------------------------------------------------------------------------
+   Semantic Typography Utility Classes
+   ---------------------------------------------------------------------------- */
+.nexus-display {
+  font-family: var(--nexus-font-sans);
+  font-size: var(--nexus-text-6xl);
+  line-height: var(--nexus-leading-6xl);
+  font-weight: var(--nexus-weight-semibold);
+  letter-spacing: var(--nexus-tracking-tighter);
+  color: var(--nexus-text-primary);
+}
+
+.nexus-h1 {
+  font-family: var(--nexus-font-sans);
+  font-size: var(--nexus-text-5xl);
+  line-height: var(--nexus-leading-5xl);
+  font-weight: var(--nexus-weight-semibold);
+  letter-spacing: var(--nexus-tracking-tight);
+  color: var(--nexus-text-primary);
+}
+
+.nexus-h2 {
+  font-family: var(--nexus-font-sans);
+  font-size: var(--nexus-text-3xl);
+  line-height: var(--nexus-leading-3xl);
+  font-weight: var(--nexus-weight-semibold);
+  letter-spacing: var(--nexus-tracking-tight);
+  color: var(--nexus-text-primary);
+}
+
+.nexus-h3 {
+  font-family: var(--nexus-font-sans);
+  font-size: var(--nexus-text-2xl);
+  line-height: var(--nexus-leading-2xl);
+  font-weight: var(--nexus-weight-semibold);
+  letter-spacing: var(--nexus-tracking-tight);
+  color: var(--nexus-text-primary);
+}
+
+.nexus-h4 {
+  font-family: var(--nexus-font-sans);
+  font-size: var(--nexus-text-xl);
+  line-height: var(--nexus-leading-xl);
+  font-weight: var(--nexus-weight-medium);
+  letter-spacing: var(--nexus-tracking-normal);
+  color: var(--nexus-text-primary);
+}
+
+.nexus-body-lg {
+  font-family: var(--nexus-font-sans);
+  font-size: var(--nexus-text-lg);
+  line-height: var(--nexus-leading-lg);
+  font-weight: var(--nexus-weight-regular);
+  color: var(--nexus-text-secondary);
+}
+
+.nexus-body {
+  font-family: var(--nexus-font-sans);
+  font-size: var(--nexus-text-base);
+  line-height: var(--nexus-leading-base);
+  font-weight: var(--nexus-weight-regular);
+  color: var(--nexus-text-secondary);
+}
+
+.nexus-body-sm {
+  font-family: var(--nexus-font-sans);
+  font-size: var(--nexus-text-sm);
+  line-height: var(--nexus-leading-sm);
+  font-weight: var(--nexus-weight-regular);
+  color: var(--nexus-text-secondary);
+}
+
+.nexus-meta-label {
+  font-family: var(--nexus-font-sans);
+  font-size: var(--nexus-text-xs);
+  line-height: var(--nexus-leading-xs);
+  font-weight: var(--nexus-weight-semibold);
+  letter-spacing: var(--nexus-tracking-widest);
+  text-transform: uppercase;
+  color: var(--nexus-text-muted);
+}
+
+.nexus-code {
+  font-family: var(--nexus-font-mono);
+  font-size: var(--nexus-text-sm);
+  line-height: var(--nexus-leading-sm);
+  font-weight: var(--nexus-weight-regular);
+  background-color: var(--nexus-bg-code);
+  color: var(--nexus-text-primary);
+}

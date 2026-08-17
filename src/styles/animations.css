@@ -1,0 +1,74 @@
+:root {
+  /* ==========================================================================
+     NEXUS LAB AI — DESIGN TOKENS: MOTION & ANIMATION SYSTEM
+     ========================================================================== */
+
+  /* --------------------------------------------------------------------------
+     1. Motion Durations (Restrained & Technical)
+     -------------------------------------------------------------------------- */
+  --nexus-duration-instant: 75ms;
+  --nexus-duration-fast: 150ms; /* Hover, focus, micro-feedback */
+  --nexus-duration-normal: 250ms; /* Transitions, cards, dropdowns */
+  --nexus-duration-slow: 400ms; /* Modal, accordion, layer reveals */
+  --nexus-duration-deliberate: 600ms; /* Architecture graph transitions */
+
+  /* --------------------------------------------------------------------------
+     2. Easing Curves
+     -------------------------------------------------------------------------- */
+  --nexus-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --nexus-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --nexus-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --nexus-ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* ----------------------------------------------------------------------------
+   Semantic Motion Transition Utilities
+   ---------------------------------------------------------------------------- */
+.nexus-transition-fast {
+  transition-property: color, background-color, border-color, opacity, transform, box-shadow;
+  transition-duration: var(--nexus-duration-fast);
+  transition-timing-function: var(--nexus-ease-standard);
+}
+
+.nexus-transition-normal {
+  transition-property: color, background-color, border-color, opacity, transform, box-shadow;
+  transition-duration: var(--nexus-duration-normal);
+  transition-timing-function: var(--nexus-ease-standard);
+}
+
+.nexus-transition-slow {
+  transition-property: color, background-color, border-color, opacity, transform, box-shadow;
+  transition-duration: var(--nexus-duration-slow);
+  transition-timing-function: var(--nexus-ease-standard);
+}
+
+/* ----------------------------------------------------------------------------
+   Keyframe Primitives
+   ---------------------------------------------------------------------------- */
+@keyframes nexus-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes nexus-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nexus-animate-fade-in {
+  animation: nexus-fade-in var(--nexus-duration-normal) var(--nexus-ease-emphasized) forwards;
+}
+
+.nexus-animate-fade-up {
+  animation: nexus-fade-up var(--nexus-duration-normal) var(--nexus-ease-emphasized) forwards;
+}
