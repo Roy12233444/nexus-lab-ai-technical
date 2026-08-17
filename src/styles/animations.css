@@ -21,9 +21,10 @@
   --nexus-ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
 }
 
-/* ----------------------------------------------------------------------------
+/* ============================================================================
    Semantic Motion Transition Utilities
-   ---------------------------------------------------------------------------- */
+   ============================================================================ */
+
 .nexus-transition-fast {
   transition-property: color, background-color, border-color, opacity, transform, box-shadow;
   transition-duration: var(--nexus-duration-fast);
@@ -42,9 +43,16 @@
   transition-timing-function: var(--nexus-ease-standard);
 }
 
-/* ----------------------------------------------------------------------------
-   Keyframe Primitives
-   ---------------------------------------------------------------------------- */
+.nexus-transition-deliberate {
+  transition-property: color, background-color, border-color, opacity, transform, box-shadow;
+  transition-duration: var(--nexus-duration-deliberate);
+  transition-timing-function: var(--nexus-ease-emphasized);
+}
+
+/* ============================================================================
+   Keyframe Primitives (Hardware-Accelerated Opacity & Transforms)
+   ============================================================================ */
+
 @keyframes nexus-fade-in {
   from {
     opacity: 0;
@@ -65,10 +73,83 @@
   }
 }
 
+@keyframes nexus-fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nexus-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes nexus-pulse-subtle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* ============================================================================
+   Animation Utility Classes
+   ============================================================================ */
+
 .nexus-animate-fade-in {
   animation: nexus-fade-in var(--nexus-duration-normal) var(--nexus-ease-emphasized) forwards;
 }
 
 .nexus-animate-fade-up {
   animation: nexus-fade-up var(--nexus-duration-normal) var(--nexus-ease-emphasized) forwards;
+}
+
+.nexus-animate-fade-down {
+  animation: nexus-fade-down var(--nexus-duration-normal) var(--nexus-ease-emphasized) forwards;
+}
+
+.nexus-animate-scale-in {
+  animation: nexus-scale-in var(--nexus-duration-fast) var(--nexus-ease-emphasized) forwards;
+}
+
+.nexus-animate-pulse-subtle {
+  animation: nexus-pulse-subtle 2s var(--nexus-ease-standard) infinite;
+}
+
+/* ============================================================================
+   Accessibility: Strict Reduced Motion Override
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .nexus-animate-fade-in,
+  .nexus-animate-fade-up,
+  .nexus-animate-fade-down,
+  .nexus-animate-scale-in,
+  .nexus-animate-pulse-subtle {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
