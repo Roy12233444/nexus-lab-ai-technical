@@ -746,16 +746,11 @@ Architecture checkpoint
 
 ## Phase 02 — Design System
 
-```text
-Typography
-Spacing
-Cards
-Buttons
-Badges
-Status indicators
-Motion primitives
-Visual tokens
-```
+| Milestone                   | Status         | Description                                                                                                              |
+| --------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **Phase 01: Foundation**    | 🟢 **LOCKED**  | Runtime, Architecture Tree, ESLint, Prettier, Vitest, TypeScript baseline                                                |
+| **Phase 02: Design System** | 🟢 **LOCKED**  | Tokens (02A), Typography (02B), Layout (02C), Primitives (02D), Evidence Language (02E), Motion (02F), System Lock (02G) |
+| **Phase 03: Website Shell** | ⏳ **PENDING** | Header, Navigation, Footer, PageShell, Responsive Shell                                                                  |
 
 ---
 
