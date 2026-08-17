@@ -14,17 +14,30 @@
   --nexus-grid-gap-sm: var(--nexus-space-4); /* 16px */
   --nexus-grid-gap: var(--nexus-space-6); /* 24px Default */
   --nexus-grid-gap-lg: var(--nexus-space-8); /* 32px */
+
+  /* --------------------------------------------------------------------------
+     3. Responsive Section Spacing
+     -------------------------------------------------------------------------- */
+  --nexus-section-py-sm: 2rem; /* 32px Mobile */
+  --nexus-section-py-md: 3rem; /* 48px Mobile */
+  --nexus-section-py-lg: 4rem; /* 64px Mobile */
 }
 
 @media (min-width: 768px) {
   :root {
     --nexus-gutter: var(--nexus-space-6); /* 24px Tablet */
+    --nexus-section-py-sm: 3rem; /* 48px Tablet */
+    --nexus-section-py-md: 4rem; /* 64px Tablet */
+    --nexus-section-py-lg: 5.5rem; /* 88px Tablet */
   }
 }
 
 @media (min-width: 1024px) {
   :root {
     --nexus-gutter: var(--nexus-space-8); /* 32px Desktop */
+    --nexus-section-py-sm: 3rem; /* 48px Desktop */
+    --nexus-section-py-md: 5rem; /* 80px Desktop */
+    --nexus-section-py-lg: 7rem; /* 112px Desktop */
   }
 }
 
