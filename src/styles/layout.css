@@ -1,0 +1,213 @@
+:root {
+  /* ==========================================================================
+     NEXUS LAB AI — DESIGN TOKENS: LAYOUT & SPATIAL GRAMMAR
+     ========================================================================== */
+
+  /* --------------------------------------------------------------------------
+     1. Responsive Page Gutters (Fluid Horizontal Padding)
+     -------------------------------------------------------------------------- */
+  --nexus-gutter: var(--nexus-space-4); /* 16px Mobile */
+
+  /* --------------------------------------------------------------------------
+     2. Canonical Grid Gaps
+     -------------------------------------------------------------------------- */
+  --nexus-grid-gap-sm: var(--nexus-space-4); /* 16px */
+  --nexus-grid-gap: var(--nexus-space-6); /* 24px Default */
+  --nexus-grid-gap-lg: var(--nexus-space-8); /* 32px */
+}
+
+@media (min-width: 768px) {
+  :root {
+    --nexus-gutter: var(--nexus-space-6); /* 24px Tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --nexus-gutter: var(--nexus-space-8); /* 32px Desktop */
+  }
+}
+
+/* ============================================================================
+   Canonical Container Classes
+   ============================================================================ */
+
+/* Standard Content Container (1280px) */
+.nexus-container {
+  width: 100%;
+  max-width: var(--nexus-max-width-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--nexus-gutter);
+  padding-right: var(--nexus-gutter);
+}
+
+/* Wide Content Container (1440px - Architecture Diagrams & Visualizers) */
+.nexus-container-wide {
+  width: 100%;
+  max-width: var(--nexus-max-width-wide);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--nexus-gutter);
+  padding-right: var(--nexus-gutter);
+}
+
+/* Reading Measure Container (768px - Technical Prose & Dossier Details) */
+.nexus-container-reading {
+  width: 100%;
+  max-width: var(--nexus-max-width-reading);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--nexus-gutter);
+  padding-right: var(--nexus-gutter);
+}
+
+/* Narrow Container (576px - Focused Technical Panels & Modals) */
+.nexus-container-narrow {
+  width: 100%;
+  max-width: var(--nexus-max-width-narrow);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--nexus-gutter);
+  padding-right: var(--nexus-gutter);
+}
+
+/* ============================================================================
+   Section Rhythm & Vertical Spacing
+   ============================================================================ */
+
+.nexus-section {
+  padding-top: var(--nexus-section-py-md);
+  padding-bottom: var(--nexus-section-py-md);
+}
+
+.nexus-section-sm {
+  padding-top: var(--nexus-section-py-sm);
+  padding-bottom: var(--nexus-section-py-sm);
+}
+
+.nexus-section-lg {
+  padding-top: var(--nexus-section-py-lg);
+  padding-bottom: var(--nexus-section-py-lg);
+}
+
+/* ============================================================================
+   Grid Primitives & Responsive Column Systems
+   ============================================================================ */
+
+/* 2-Column Responsive Grid */
+.nexus-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: var(--nexus-grid-gap);
+}
+
+@media (min-width: 768px) {
+  .nexus-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 3-Column Responsive Grid (Research Programs, Evidence Cards) */
+.nexus-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: var(--nexus-grid-gap);
+}
+
+@media (min-width: 640px) {
+  .nexus-grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .nexus-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* 4-Column Responsive Grid (Metrics, Attributes, Capabilities) */
+.nexus-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: var(--nexus-grid-gap);
+}
+
+@media (min-width: 640px) {
+  .nexus-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .nexus-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ============================================================================
+   Flexbox & Stacking Alignment Primitives
+   ============================================================================ */
+
+.nexus-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nexus-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nexus-flex-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Vertical Stacking */
+.nexus-stack-sm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nexus-space-2);
+}
+
+.nexus-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nexus-space-4);
+}
+
+.nexus-stack-lg {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nexus-space-6);
+}
+
+.nexus-stack-xl {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nexus-space-8);
+}
+
+/* Horizontal Inline Grouping */
+.nexus-inline-sm {
+  display: flex;
+  align-items: center;
+  gap: var(--nexus-space-2);
+}
+
+.nexus-inline {
+  display: flex;
+  align-items: center;
+  gap: var(--nexus-space-4);
+}
+
+.nexus-inline-lg {
+  display: flex;
+  align-items: center;
+  gap: var(--nexus-space-6);
+}
