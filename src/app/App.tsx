@@ -26,9 +26,7 @@ function App() {
             <div className="flex flex-wrap gap-2.5 pt-2">
               <span className="nexus-code-inline text-xs">01 Foundation 🟢 LOCKED</span>
               <span className="nexus-code-inline text-xs">02 Design System 🟢 LOCKED</span>
-              <span className="nexus-code-inline text-xs">03A Header & Navigation 🟢 LOCKED</span>
-              <span className="nexus-code-inline text-xs">03B Footer & Legal/Meta 🟢 LOCKED</span>
-              <span className="nexus-code-inline text-xs">03C PageShell Engine 🟢 ACTIVE</span>
+              <span className="nexus-code-inline text-xs">03 Website Shell 🟢 LOCKED</span>
             </div>
           </div>
         </Section>

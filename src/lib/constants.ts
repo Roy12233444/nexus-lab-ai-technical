@@ -18,5 +18,5 @@ export const SITE_CONFIG = {
 export const SYSTEM_MILESTONES = {
   foundation: 'LOCKED',
   designSystem: 'LOCKED',
-  shell: 'ACTIVE',
+  shell: 'LOCKED',
 } as const;

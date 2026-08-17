@@ -54,7 +54,7 @@ describe('Footer & Legal/Meta System (Phase 03B)', () => {
       render(<Footer />);
       expect(screen.getByText(/01 locked/i)).toBeDefined();
       expect(screen.getByText(/02 locked/i)).toBeDefined();
-      expect(screen.getByText(/03 active/i)).toBeDefined();
+      expect(screen.getByText(/03 locked/i)).toBeDefined();
     });
   });
 });

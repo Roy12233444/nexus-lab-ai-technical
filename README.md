@@ -1306,4 +1306,4 @@ See `LICENSE` for the project's licensing terms.
 
 `Architecture → Foundation → Engineering Tooling → Design System → Implementation`
 
-**Current milestone:** Phase 01D — Foundation Lock (LOCKED) · Ready for Phase 02 (Design System)
+**Current milestone:** Phase 03E — Website Shell Lock (LOCKED) · Ready for Phase 04 (Core Website Pages & Content)
