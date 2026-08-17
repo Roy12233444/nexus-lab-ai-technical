@@ -1228,10 +1228,10 @@ Phase 01B — Repository Architecture
 Status: COMPLETE
 
 Phase 01C — Engineering Tooling
-Status: IN PROGRESS
+Status: COMPLETE
 
 Phase 01D — Foundation Lock
-Status: PENDING
+Status: COMPLETE (LOCKED)
 
 Phase 02 — Design System
 Status: PENDING
@@ -1311,4 +1311,4 @@ See `LICENSE` for the project's licensing terms.
 
 `Architecture → Foundation → Engineering Tooling → Design System → Implementation`
 
-**Current milestone:** Phase 01C — Engineering Tooling
+**Current milestone:** Phase 01D — Foundation Lock (LOCKED) · Ready for Phase 02 (Design System)
