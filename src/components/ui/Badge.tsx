@@ -1,8 +1,15 @@
 import React, { forwardRef } from 'react';
 import clsx from 'clsx';
+import { EvidenceStatus } from '@/types/evidence';
 
 export type BadgeVariant =
-  'verified' | 'implemented' | 'experimental' | 'hypothesis' | 'default' | 'outline';
+  | 'verified'
+  | 'implemented'
+  | 'experimental'
+  | 'hypothesis'
+  | 'default'
+  | 'outline'
+  | EvidenceStatus;
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
   variant?: BadgeVariant;
@@ -19,7 +26,13 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
       md: 'px-2.5 py-1 text-xs gap-1.5',
     };
 
-    const variantStyles: Record<BadgeVariant, string> = {
+    const normalizedVariant = String(variant).toLowerCase() as
+      'verified' | 'implemented' | 'experimental' | 'hypothesis' | 'default' | 'outline';
+
+    const variantStyles: Record<
+      'verified' | 'implemented' | 'experimental' | 'hypothesis' | 'default' | 'outline',
+      string
+    > = {
       verified:
         'bg-[var(--nexus-evidence-verified-bg)] text-[var(--nexus-evidence-verified-text)] border border-[var(--nexus-evidence-verified-border)]',
       implemented:
@@ -34,10 +47,12 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
         'bg-transparent text-[var(--nexus-text-primary)] border border-[var(--nexus-border-strong)]',
     };
 
+    const activeStyle = variantStyles[normalizedVariant] || variantStyles.default;
+
     return (
       <span
         ref={ref}
-        className={clsx(baseStyles, sizeStyles[size], variantStyles[variant], className)}
+        className={clsx(baseStyles, sizeStyles[size], activeStyle, className)}
         {...props}
       >
         {children}
