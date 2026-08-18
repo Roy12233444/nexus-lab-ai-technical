@@ -2,6 +2,7 @@ import React from 'react';
 import { StatusIndicator } from '@/components/ui/StatusIndicator';
 import { Button } from '@/components/ui/Button';
 import { OVERVIEW_CONTENT } from '@/content/overview/overview';
+import { HeroMatrixBackground } from '@/components/overview/HeroMatrixBackground';
 
 export interface HeroSectionProps {
   onExplorePrograms?: () => void;
@@ -15,29 +16,25 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   const { identity } = OVERVIEW_CONTENT;
 
   return (
-    <div className="relative w-full overflow-hidden py-16 md:py-24">
-      {/* Subtle Dotted Matrix Geometric Background */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.035] dark:opacity-[0.06]"
-        style={{
-          backgroundImage: 'radial-gradient(var(--nexus-text-primary) 1px, transparent 1px)',
-          backgroundSize: '24px 24px',
-        }}
-        aria-hidden="true"
-      />
+    <div className="relative w-full overflow-hidden bg-[var(--nexus-bg-primary)] py-16 md:py-24">
+      {/* Layer 1: Dotted Matrix Visual Substrate (Decorative, aria-hidden) */}
+      <HeroMatrixBackground />
 
-      <div className="relative flex flex-col items-start gap-6">
+      {/* Layer 2: Semantic Hero Content */}
+      <div className="relative z-10 flex flex-col items-start gap-6">
         {/* Monospace Overline Metadata */}
-        <div className="flex items-center gap-3">
-          <span className="nexus-meta-label text-xs tracking-wider text-[var(--nexus-text-muted)]">
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="nexus-meta-label text-xs font-semibold tracking-wider text-[var(--nexus-text-muted)]">
             {identity.brandName}
           </span>
-          <span className="text-[var(--nexus-border-default)]">&bull;</span>
+          <span className="text-[var(--nexus-border-default)]" aria-hidden="true">
+            &bull;
+          </span>
           <StatusIndicator status="active" label="CORE ARCHITECTURE : ACTIVE" size="sm" />
         </div>
 
         {/* Fluid Display Heading */}
-        <h1 className="nexus-display max-w-3xl font-semibold tracking-tight text-[var(--nexus-text-primary)]">
+        <h1 className="nexus-display max-w-3xl leading-[1.1] font-semibold tracking-tight text-[var(--nexus-text-primary)]">
           {identity.positioning}
         </h1>
 
@@ -47,7 +44,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </p>
 
         {/* Milestone Badges */}
-        <div className="flex flex-wrap items-center gap-2 pt-2">
+        <div className="flex flex-wrap items-center gap-2 pt-1">
           <span className="nexus-code-inline text-xs">01 Foundation 🟢 LOCKED</span>
           <span className="nexus-code-inline text-xs">02 Design System 🟢 LOCKED</span>
           <span className="nexus-code-inline text-xs">03 Website Shell 🟢 LOCKED</span>
@@ -55,24 +52,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
 
         {/* Exploration Action Triggers */}
-        <div className="flex flex-wrap items-center gap-3 pt-6">
+        <div className="flex flex-wrap items-center gap-3 pt-4">
           <Button
             variant="primary"
-            size="md"
-            onClick={() => {
-              if (onExplorePrograms) onExplorePrograms();
-              else {
-                document
-                  .getElementById('research-programs')
-                  ?.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-          >
-            Explore Research Programs
-          </Button>
-
-          <Button
-            variant="secondary"
             size="md"
             onClick={() => {
               if (onExploreArchitecture) onExploreArchitecture();
@@ -84,6 +66,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             }}
           >
             System Architecture
+          </Button>
+
+          <Button
+            variant="secondary"
+            size="md"
+            onClick={() => {
+              if (onExplorePrograms) onExplorePrograms();
+              else {
+                document
+                  .getElementById('research-programs')
+                  ?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Explore Research Programs
           </Button>
         </div>
       </div>
