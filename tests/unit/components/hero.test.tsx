@@ -4,7 +4,7 @@ import React from 'react';
 import { HeroSection } from '@/components/overview/HeroSection';
 import { HeroMatrixBackground } from '@/components/overview/HeroMatrixBackground';
 
-describe('Nexus LAB AI Hero & Dotted Matrix Subsystem (Phase 04A.5 Subtask)', () => {
+describe('Nexus LAB AI Hero & Dotted Matrix Subsystem (Kill-Critic Precision Pass)', () => {
   describe('HeroSection Semantic Rendering', () => {
     it('renders canonical identity, overline tracks, and centered heading', () => {
       render(<HeroSection />);
@@ -22,20 +22,28 @@ describe('Nexus LAB AI Hero & Dotted Matrix Subsystem (Phase 04A.5 Subtask)', ()
       ).toBeDefined();
     });
 
-    it('renders 4 architectural metric cards', () => {
+    it('renders 4 evidence-grounded architectural information signals', () => {
       render(<HeroSection />);
 
-      expect(screen.getAllByText(/Research Programs/i).length).toBeGreaterThan(0);
-      expect(screen.getByText('04+')).toBeDefined();
-      expect(screen.getByText(/Systems in Build/i)).toBeDefined();
-      expect(screen.getByText('12+')).toBeDefined();
-      expect(screen.getByText(/Evidence Driven/i)).toBeDefined();
-      expect(screen.getByText('100%')).toBeDefined();
-      expect(screen.getByText(/Long Horizon/i)).toBeDefined();
-      expect(screen.getByText('∞')).toBeDefined();
+      expect(screen.getByText('Multi-domain research programs')).toBeDefined();
+      expect(screen.getByText('SYSTEMS')).toBeDefined();
+      expect(screen.getByText('Autonomous systems in development')).toBeDefined();
+      expect(screen.getAllByText('EVIDENCE').length).toBeGreaterThan(0);
+      expect(screen.getByText('Evidence-driven validation')).toBeDefined();
+      expect(screen.getByText('HORIZON')).toBeDefined();
+      expect(screen.getByText('Long-horizon systems research')).toBeDefined();
     });
 
-    it('invokes CTA callbacks on user interaction', () => {
+    it('does NOT contain unbacked marketing metrics or absolute claims', () => {
+      render(<HeroSection />);
+
+      expect(screen.queryByText(/100% Epistemic Integrity/i)).toBeNull();
+      expect(screen.queryByText(/04\+ Active Tracks/i)).toBeNull();
+      expect(screen.queryByText(/12\+ Across Domains/i)).toBeNull();
+      expect(screen.queryByText(/∞ Future Focus/i)).toBeNull();
+    });
+
+    it('invokes CTA callbacks on user interaction without competing third buttons', () => {
       const onExploreArchitecture = vi.fn();
       const onExplorePrograms = vi.fn();
 
@@ -53,6 +61,8 @@ describe('Nexus LAB AI Hero & Dotted Matrix Subsystem (Phase 04A.5 Subtask)', ()
       const progBtn = screen.getByRole('button', { name: /RESEARCH PROGRAMS/i });
       fireEvent.click(progBtn);
       expect(onExplorePrograms).toHaveBeenCalledTimes(1);
+
+      expect(screen.queryByText(/Enter the Nexus Innovation Engine/i)).toBeNull();
     });
 
     it('guarantees that reference design guide panel elements are NOT present in UI', () => {

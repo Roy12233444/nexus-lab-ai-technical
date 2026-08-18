@@ -1,9 +1,11 @@
 import React from 'react';
 
 /**
- * Nexus LAB AI — Dotted Matrix Visual Substrate
- * Professional architectural network framing the outer canvas while preserving
- * a clean, high-contrast central reading zone for the Hero content.
+ * Nexus LAB AI — Dotted Matrix Visual Substrate (Kill-Critic Precision Pass)
+ * Architectural substrate representing systems topology beneath the surface.
+ * Strictly light laboratory palette: very light blue-gray dots (#D9E7F2),
+ * restrained cyan-blue active nodes (#00AEEF), rare amber accent (#F59E0B),
+ * and ultra-thin 0.5-0.75px pale connecting lines with clear center reading zone.
  */
 export const HeroMatrixBackground: React.FC = () => {
   return (
@@ -11,45 +13,50 @@ export const HeroMatrixBackground: React.FC = () => {
       className="pointer-events-none absolute inset-0 overflow-hidden select-none"
       aria-hidden="true"
     >
-      {/* 1. Base Ambient Radiant Light Glow */}
+      {/* 1. Subtle Atmospheric Light Gradient (Laboratory Environment) */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 80% 50% at 50% 10%, rgba(224, 242, 254, 0.7) 0%, rgba(240, 249, 255, 0.4) 45%, rgba(255, 255, 255, 0) 80%)',
+            'radial-gradient(ellipse 80% 50% at 50% 12%, rgba(240, 249, 255, 0.6) 0%, rgba(248, 250, 252, 0.3) 50%, transparent 80%)',
         }}
       />
 
-      {/* 2. Crisp Dotted Matrix Pattern with Center Reading Clearance */}
+      {/* 2. Base Architectural Dot Grid (Very Light Blue-Gray #D9E7F2 / #E3EDF5) */}
       <svg
-        className="absolute inset-0 h-full w-full opacity-45"
+        className="absolute inset-0 h-full w-full opacity-40"
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
         height="100%"
       >
         <defs>
-          <pattern id="nexus-matrix-grid-pro" width="18" height="18" patternUnits="userSpaceOnUse">
-            <circle cx="2" cy="2" r="1.1" fill="#0f172a" fillOpacity="0.25" />
+          <pattern
+            id="nexus-matrix-grid-refined"
+            width="18"
+            height="18"
+            patternUnits="userSpaceOnUse"
+          >
+            <circle cx="2" cy="2" r="1.1" fill="#94a3b8" fillOpacity="0.3" />
           </pattern>
-          {/* Mask that clears center so text is 100% crisp, while keeping dots prominent on sides */}
-          <radialGradient id="center-clearance" cx="50%" cy="40%" r="50%">
-            <stop offset="0%" stopColor="#fff" stopOpacity="0.2" />
-            <stop offset="60%" stopColor="#fff" stopOpacity="0.75" />
+          {/* Gentle Radial Fade Mask to protect central typography reading zone */}
+          <radialGradient id="reading-zone-mask" cx="50%" cy="40%" r="50%">
+            <stop offset="0%" stopColor="#fff" stopOpacity="0.15" />
+            <stop offset="60%" stopColor="#fff" stopOpacity="0.7" />
             <stop offset="100%" stopColor="#fff" stopOpacity="0.9" />
           </radialGradient>
-          <mask id="hero-grid-mask">
-            <rect width="100%" height="100%" fill="url(#center-clearance)" />
+          <mask id="hero-dot-mask">
+            <rect width="100%" height="100%" fill="url(#reading-zone-mask)" />
           </mask>
         </defs>
         <rect
           width="100%"
           height="100%"
-          fill="url(#nexus-matrix-grid-pro)"
-          mask="url(#hero-grid-mask)"
+          fill="url(#nexus-matrix-grid-refined)"
+          mask="url(#hero-dot-mask)"
         />
       </svg>
 
-      {/* 3. Outer Constellation Nodes & Network Vectors (Framing Left & Right Wings) */}
+      {/* 3. Outer Constellation Nodes & Ultra-Thin Connecting Lines */}
       <svg
         className="absolute inset-0 h-full w-full"
         viewBox="0 0 1440 700"
@@ -58,322 +65,305 @@ export const HeroMatrixBackground: React.FC = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
-          {/* Node Glow Filters */}
-          <filter id="pro-glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="3.5" result="blur" />
+          {/* Subtle Gaussian Blur Glow Filters (Restrained, Not Overbearing) */}
+          <filter id="node-glow-subtle" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="2.5" result="blur" />
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
           </filter>
-          <filter id="pro-glow-indigo" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="4" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-          <filter id="pro-glow-amber" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="4.5" result="blur" />
+          <filter id="node-glow-amber-subtle" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
           </filter>
 
-          {/* Gradients for Lines */}
-          <linearGradient id="vector-left" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#0284c7" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="#6366f1" stopOpacity="0.1" />
+          {/* Pale Connecting Vectors (0.5-0.75px) */}
+          <linearGradient id="pale-vector-left" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#0284c7" stopOpacity="0.25" />
+            <stop offset="100%" stopColor="#94a3b8" stopOpacity="0.08" />
           </linearGradient>
-          <linearGradient id="vector-right" x1="100%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#0284c7" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="#d97706" stopOpacity="0.15" />
+          <linearGradient id="pale-vector-right" x1="100%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#0284c7" stopOpacity="0.25" />
+            <stop offset="100%" stopColor="#94a3b8" stopOpacity="0.08" />
           </linearGradient>
-          <linearGradient id="vector-top" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#0284c7" stopOpacity="0.2" />
-            <stop offset="50%" stopColor="#6366f1" stopOpacity="0.35" />
-            <stop offset="100%" stopColor="#0284c7" stopOpacity="0.2" />
+          <linearGradient id="pale-vector-arch" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#0284c7" stopOpacity="0.15" />
+            <stop offset="50%" stopColor="#0284c7" stopOpacity="0.25" />
+            <stop offset="100%" stopColor="#0284c7" stopOpacity="0.15" />
           </linearGradient>
         </defs>
 
-        {/* LEFT WING CONSTELLATION (Nodes x: 50–350) */}
-        <g className="opacity-80">
-          <line x1="80" y1="160" x2="200" y2="100" stroke="url(#vector-left)" strokeWidth="0.85" />
-          <line
-            x1="200"
-            y1="100"
-            x2="290"
-            y2="220"
-            stroke="url(#vector-left)"
-            strokeWidth="0.85"
-            strokeDasharray="4 4"
-          />
-          <line x1="290" y1="220" x2="140" y2="320" stroke="url(#vector-left)" strokeWidth="0.85" />
-          <line
-            x1="140"
-            y1="320"
-            x2="260"
-            y2="440"
-            stroke="url(#vector-left)"
-            strokeWidth="0.85"
-            strokeDasharray="5 3"
-          />
-          <line x1="290" y1="220" x2="380" y2="160" stroke="url(#vector-left)" strokeWidth="0.85" />
-          <line
-            x1="200"
-            y1="100"
-            x2="380"
-            y2="160"
-            stroke="url(#vector-left)"
-            strokeWidth="0.85"
-            strokeDasharray="3 3"
-          />
-        </g>
-
-        {/* TOP ARCHITECTURAL SPAN (Arching high above text) */}
+        {/* LEFT WING TOPOLOGY (x: 80–380) */}
         <g className="opacity-70">
           <line
-            x1="380"
+            x1="90"
             y1="160"
-            x2="560"
-            y2="70"
-            stroke="url(#vector-top)"
-            strokeWidth="0.75"
+            x2="210"
+            y2="110"
+            stroke="url(#pale-vector-left)"
+            strokeWidth="0.65"
+          />
+          <line
+            x1="210"
+            y1="110"
+            x2="300"
+            y2="220"
+            stroke="url(#pale-vector-left)"
+            strokeWidth="0.65"
+            strokeDasharray="3 3"
+          />
+          <line
+            x1="300"
+            y1="220"
+            x2="160"
+            y2="310"
+            stroke="url(#pale-vector-left)"
+            strokeWidth="0.65"
+          />
+          <line
+            x1="160"
+            y1="310"
+            x2="270"
+            y2="430"
+            stroke="url(#pale-vector-left)"
+            strokeWidth="0.65"
+            strokeDasharray="4 3"
+          />
+          <line
+            x1="210"
+            y1="110"
+            x2="370"
+            y2="150"
+            stroke="url(#pale-vector-left)"
+            strokeWidth="0.65"
+          />
+        </g>
+
+        {/* HIGH ARCH (Arches well above the header title) */}
+        <g className="opacity-60">
+          <line
+            x1="370"
+            y1="150"
+            x2="550"
+            y2="65"
+            stroke="url(#pale-vector-arch)"
+            strokeWidth="0.6"
             strokeDasharray="4 4"
           />
-          <line x1="560" y1="70" x2="880" y2="70" stroke="url(#vector-top)" strokeWidth="0.75" />
           <line
-            x1="880"
-            y1="70"
-            x2="1060"
-            y2="160"
-            stroke="url(#vector-top)"
-            strokeWidth="0.75"
+            x1="550"
+            y1="65"
+            x2="890"
+            y2="65"
+            stroke="url(#pale-vector-arch)"
+            strokeWidth="0.6"
+          />
+          <line
+            x1="890"
+            y1="65"
+            x2="1070"
+            y2="150"
+            stroke="url(#pale-vector-arch)"
+            strokeWidth="0.6"
             strokeDasharray="4 4"
           />
         </g>
 
-        {/* RIGHT WING CONSTELLATION (Nodes x: 1090–1390) */}
-        <g className="opacity-80">
+        {/* RIGHT WING TOPOLOGY (x: 1070–1370) */}
+        <g className="opacity-70">
           <line
-            x1="1060"
-            y1="160"
-            x2="1160"
-            y2="90"
-            stroke="url(#vector-right)"
-            strokeWidth="0.85"
+            x1="1070"
+            y1="150"
+            x2="1170"
+            y2="95"
+            stroke="url(#pale-vector-right)"
+            strokeWidth="0.65"
           />
           <line
-            x1="1160"
-            y1="90"
+            x1="1170"
+            y1="95"
             x2="1280"
-            y2="200"
-            stroke="url(#vector-right)"
-            strokeWidth="0.85"
-            strokeDasharray="4 4"
+            y2="190"
+            stroke="url(#pale-vector-right)"
+            strokeWidth="0.65"
+            strokeDasharray="3 3"
           />
           <line
-            x1="1060"
-            y1="160"
-            x2="1180"
-            y2="280"
-            stroke="url(#vector-right)"
-            strokeWidth="0.85"
+            x1="1070"
+            y1="150"
+            x2="1190"
+            y2="270"
+            stroke="url(#pale-vector-right)"
+            strokeWidth="0.65"
           />
           <line
-            x1="1180"
-            y1="280"
-            x2="1360"
-            y2="340"
-            stroke="url(#vector-right)"
-            strokeWidth="0.85"
-            strokeDasharray="6 3"
+            x1="1190"
+            y1="270"
+            x2="1350"
+            y2="330"
+            stroke="url(#pale-vector-right)"
+            strokeWidth="0.65"
+            strokeDasharray="4 3"
           />
           <line
-            x1="1180"
-            y1="280"
-            x2="1240"
-            y2="450"
-            stroke="url(#vector-right)"
-            strokeWidth="0.85"
-          />
-          <line
-            x1="1280"
-            y1="200"
-            x2="1380"
-            y2="140"
-            stroke="url(#vector-right)"
-            strokeWidth="0.85"
+            x1="1190"
+            y1="270"
+            x2="1250"
+            y2="440"
+            stroke="url(#pale-vector-right)"
+            strokeWidth="0.65"
           />
         </g>
 
-        {/* TOPOLOGICAL INTELLIGENCE NODES */}
+        {/* INTELLIGENCE NODES (Restrained Hierarchy) */}
         <g>
           {/* Left Wing Nodes */}
-          <circle cx="80" cy="160" r="3" fill="#0284c7" fillOpacity="0.75" />
+          <circle cx="90" cy="160" r="2.5" fill="#0284c7" fillOpacity="0.7" />
           <circle
-            cx="200"
-            cy="100"
-            r="4.5"
+            cx="210"
+            cy="110"
+            r="3.5"
             fill="#0284c7"
-            fillOpacity="0.9"
-            filter="url(#pro-glow-cyan)"
-          />
-          <circle cx="200" cy="100" r="10" fill="#0284c7" fillOpacity="0.15" />
-          <circle
-            cx="290"
-            cy="220"
-            r="4"
-            fill="#6366f1"
             fillOpacity="0.85"
-            filter="url(#pro-glow-indigo)"
+            filter="url(#node-glow-subtle)"
           />
-          <circle cx="140" cy="320" r="3.5" fill="#0284c7" fillOpacity="0.7" />
-          <circle cx="260" cy="440" r="3" fill="#0284c7" fillOpacity="0.6" />
-          <circle cx="380" cy="160" r="3.5" fill="#0284c7" fillOpacity="0.8" />
+          <circle cx="210" cy="110" r="7" fill="#0284c7" fillOpacity="0.12" />
+          <circle cx="300" cy="220" r="3" fill="#4f8cc9" fillOpacity="0.75" />
+          <circle cx="160" cy="310" r="2.5" fill="#0284c7" fillOpacity="0.6" />
+          <circle cx="270" cy="430" r="2.5" fill="#0284c7" fillOpacity="0.5" />
+          <circle cx="370" cy="150" r="3" fill="#0284c7" fillOpacity="0.75" />
 
-          {/* Top Span Nodes */}
-          <circle cx="560" cy="70" r="3" fill="#6366f1" fillOpacity="0.75" />
-          <circle cx="880" cy="70" r="3" fill="#6366f1" fillOpacity="0.75" />
+          {/* High Arch Overhead Nodes */}
+          <circle cx="550" cy="65" r="2.5" fill="#4f8cc9" fillOpacity="0.7" />
+          <circle cx="890" cy="65" r="2.5" fill="#4f8cc9" fillOpacity="0.7" />
 
           {/* Right Wing Nodes */}
-          <circle cx="1060" cy="160" r="3.5" fill="#0284c7" fillOpacity="0.8" />
+          <circle cx="1070" cy="150" r="3" fill="#0284c7" fillOpacity="0.75" />
           <circle
-            cx="1160"
-            cy="90"
-            r="4.5"
+            cx="1170"
+            cy="95"
+            r="3.5"
             fill="#0284c7"
-            fillOpacity="0.9"
-            filter="url(#pro-glow-cyan)"
-          />
-          <circle cx="1160" cy="90" r="10" fill="#0284c7" fillOpacity="0.15" />
-          <circle
-            cx="1280"
-            cy="200"
-            r="4"
-            fill="#6366f1"
             fillOpacity="0.85"
-            filter="url(#pro-glow-indigo)"
+            filter="url(#node-glow-subtle)"
           />
-          <circle
-            cx="1180"
-            cy="280"
-            r="4.5"
-            fill="#d97706"
-            fillOpacity="0.9"
-            filter="url(#pro-glow-amber)"
-          />
-          <circle
-            cx="1180"
-            cy="280"
-            r="12"
-            fill="#d97706"
-            fillOpacity="0.18"
-            className="animate-pulse"
-          />
-          <circle cx="1360" cy="340" r="3" fill="#0284c7" fillOpacity="0.65" />
-          <circle cx="1240" cy="450" r="3" fill="#0284c7" fillOpacity="0.55" />
-          <circle cx="1380" cy="140" r="2.5" fill="#0284c7" fillOpacity="0.6" />
+          <circle cx="1170" cy="95" r="7" fill="#0284c7" fillOpacity="0.12" />
+          <circle cx="1280" cy="190" r="3" fill="#4f8cc9" fillOpacity="0.75" />
 
-          {/* Micro Accent Amber Sparks */}
-          <circle cx="150" cy="90" r="2" fill="#d97706" fillOpacity="0.65" />
-          <circle cx="340" cy="300" r="2.2" fill="#d97706" fillOpacity="0.6" />
-          <circle cx="1100" cy="380" r="2" fill="#d97706" fillOpacity="0.65" />
-          <circle cx="1320" cy="80" r="2.2" fill="#d97706" fillOpacity="0.6" />
+          {/* Rare Accent Node (Warm Orange #F59E0B — Discovery Signal) */}
+          <circle
+            cx="1190"
+            cy="270"
+            r="3.5"
+            fill="#f59e0b"
+            fillOpacity="0.9"
+            filter="url(#node-glow-amber-subtle)"
+          />
+          <circle cx="1190" cy="270" r="8" fill="#f59e0b" fillOpacity="0.15" />
+
+          <circle cx="1350" cy="330" r="2.5" fill="#0284c7" fillOpacity="0.6" />
+          <circle cx="1250" cy="440" r="2.5" fill="#0284c7" fillOpacity="0.5" />
+
+          {/* Sparse Micro Sparks (Subtle) */}
+          <circle cx="170" cy="80" r="1.8" fill="#f59e0b" fillOpacity="0.6" />
+          <circle cx="1310" cy="85" r="1.8" fill="#f59e0b" fillOpacity="0.6" />
         </g>
       </svg>
 
-      {/* 4. Bottom Horizon Engine Mesh with Ambient Color Wave */}
-      <div className="pointer-events-none absolute right-0 bottom-0 left-0 h-56 overflow-hidden">
-        {/* Soft Ambient Horizon Light */}
+      {/* 4. Subtle Computational Substrate (Restrained Horizon Lines) */}
+      <div className="pointer-events-none absolute right-0 bottom-0 left-0 h-44 overflow-hidden">
+        {/* Soft Ambient Fade */}
         <div
-          className="absolute bottom-0 left-1/2 h-32 w-4/5 -translate-x-1/2 opacity-40"
+          className="absolute bottom-0 left-1/2 h-24 w-3/4 -translate-x-1/2 opacity-25"
           style={{
             background:
-              'radial-gradient(ellipse 65% 90% at 50% 100%, rgba(14, 165, 233, 0.35) 0%, rgba(99, 102, 241, 0.2) 45%, transparent 80%)',
+              'radial-gradient(ellipse 60% 80% at 50% 100%, rgba(2, 132, 199, 0.2) 0%, transparent 70%)',
           }}
         />
 
-        {/* Curved Perspective Horizon Grid SVG */}
+        {/* Lightweight Elliptical Horizon Mesh (Opacity 20%) */}
         <svg
-          className="absolute bottom-0 left-1/2 h-48 w-[1600px] -translate-x-1/2 opacity-30"
-          viewBox="0 0 1600 180"
+          className="absolute bottom-0 left-1/2 h-36 w-[1440px] -translate-x-1/2 opacity-20"
+          viewBox="0 0 1440 140"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Elliptical Horizon Arcs */}
-          <path d="M0 180 Q800 15 1600 180" stroke="#0284c7" strokeWidth="1" strokeOpacity="0.5" />
           <path
-            d="M60 180 Q800 40 1540 180"
+            d="M0 140 Q720 15 1440 140"
             stroke="#0284c7"
             strokeWidth="0.8"
+            strokeOpacity="0.5"
+          />
+          <path
+            d="M80 140 Q720 45 1360 140"
+            stroke="#0284c7"
+            strokeWidth="0.65"
             strokeOpacity="0.4"
           />
           <path
-            d="M140 180 Q800 70 1460 180"
-            stroke="#6366f1"
-            strokeWidth="0.75"
-            strokeOpacity="0.35"
-            strokeDasharray="6 4"
-          />
-          <path
-            d="M240 180 Q800 105 1360 180"
-            stroke="#0284c7"
-            strokeWidth="0.75"
-            strokeOpacity="0.3"
-          />
-          <path
-            d="M360 180 Q800 140 1240 180"
+            d="M180 140 Q720 75 1260 140"
             stroke="#0284c7"
             strokeWidth="0.6"
-            strokeOpacity="0.25"
-            strokeDasharray="4 4"
+            strokeOpacity="0.3"
+            strokeDasharray="5 3"
+          />
+          <path
+            d="M300 140 Q720 105 1140 140"
+            stroke="#0284c7"
+            strokeWidth="0.5"
+            strokeOpacity="0.2"
           />
 
           {/* Perspective Longitude Rays */}
           <line
-            x1="800"
+            x1="720"
             y1="15"
             x2="350"
-            y2="180"
+            y2="140"
             stroke="#0284c7"
-            strokeWidth="0.6"
-            strokeOpacity="0.25"
+            strokeWidth="0.5"
+            strokeOpacity="0.2"
           />
           <line
-            x1="800"
+            x1="720"
             y1="15"
-            x2="580"
-            y2="180"
+            x2="540"
+            y2="140"
             stroke="#0284c7"
-            strokeWidth="0.6"
-            strokeOpacity="0.25"
+            strokeWidth="0.5"
+            strokeOpacity="0.2"
           />
           <line
-            x1="800"
+            x1="720"
             y1="15"
-            x2="800"
-            y2="180"
-            stroke="#0ea5e9"
-            strokeWidth="0.8"
-            strokeOpacity="0.4"
+            x2="720"
+            y2="140"
+            stroke="#0284c7"
+            strokeWidth="0.65"
+            strokeOpacity="0.3"
             strokeDasharray="3 3"
           />
           <line
-            x1="800"
+            x1="720"
             y1="15"
-            x2="1020"
-            y2="180"
+            x2="900"
+            y2="140"
             stroke="#0284c7"
-            strokeWidth="0.6"
-            strokeOpacity="0.25"
+            strokeWidth="0.5"
+            strokeOpacity="0.2"
           />
           <line
-            x1="800"
+            x1="720"
             y1="15"
-            x2="1250"
-            y2="180"
+            x2="1090"
+            y2="140"
             stroke="#0284c7"
-            strokeWidth="0.6"
-            strokeOpacity="0.25"
+            strokeWidth="0.5"
+            strokeOpacity="0.2"
           />
         </svg>
 
         {/* Seamless Bottom Edge Blend */}
         <div
-          className="absolute inset-x-0 bottom-0 h-12"
+          className="absolute inset-x-0 bottom-0 h-10"
           style={{
             background: 'linear-gradient(to bottom, transparent, var(--nexus-bg-primary))',
           }}
