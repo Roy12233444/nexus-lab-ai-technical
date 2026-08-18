@@ -6,28 +6,33 @@ import { HeroMatrixBackground } from '@/components/overview/HeroMatrixBackground
 
 describe('Nexus LAB AI Hero & Dotted Matrix Subsystem (Phase 04A.5 Subtask)', () => {
   describe('HeroSection Semantic Rendering', () => {
-    it('renders canonical identity, overline, and fluid display heading', () => {
+    it('renders canonical identity, overline tracks, and centered heading', () => {
       render(<HeroSection />);
 
-      expect(screen.getByText('NEXUS LAB AI')).toBeDefined();
+      expect(screen.getAllByText(/RESEARCH/i).length).toBeGreaterThan(0);
+      expect(screen.getByText(/ENGINEERING/i)).toBeDefined();
+      expect(screen.getByRole('heading', { level: 1, name: /NEXUS LAB AI/i })).toBeDefined();
       expect(
-        screen.getByRole('heading', { level: 1, name: /AI Systems Innovation Company/i })
+        screen.getByRole('heading', { level: 2, name: /AI Systems Innovation Company/i })
       ).toBeDefined();
       expect(
         screen.getByText(
-          /Researching, engineering, and validating durable intelligent-system capabilities/i
+          /We research, engineer, and validate intelligent systems that are durable, trustworthy, and built for the future/i
         )
       ).toBeDefined();
     });
 
-    it('renders live system status indicator and milestone locks', () => {
+    it('renders 4 architectural metric cards', () => {
       render(<HeroSection />);
 
-      expect(screen.getByText(/CORE ARCHITECTURE : ACTIVE/i)).toBeDefined();
-      expect(screen.getByText(/01 Foundation 🟢 LOCKED/i)).toBeDefined();
-      expect(screen.getByText(/02 Design System 🟢 LOCKED/i)).toBeDefined();
-      expect(screen.getByText(/03 Website Shell 🟢 LOCKED/i)).toBeDefined();
-      expect(screen.getByText(/04A Overview Core 🟢 ACTIVE/i)).toBeDefined();
+      expect(screen.getAllByText(/Research Programs/i).length).toBeGreaterThan(0);
+      expect(screen.getByText('04+')).toBeDefined();
+      expect(screen.getByText(/Systems in Build/i)).toBeDefined();
+      expect(screen.getByText('12+')).toBeDefined();
+      expect(screen.getByText(/Evidence Driven/i)).toBeDefined();
+      expect(screen.getByText('100%')).toBeDefined();
+      expect(screen.getByText(/Long Horizon/i)).toBeDefined();
+      expect(screen.getByText('∞')).toBeDefined();
     });
 
     it('invokes CTA callbacks on user interaction', () => {
@@ -41,11 +46,11 @@ describe('Nexus LAB AI Hero & Dotted Matrix Subsystem (Phase 04A.5 Subtask)', ()
         />
       );
 
-      const archBtn = screen.getByRole('button', { name: /System Architecture/i });
+      const archBtn = screen.getByRole('button', { name: /EXPLORE ARCHITECTURE/i });
       fireEvent.click(archBtn);
       expect(onExploreArchitecture).toHaveBeenCalledTimes(1);
 
-      const progBtn = screen.getByRole('button', { name: /Explore Research Programs/i });
+      const progBtn = screen.getByRole('button', { name: /RESEARCH PROGRAMS/i });
       fireEvent.click(progBtn);
       expect(onExplorePrograms).toHaveBeenCalledTimes(1);
     });

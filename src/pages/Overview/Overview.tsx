@@ -20,7 +20,7 @@ export const Overview: React.FC<OverviewProps> = ({ onNavigate }) => {
   return (
     <PageShell width="full">
       {/* Section 01: Identity / Hero */}
-      <Section id="identity-hero" spacing="none" width="reading" background="primary">
+      <Section id="identity-hero" spacing="none" width="full" background="primary">
         <HeroSection />
       </Section>
 
