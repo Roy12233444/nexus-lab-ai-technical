@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, c
       )}
     >
       <div className="nexus-container flex h-16 items-center justify-between">
-        {/* Left: Brand Identity */}
+        {/* Left: Brand Identity (Text-only without separate icon logo) */}
         <div className="flex items-center gap-6">
           <a
             href={ROUTES.HOME}
@@ -35,20 +35,20 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, c
               }
             }}
             aria-label="Nexus LAB AI Home"
-            className="flex items-center gap-2.5 rounded-[var(--nexus-radius-sm)] select-none focus-visible:ring-2 focus-visible:ring-[var(--nexus-text-primary)] focus-visible:outline-none"
+            className="flex items-center gap-2 rounded-[var(--nexus-radius-sm)] select-none focus-visible:ring-2 focus-visible:ring-[var(--nexus-text-primary)] focus-visible:outline-none"
           >
-            <div className="flex h-7 w-7 items-center justify-center rounded-[var(--nexus-radius-sm)] bg-[var(--nexus-text-primary)] text-xs font-bold text-[var(--nexus-text-inverse)]">
-              N
-            </div>
             <div className="flex flex-col">
-              <span className="text-sm font-bold tracking-tight text-[var(--nexus-text-primary)]">
-                NEXUS<span className="ml-1 font-normal text-[var(--nexus-text-muted)]">LAB AI</span>
+              <span className="text-sm font-black tracking-tight text-[var(--nexus-text-primary)]">
+                NEXUS LAB AI
+              </span>
+              <span className="text-[10px] font-medium tracking-wider text-[var(--nexus-text-muted)] uppercase">
+                AI SYSTEMS INNOVATION COMPANY
               </span>
             </div>
           </a>
         </div>
 
-        {/* Center: Desktop Navigation */}
+        {/* Center: Desktop Navigation (Overview, Research, Technology, Evidence, Products, Philosophy, Future, Challenge) */}
         <Navigation currentPath={currentPath} onNavigate={onNavigate} />
 
         {/* Right: Technical State & Mobile Trigger */}

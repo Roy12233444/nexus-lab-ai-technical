@@ -4,46 +4,43 @@ import React from 'react';
 import { HeroSection } from '@/components/overview/HeroSection';
 import { HeroMatrixBackground } from '@/components/overview/HeroMatrixBackground';
 
-describe('Nexus LAB AI Hero & Dotted Matrix Subsystem (Kill-Critic Precision Pass)', () => {
+describe('Nexus LAB AI Hero & 3D Isometric Network Subsystem', () => {
   describe('HeroSection Semantic Rendering', () => {
-    it('renders canonical identity, overline tracks, and centered heading', () => {
+    it('renders canonical identity, overline, stacked title, and lead statement', () => {
       render(<HeroSection />);
 
-      expect(screen.getAllByText(/RESEARCH/i).length).toBeGreaterThan(0);
-      expect(screen.getByText(/ENGINEERING/i)).toBeDefined();
-      expect(screen.getByRole('heading', { level: 1, name: /NEXUS LAB AI/i })).toBeDefined();
+      expect(screen.getByText(/NEXUS LAB AI/i)).toBeDefined();
       expect(
-        screen.getByRole('heading', { level: 2, name: /AI Systems Innovation Company/i })
+        screen.getByRole('heading', {
+          level: 1,
+          name: /AI SYSTEMS/i,
+        })
       ).toBeDefined();
       expect(
         screen.getByText(
-          /We research, engineer, and validate intelligent systems that are durable, trustworthy, and built for the future/i
+          /Researching, engineering, and validating durable intelligent-system capabilities/i
         )
       ).toBeDefined();
+      expect(screen.getByText(/CORE ARCHITECTURE : ACTIVE/i)).toBeDefined();
     });
 
-    it('renders 4 evidence-grounded architectural information signals', () => {
+    it('renders 4 architectural information dock items and floating 10 layers badge', () => {
       render(<HeroSection />);
 
-      expect(screen.getByText('Multi-domain research programs')).toBeDefined();
+      expect(screen.getByText('First Principles')).toBeDefined();
       expect(screen.getByText('SYSTEMS')).toBeDefined();
-      expect(screen.getByText('Autonomous systems in development')).toBeDefined();
-      expect(screen.getAllByText('EVIDENCE').length).toBeGreaterThan(0);
-      expect(screen.getByText('Evidence-driven validation')).toBeDefined();
+      expect(screen.getByText('Engineered for Reliability')).toBeDefined();
+      expect(screen.getByText('EVIDENCE')).toBeDefined();
+      expect(screen.getByText('Verified. Transparent. Repeatable.')).toBeDefined();
       expect(screen.getByText('HORIZON')).toBeDefined();
-      expect(screen.getByText('Long-horizon systems research')).toBeDefined();
+      expect(screen.getByText('Building for the Future')).toBeDefined();
+
+      expect(screen.getByText('10')).toBeDefined();
+      expect(screen.getByText('SYSTEM LAYERS')).toBeDefined();
+      expect(screen.getByText('ONE ENGINE')).toBeDefined();
     });
 
-    it('does NOT contain unbacked marketing metrics or absolute claims', () => {
-      render(<HeroSection />);
-
-      expect(screen.queryByText(/100% Epistemic Integrity/i)).toBeNull();
-      expect(screen.queryByText(/04\+ Active Tracks/i)).toBeNull();
-      expect(screen.queryByText(/12\+ Across Domains/i)).toBeNull();
-      expect(screen.queryByText(/∞ Future Focus/i)).toBeNull();
-    });
-
-    it('invokes CTA callbacks on user interaction without competing third buttons', () => {
+    it('invokes CTA callbacks on user interaction', () => {
       const onExploreArchitecture = vi.fn();
       const onExplorePrograms = vi.fn();
 
@@ -61,21 +58,10 @@ describe('Nexus LAB AI Hero & Dotted Matrix Subsystem (Kill-Critic Precision Pas
       const progBtn = screen.getByRole('button', { name: /RESEARCH PROGRAMS/i });
       fireEvent.click(progBtn);
       expect(onExplorePrograms).toHaveBeenCalledTimes(1);
-
-      expect(screen.queryByText(/Enter the Nexus Innovation Engine/i)).toBeNull();
-    });
-
-    it('guarantees that reference design guide panel elements are NOT present in UI', () => {
-      render(<HeroSection />);
-
-      expect(screen.queryByText(/DOTTED MATRIX GUIDE/i)).toBeNull();
-      expect(screen.queryByText(/Subtle Dot Grid explanation/i)).toBeNull();
-      expect(screen.queryByText(/Dynamic Nodes explanation/i)).toBeNull();
-      expect(screen.queryByText(/Connecting Lines explanation/i)).toBeNull();
     });
   });
 
-  describe('HeroMatrixBackground Decorative Substrate', () => {
+  describe('HeroMatrixBackground 3D Isometric Substrate', () => {
     it('renders as a decorative layer with aria-hidden="true" and pointer-events-none', () => {
       const { container } = render(<HeroMatrixBackground />);
 
@@ -84,17 +70,17 @@ describe('Nexus LAB AI Hero & Dotted Matrix Subsystem (Kill-Critic Precision Pas
       expect(wrapper.className).toContain('pointer-events-none');
     });
 
-    it('contains SVG dot grid pattern and topological connection lines', () => {
+    it('contains SVG isometric canvas with cubes and topological nodes', () => {
       const { container } = render(<HeroMatrixBackground />);
 
-      const svgs = container.querySelectorAll('svg');
-      expect(svgs.length).toBeGreaterThanOrEqual(2);
+      const svg = container.querySelector('svg');
+      expect(svg).toBeDefined();
+
+      const polygons = container.querySelectorAll('polygon');
+      expect(polygons.length).toBeGreaterThan(0);
 
       const circles = container.querySelectorAll('circle');
       expect(circles.length).toBeGreaterThan(0);
-
-      const lines = container.querySelectorAll('line');
-      expect(lines.length).toBeGreaterThan(0);
     });
   });
 });

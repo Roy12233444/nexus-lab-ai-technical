@@ -9,7 +9,7 @@ describe('Overview Page UI Implementation (Phase 04A.5)', () => {
     it('renders the 10 canonical sections', () => {
       render(<Overview />);
 
-      expect(screen.getByRole('heading', { level: 1, name: /NEXUS LAB AI/i })).toBeDefined();
+      expect(screen.getByRole('heading', { level: 1, name: /AI SYSTEMS/i })).toBeDefined();
       expect(screen.getByText('The Core Thesis')).toBeDefined();
       expect(screen.getByText('Institutional Mission')).toBeDefined();
       expect(screen.getByText('The Innovation Engine')).toBeDefined();

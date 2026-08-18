@@ -1,11 +1,13 @@
 import React from 'react';
 
 /**
- * Nexus LAB AI — Dotted Matrix Visual Substrate (Kill-Critic Precision Pass)
- * Architectural substrate representing systems topology beneath the surface.
- * Strictly light laboratory palette: very light blue-gray dots (#D9E7F2),
- * restrained cyan-blue active nodes (#00AEEF), rare amber accent (#F59E0B),
- * and ultra-thin 0.5-0.75px pale connecting lines with clear center reading zone.
+ * Nexus LAB AI — 3D Isometric Intelligence Network Substrate
+ * Implements the exact architectural perspective visual from the reference design:
+ * - Pure light laboratory background (#FFFFFF / #F8FAFC)
+ * - Perspective dotted grid on the right canvas
+ * - Floating isometric glass/frost computing nodes with light/shadow facets
+ * - Central elevated luminous intelligence cube with vertical cyan energy beams & glowing pedestal
+ * - Multi-tiered topological constellation vectors with glowing cyan, blue, and rare amber nodes
  */
 export const HeroMatrixBackground: React.FC = () => {
   return (
@@ -13,362 +15,550 @@ export const HeroMatrixBackground: React.FC = () => {
       className="pointer-events-none absolute inset-0 overflow-hidden select-none"
       aria-hidden="true"
     >
-      {/* 1. Subtle Atmospheric Light Gradient (Laboratory Environment) */}
+      {/* 1. Ambient Laboratory Lighting Gradient */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 80% 50% at 50% 12%, rgba(240, 249, 255, 0.6) 0%, rgba(248, 250, 252, 0.3) 50%, transparent 80%)',
+            'radial-gradient(ellipse 75% 60% at 75% 50%, rgba(224, 242, 254, 0.45) 0%, rgba(240, 249, 255, 0.25) 50%, #ffffff 85%)',
         }}
       />
 
-      {/* 2. Base Architectural Dot Grid (Very Light Blue-Gray #D9E7F2 / #E3EDF5) */}
-      <svg
-        className="absolute inset-0 h-full w-full opacity-40"
-        xmlns="http://www.w3.org/2000/svg"
-        width="100%"
-        height="100%"
-      >
-        <defs>
-          <pattern
-            id="nexus-matrix-grid-refined"
-            width="18"
-            height="18"
-            patternUnits="userSpaceOnUse"
-          >
-            <circle cx="2" cy="2" r="1.1" fill="#94a3b8" fillOpacity="0.3" />
-          </pattern>
-          {/* Gentle Radial Fade Mask to protect central typography reading zone */}
-          <radialGradient id="reading-zone-mask" cx="50%" cy="40%" r="50%">
-            <stop offset="0%" stopColor="#fff" stopOpacity="0.15" />
-            <stop offset="60%" stopColor="#fff" stopOpacity="0.7" />
-            <stop offset="100%" stopColor="#fff" stopOpacity="0.9" />
-          </radialGradient>
-          <mask id="hero-dot-mask">
-            <rect width="100%" height="100%" fill="url(#reading-zone-mask)" />
-          </mask>
-        </defs>
-        <rect
-          width="100%"
-          height="100%"
-          fill="url(#nexus-matrix-grid-refined)"
-          mask="url(#hero-dot-mask)"
-        />
-      </svg>
-
-      {/* 3. Outer Constellation Nodes & Ultra-Thin Connecting Lines */}
+      {/* 2. Full-Width 3D Perspective Vector Canvas */}
       <svg
         className="absolute inset-0 h-full w-full"
-        viewBox="0 0 1440 700"
+        viewBox="0 0 1600 900"
         preserveAspectRatio="xMidYMid slice"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
-          {/* Subtle Gaussian Blur Glow Filters (Restrained, Not Overbearing) */}
-          <filter id="node-glow-subtle" x="-40%" y="-40%" width="180%" height="180%">
-            <feGaussianBlur stdDeviation="2.5" result="blur" />
+          {/* Subtle Gaussian Blur Glow Filters */}
+          <filter id="iso-glow-cyan" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="6" result="blur" />
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
           </filter>
-          <filter id="node-glow-amber-subtle" x="-40%" y="-40%" width="180%" height="180%">
+          <filter id="iso-glow-soft" x="-40%" y="-40%" width="180%" height="180%">
             <feGaussianBlur stdDeviation="3" result="blur" />
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
           </filter>
+          <filter id="iso-glow-amber" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          </filter>
 
-          {/* Pale Connecting Vectors (0.5-0.75px) */}
-          <linearGradient id="pale-vector-left" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#0284c7" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#94a3b8" stopOpacity="0.08" />
+          {/* Gradients for Isometric Cube Facets */}
+          <linearGradient id="cube-top-light" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="#f1f5f9" stopOpacity="0.9" />
           </linearGradient>
-          <linearGradient id="pale-vector-right" x1="100%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#0284c7" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#94a3b8" stopOpacity="0.08" />
+          <linearGradient id="cube-left-light" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#e2e8f0" stopOpacity="0.85" />
+            <stop offset="100%" stopColor="#cbd5e1" stopOpacity="0.75" />
           </linearGradient>
-          <linearGradient id="pale-vector-arch" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#0284c7" stopOpacity="0.15" />
-            <stop offset="50%" stopColor="#0284c7" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#0284c7" stopOpacity="0.15" />
+          <linearGradient id="cube-right-light" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#cbd5e1" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#94a3b8" stopOpacity="0.7" />
           </linearGradient>
+
+          {/* Central Hero Cube Glass Facets */}
+          <linearGradient id="hero-cube-top" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.98" />
+            <stop offset="100%" stopColor="#e0f2fe" stopOpacity="0.95" />
+          </linearGradient>
+          <linearGradient id="hero-cube-left" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#f8fafc" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="#bae6fd" stopOpacity="0.8" />
+          </linearGradient>
+          <linearGradient id="hero-cube-right" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#e2e8f0" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="#7dd3fc" stopOpacity="0.75" />
+          </linearGradient>
+
+          {/* Luminescent Pedestal Gradient */}
+          <linearGradient id="pedestal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.8" />
+            <stop offset="50%" stopColor="#0284c7" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#0369a1" stopOpacity="0.4" />
+          </linearGradient>
+
+          {/* Vertical Energy Beam Gradient */}
+          <linearGradient id="energy-beam" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.9" />
+            <stop offset="60%" stopColor="#0284c7" stopOpacity="0.4" />
+            <stop offset="100%" stopColor="#bae6fd" stopOpacity="0" />
+          </linearGradient>
+
+          {/* Perspective Dotted Matrix Pattern */}
+          <pattern id="iso-dot-pattern" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.1" fill="#94a3b8" fillOpacity="0.28" />
+          </pattern>
         </defs>
 
-        {/* LEFT WING TOPOLOGY (x: 80–380) */}
-        <g className="opacity-70">
-          <line
-            x1="90"
-            y1="160"
-            x2="210"
-            y2="110"
-            stroke="url(#pale-vector-left)"
-            strokeWidth="0.65"
+        {/* 3. PERSPECTIVE DOTTED MATRIX FIELD (Right & Center-Right Canvas) */}
+        <g opacity="0.65">
+          <path
+            d="M 500 0 L 1600 0 L 1600 900 L 400 900 Z"
+            fill="url(#iso-dot-pattern)"
+            mask="url(#matrix-fade-mask)"
           />
-          <line
-            x1="210"
-            y1="110"
-            x2="300"
-            y2="220"
-            stroke="url(#pale-vector-left)"
-            strokeWidth="0.65"
-            strokeDasharray="3 3"
-          />
-          <line
-            x1="300"
-            y1="220"
-            x2="160"
-            y2="310"
-            stroke="url(#pale-vector-left)"
-            strokeWidth="0.65"
-          />
-          <line
-            x1="160"
-            y1="310"
-            x2="270"
-            y2="430"
-            stroke="url(#pale-vector-left)"
-            strokeWidth="0.65"
-            strokeDasharray="4 3"
-          />
-          <line
-            x1="210"
-            y1="110"
-            x2="370"
-            y2="150"
-            stroke="url(#pale-vector-left)"
-            strokeWidth="0.65"
-          />
+          <mask id="matrix-fade-mask">
+            <linearGradient id="fade-left" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#000" stopOpacity="0" />
+              <stop offset="35%" stopColor="#fff" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#fff" stopOpacity="1" />
+            </linearGradient>
+            <rect x="0" y="0" width="1600" height="900" fill="url(#fade-left)" />
+          </mask>
         </g>
 
-        {/* HIGH ARCH (Arches well above the header title) */}
-        <g className="opacity-60">
+        {/* 4. ISOMETRIC TOPOLOGICAL NETWORK LINES */}
+        <g opacity="0.45" stroke="#94a3b8" strokeWidth="0.75">
+          {/* Outer Mesh Connections */}
           <line
-            x1="370"
-            y1="150"
-            x2="550"
-            y2="65"
-            stroke="url(#pale-vector-arch)"
-            strokeWidth="0.6"
-            strokeDasharray="4 4"
-          />
-          <line
-            x1="550"
-            y1="65"
-            x2="890"
-            y2="65"
-            stroke="url(#pale-vector-arch)"
-            strokeWidth="0.6"
-          />
-          <line
-            x1="890"
-            y1="65"
-            x2="1070"
-            y2="150"
-            stroke="url(#pale-vector-arch)"
-            strokeWidth="0.6"
-            strokeDasharray="4 4"
-          />
-        </g>
-
-        {/* RIGHT WING TOPOLOGY (x: 1070–1370) */}
-        <g className="opacity-70">
-          <line
-            x1="1070"
-            y1="150"
-            x2="1170"
-            y2="95"
-            stroke="url(#pale-vector-right)"
-            strokeWidth="0.65"
-          />
-          <line
-            x1="1170"
-            y1="95"
-            x2="1280"
-            y2="190"
-            stroke="url(#pale-vector-right)"
-            strokeWidth="0.65"
+            x1="600"
+            y1="520"
+            x2="800"
+            y2="600"
+            stroke="#0284c7"
+            strokeOpacity="0.3"
             strokeDasharray="3 3"
           />
+          <line x1="800" y1="600" x2="1140" y2="580" stroke="#0284c7" strokeOpacity="0.35" />
+          <line x1="1140" y1="580" x2="1360" y2="690" stroke="#94a3b8" strokeOpacity="0.3" />
           <line
-            x1="1070"
-            y1="150"
-            x2="1190"
-            y2="270"
-            stroke="url(#pale-vector-right)"
-            strokeWidth="0.65"
+            x1="800"
+            y1="600"
+            x2="820"
+            y2="760"
+            stroke="#94a3b8"
+            strokeOpacity="0.25"
+            strokeDasharray="4 4"
           />
+
+          {/* Mid-Plane Network Vectors */}
+          <line x1="720" y1="410" x2="940" y2="480" stroke="#0284c7" strokeOpacity="0.4" />
+          <line x1="940" y1="480" x2="1140" y2="580" stroke="#0284c7" strokeOpacity="0.5" />
           <line
-            x1="1190"
-            y1="270"
-            x2="1350"
-            y2="330"
-            stroke="url(#pale-vector-right)"
-            strokeWidth="0.65"
-            strokeDasharray="4 3"
-          />
-          <line
-            x1="1190"
-            y1="270"
-            x2="1250"
+            x1="940"
+            y1="480"
+            x2="1140"
             y2="440"
-            stroke="url(#pale-vector-right)"
-            strokeWidth="0.65"
+            stroke="#0284c7"
+            strokeOpacity="0.4"
+            strokeDasharray="3 3"
+          />
+          <line x1="1140" y1="440" x2="1380" y2="490" stroke="#0284c7" strokeOpacity="0.35" />
+          <line x1="1380" y1="490" x2="1500" y2="430" stroke="#94a3b8" strokeOpacity="0.25" />
+
+          {/* Central Cube Hub Rays */}
+          <line
+            x1="1140"
+            y1="580"
+            x2="1140"
+            y2="440"
+            stroke="#38bdf8"
+            strokeOpacity="0.6"
+            strokeWidth="1"
+          />
+          <line x1="1140" y1="580" x2="1240" y2="340" stroke="#0284c7" strokeOpacity="0.4" />
+          <line
+            x1="1140"
+            y1="440"
+            x2="1240"
+            y2="340"
+            stroke="#0284c7"
+            strokeOpacity="0.35"
+            strokeDasharray="4 4"
+          />
+          <line x1="1240" y1="340" x2="1420" y2="380" stroke="#94a3b8" strokeOpacity="0.3" />
+          <line x1="1240" y1="340" x2="1200" y2="170" stroke="#94a3b8" strokeOpacity="0.25" />
+          <line
+            x1="1200"
+            y1="170"
+            x2="1400"
+            y2="240"
+            stroke="#94a3b8"
+            strokeOpacity="0.25"
+            strokeDasharray="3 3"
+          />
+
+          {/* Background Distant Nodes Lines */}
+          <line x1="620" y1="330" x2="720" y2="410" stroke="#94a3b8" strokeOpacity="0.25" />
+          <line
+            x1="720"
+            y1="410"
+            x2="800"
+            y2="280"
+            stroke="#94a3b8"
+            strokeOpacity="0.25"
+            strokeDasharray="4 4"
+          />
+          <line x1="800" y1="280" x2="980" y2="340" stroke="#94a3b8" strokeOpacity="0.25" />
+          <line x1="980" y1="340" x2="1140" y2="440" stroke="#0284c7" strokeOpacity="0.3" />
+          <line x1="980" y1="340" x2="1080" y2="200" stroke="#94a3b8" strokeOpacity="0.2" />
+        </g>
+
+        {/* 5. FLOATING 3D ISOMETRIC COMPUTATIONAL NODES (Background & Midground) */}
+
+        {/* Node 1: Left Foreground Small Node (x: 600, y: 720) */}
+        <g transform="translate(600, 720) scale(0.65)" opacity="0.8">
+          <polygon
+            points="0,-20 20,-10 0,0 -20,-10"
+            fill="url(#cube-top-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="-20,-10 0,0 0,22 -20,12"
+            fill="url(#cube-left-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="0,0 20,-10 20,12 0,22"
+            fill="url(#cube-right-light)"
+            stroke="#94a3b8"
+            strokeWidth="0.5"
           />
         </g>
 
-        {/* INTELLIGENCE NODES (Restrained Hierarchy) */}
+        {/* Node 2: Left Midground Node (x: 800, y: 590) */}
+        <g transform="translate(800, 590) scale(0.85)" opacity="0.85">
+          <polygon
+            points="0,-24 24,-12 0,0 -24,-12"
+            fill="url(#cube-top-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="-24,-12 0,0 0,26 -24,14"
+            fill="url(#cube-left-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="0,0 24,-12 24,14 0,26"
+            fill="url(#cube-right-light)"
+            stroke="#94a3b8"
+            strokeWidth="0.5"
+          />
+        </g>
+
+        {/* Node 3: Bottom Center Deep Node (x: 820, y: 840) */}
+        <g transform="translate(820, 840) scale(1.1)" opacity="0.9">
+          <polygon
+            points="0,-28 28,-14 0,0 -28,-14"
+            fill="url(#cube-top-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.6"
+          />
+          <polygon
+            points="-28,-14 0,0 0,30 -28,16"
+            fill="url(#cube-left-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.6"
+          />
+          <polygon
+            points="0,0 28,-14 28,16 0,30"
+            fill="url(#cube-right-light)"
+            stroke="#94a3b8"
+            strokeWidth="0.6"
+          />
+        </g>
+
+        {/* Node 4: Distant Top Left Node (x: 800, y: 380) */}
+        <g transform="translate(800, 380) scale(0.6)" opacity="0.7">
+          <polygon
+            points="0,-20 20,-10 0,0 -20,-10"
+            fill="url(#cube-top-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="-20,-10 0,0 0,22 -20,12"
+            fill="url(#cube-left-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="0,0 20,-10 20,12 0,22"
+            fill="url(#cube-right-light)"
+            stroke="#94a3b8"
+            strokeWidth="0.5"
+          />
+        </g>
+
+        {/* Node 5: Distant Center Top Node (x: 980, y: 360) */}
+        <g transform="translate(980, 360) scale(0.55)" opacity="0.65">
+          <polygon
+            points="0,-20 20,-10 0,0 -20,-10"
+            fill="url(#cube-top-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="-20,-10 0,0 0,22 -20,12"
+            fill="url(#cube-left-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="0,0 20,-10 20,12 0,22"
+            fill="url(#cube-right-light)"
+            stroke="#94a3b8"
+            strokeWidth="0.5"
+          />
+        </g>
+
+        {/* Node 6: Upper Right Background Node (x: 1200, y: 300) */}
+        <g transform="translate(1200, 300) scale(0.75)" opacity="0.75">
+          <polygon
+            points="0,-22 22,-11 0,0 -22,-11"
+            fill="url(#cube-top-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="-22,-11 0,0 0,24 -22,13"
+            fill="url(#cube-left-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="0,0 22,-11 22,13 0,24"
+            fill="url(#cube-right-light)"
+            stroke="#94a3b8"
+            strokeWidth="0.5"
+          />
+        </g>
+
+        {/* Node 7: Far Top Right Floating Node (x: 1240, y: 140) */}
+        <g transform="translate(1240, 140) scale(0.45)" opacity="0.6">
+          <polygon
+            points="0,-20 20,-10 0,0 -20,-10"
+            fill="url(#cube-top-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="-20,-10 0,0 0,22 -20,12"
+            fill="url(#cube-left-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="0,0 20,-10 20,12 0,22"
+            fill="url(#cube-right-light)"
+            stroke="#94a3b8"
+            strokeWidth="0.5"
+          />
+        </g>
+
+        {/* Node 8: Far Right Foreground Node (x: 1420, y: 370) */}
+        <g transform="translate(1420, 370) scale(0.9)" opacity="0.85">
+          <polygon
+            points="0,-26 26,-13 0,0 -26,-13"
+            fill="url(#cube-top-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="-26,-13 0,0 0,28 -26,15"
+            fill="url(#cube-left-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="0,0 26,-13 26,15 0,28"
+            fill="url(#cube-right-light)"
+            stroke="#94a3b8"
+            strokeWidth="0.5"
+          />
+        </g>
+
+        {/* Node 9: Far Right Distant Node (x: 1530, y: 560) */}
+        <g transform="translate(1530, 560) scale(0.65)" opacity="0.7">
+          <polygon
+            points="0,-20 20,-10 0,0 -20,-10"
+            fill="url(#cube-top-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="-20,-10 0,0 0,22 -20,12"
+            fill="url(#cube-left-light)"
+            stroke="#cbd5e1"
+            strokeWidth="0.5"
+          />
+          <polygon
+            points="0,0 20,-10 20,12 0,22"
+            fill="url(#cube-right-light)"
+            stroke="#94a3b8"
+            strokeWidth="0.5"
+          />
+        </g>
+
+        {/* 6. HERO CENTRAL INTELLIGENCE CUBE & LUMINESCENT PEDESTAL (Centerpiece) */}
+        <g transform="translate(1140, 640)">
+          {/* Ambient Glow Aura beneath Pedestal */}
+          <ellipse
+            cx="0"
+            cy="20"
+            rx="140"
+            ry="70"
+            fill="#38bdf8"
+            fillOpacity="0.25"
+            filter="url(#iso-glow-cyan)"
+          />
+
+          {/* Luminous Isometric Pedestal Platform */}
+          <polygon
+            points="0,-32 100,18 0,68 -100,18"
+            fill="url(#pedestal-grad)"
+            stroke="#38bdf8"
+            strokeWidth="1.5"
+            strokeOpacity="0.8"
+          />
+          <polygon points="-100,18 0,68 0,84 -100,34" fill="#0284c7" fillOpacity="0.6" />
+          <polygon points="0,68 100,18 100,34 0,84" fill="#0369a1" fillOpacity="0.7" />
+
+          {/* Upward Vertical Luminescence Rays */}
+          <g stroke="url(#energy-beam)" strokeWidth="1.2" opacity="0.85">
+            <line x1="-60" y1="10" x2="-60" y2="-90" />
+            <line x1="-40" y1="20" x2="-40" y2="-80" />
+            <line x1="-20" y1="35" x2="-20" y2="-65" />
+            <line x1="0" y1="45" x2="0" y2="-55" />
+            <line x1="20" y1="35" x2="20" y2="-65" />
+            <line x1="40" y1="20" x2="40" y2="-80" />
+            <line x1="60" y1="10" x2="60" y2="-90" />
+          </g>
+
+          {/* Floating Elevated Hero Cube (y: -110) */}
+          <g transform="translate(0, -120) scale(1.65)">
+            {/* Top Face */}
+            <polygon
+              points="0,-34 34,-17 0,0 -34,-17"
+              fill="url(#hero-cube-top)"
+              stroke="#bae6fd"
+              strokeWidth="0.8"
+            />
+            {/* Left Face */}
+            <polygon
+              points="-34,-17 0,0 0,38 -34,21"
+              fill="url(#hero-cube-left)"
+              stroke="#bae6fd"
+              strokeWidth="0.8"
+            />
+            {/* Right Face */}
+            <polygon
+              points="0,0 34,-17 34,21 0,38"
+              fill="url(#hero-cube-right)"
+              stroke="#7dd3fc"
+              strokeWidth="0.8"
+            />
+            {/* Internal Shimmer / Core Specular Accent */}
+            <line
+              x1="-34"
+              y1="-17"
+              x2="0"
+              y2="0"
+              stroke="#ffffff"
+              strokeWidth="1.2"
+              strokeOpacity="0.9"
+            />
+            <line
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="38"
+              stroke="#38bdf8"
+              strokeWidth="0.8"
+              strokeOpacity="0.8"
+            />
+          </g>
+        </g>
+
+        {/* 7. TOPOLOGICAL GLOWING NODES (Cyan, Blue, Amber Accents) */}
         <g>
-          {/* Left Wing Nodes */}
-          <circle cx="90" cy="160" r="2.5" fill="#0284c7" fillOpacity="0.7" />
+          {/* Cyan / Sky Glowing Points */}
           <circle
-            cx="210"
-            cy="110"
+            cx="620"
+            cy="330"
             r="3.5"
+            fill="#38bdf8"
+            fillOpacity="0.9"
+            filter="url(#iso-glow-soft)"
+          />
+          <circle
+            cx="720"
+            cy="410"
+            r="4.5"
+            fill="#0284c7"
+            fillOpacity="0.9"
+            filter="url(#iso-glow-soft)"
+          />
+          <circle cx="720" cy="410" r="9" fill="#0284c7" fillOpacity="0.15" />
+          <circle
+            cx="940"
+            cy="480"
+            r="4"
             fill="#0284c7"
             fillOpacity="0.85"
-            filter="url(#node-glow-subtle)"
+            filter="url(#iso-glow-soft)"
           />
-          <circle cx="210" cy="110" r="7" fill="#0284c7" fillOpacity="0.12" />
-          <circle cx="300" cy="220" r="3" fill="#4f8cc9" fillOpacity="0.75" />
-          <circle cx="160" cy="310" r="2.5" fill="#0284c7" fillOpacity="0.6" />
-          <circle cx="270" cy="430" r="2.5" fill="#0284c7" fillOpacity="0.5" />
-          <circle cx="370" cy="150" r="3" fill="#0284c7" fillOpacity="0.75" />
-
-          {/* High Arch Overhead Nodes */}
-          <circle cx="550" cy="65" r="2.5" fill="#4f8cc9" fillOpacity="0.7" />
-          <circle cx="890" cy="65" r="2.5" fill="#4f8cc9" fillOpacity="0.7" />
-
-          {/* Right Wing Nodes */}
-          <circle cx="1070" cy="150" r="3" fill="#0284c7" fillOpacity="0.75" />
           <circle
-            cx="1170"
-            cy="95"
-            r="3.5"
+            cx="1140"
+            cy="440"
+            r="4"
+            fill="#38bdf8"
+            fillOpacity="0.9"
+            filter="url(#iso-glow-soft)"
+          />
+          <circle
+            cx="1380"
+            cy="490"
+            r="4"
             fill="#0284c7"
-            fillOpacity="0.85"
-            filter="url(#node-glow-subtle)"
+            fillOpacity="0.8"
+            filter="url(#iso-glow-soft)"
           />
-          <circle cx="1170" cy="95" r="7" fill="#0284c7" fillOpacity="0.12" />
-          <circle cx="1280" cy="190" r="3" fill="#4f8cc9" fillOpacity="0.75" />
+          <circle cx="1500" cy="430" r="3.5" fill="#0284c7" fillOpacity="0.75" />
 
-          {/* Rare Accent Node (Warm Orange #F59E0B — Discovery Signal) */}
+          {/* Subtle Deep Blue Secondary Nodes */}
+          <circle cx="800" cy="280" r="3" fill="#4f8cc9" fillOpacity="0.8" />
+          <circle cx="1080" cy="200" r="2.5" fill="#4f8cc9" fillOpacity="0.7" />
+          <circle cx="1360" cy="690" r="3" fill="#4f8cc9" fillOpacity="0.7" />
+
+          {/* Rare Warm Amber Signal Nodes (Discovery Accents as in reference image) */}
           <circle
-            cx="1190"
-            cy="270"
+            cx="1040"
+            cy="660"
+            r="4"
+            fill="#f59e0b"
+            fillOpacity="0.95"
+            filter="url(#iso-glow-amber)"
+          />
+          <circle cx="1040" cy="660" r="9" fill="#f59e0b" fillOpacity="0.2" />
+          <circle
+            cx="1450"
+            cy="720"
             r="3.5"
             fill="#f59e0b"
             fillOpacity="0.9"
-            filter="url(#node-glow-amber-subtle)"
+            filter="url(#iso-glow-amber)"
           />
-          <circle cx="1190" cy="270" r="8" fill="#f59e0b" fillOpacity="0.15" />
-
-          <circle cx="1350" cy="330" r="2.5" fill="#0284c7" fillOpacity="0.6" />
-          <circle cx="1250" cy="440" r="2.5" fill="#0284c7" fillOpacity="0.5" />
-
-          {/* Sparse Micro Sparks (Subtle) */}
-          <circle cx="170" cy="80" r="1.8" fill="#f59e0b" fillOpacity="0.6" />
-          <circle cx="1310" cy="85" r="1.8" fill="#f59e0b" fillOpacity="0.6" />
+          <circle cx="1450" cy="720" r="8" fill="#f59e0b" fillOpacity="0.18" />
+          <circle
+            cx="1580"
+            cy="440"
+            r="3"
+            fill="#f59e0b"
+            fillOpacity="0.85"
+            filter="url(#iso-glow-amber)"
+          />
         </g>
       </svg>
-
-      {/* 4. Subtle Computational Substrate (Restrained Horizon Lines) */}
-      <div className="pointer-events-none absolute right-0 bottom-0 left-0 h-44 overflow-hidden">
-        {/* Soft Ambient Fade */}
-        <div
-          className="absolute bottom-0 left-1/2 h-24 w-3/4 -translate-x-1/2 opacity-25"
-          style={{
-            background:
-              'radial-gradient(ellipse 60% 80% at 50% 100%, rgba(2, 132, 199, 0.2) 0%, transparent 70%)',
-          }}
-        />
-
-        {/* Lightweight Elliptical Horizon Mesh (Opacity 20%) */}
-        <svg
-          className="absolute bottom-0 left-1/2 h-36 w-[1440px] -translate-x-1/2 opacity-20"
-          viewBox="0 0 1440 140"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 140 Q720 15 1440 140"
-            stroke="#0284c7"
-            strokeWidth="0.8"
-            strokeOpacity="0.5"
-          />
-          <path
-            d="M80 140 Q720 45 1360 140"
-            stroke="#0284c7"
-            strokeWidth="0.65"
-            strokeOpacity="0.4"
-          />
-          <path
-            d="M180 140 Q720 75 1260 140"
-            stroke="#0284c7"
-            strokeWidth="0.6"
-            strokeOpacity="0.3"
-            strokeDasharray="5 3"
-          />
-          <path
-            d="M300 140 Q720 105 1140 140"
-            stroke="#0284c7"
-            strokeWidth="0.5"
-            strokeOpacity="0.2"
-          />
-
-          {/* Perspective Longitude Rays */}
-          <line
-            x1="720"
-            y1="15"
-            x2="350"
-            y2="140"
-            stroke="#0284c7"
-            strokeWidth="0.5"
-            strokeOpacity="0.2"
-          />
-          <line
-            x1="720"
-            y1="15"
-            x2="540"
-            y2="140"
-            stroke="#0284c7"
-            strokeWidth="0.5"
-            strokeOpacity="0.2"
-          />
-          <line
-            x1="720"
-            y1="15"
-            x2="720"
-            y2="140"
-            stroke="#0284c7"
-            strokeWidth="0.65"
-            strokeOpacity="0.3"
-            strokeDasharray="3 3"
-          />
-          <line
-            x1="720"
-            y1="15"
-            x2="900"
-            y2="140"
-            stroke="#0284c7"
-            strokeWidth="0.5"
-            strokeOpacity="0.2"
-          />
-          <line
-            x1="720"
-            y1="15"
-            x2="1090"
-            y2="140"
-            stroke="#0284c7"
-            strokeWidth="0.5"
-            strokeOpacity="0.2"
-          />
-        </svg>
-
-        {/* Seamless Bottom Edge Blend */}
-        <div
-          className="absolute inset-x-0 bottom-0 h-10"
-          style={{
-            background: 'linear-gradient(to bottom, transparent, var(--nexus-bg-primary))',
-          }}
-        />
-      </div>
     </div>
   );
 };
