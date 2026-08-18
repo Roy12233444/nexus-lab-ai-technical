@@ -1,0 +1,155 @@
+import { OverviewPageBlueprint } from '@/types/overviewSection';
+
+/**
+ * Nexus LAB AI — Canonical Overview Page Architecture Blueprint
+ * Phase 04A.4 — 10-Section Narrative Composition
+ */
+export const OVERVIEW_PAGE_BLUEPRINT: OverviewPageBlueprint = {
+  pageId: 'overview',
+  route: '/overview',
+  title: 'Nexus LAB AI Overview',
+  description:
+    'Sovereign AI Systems Innovation Company — Researching, engineering, and validating durable intelligent-system capabilities.',
+  sections: [
+    {
+      order: 1,
+      id: 'identity-hero',
+      title: 'AI Systems Innovation Company',
+      eyebrow: 'Nexus LAB AI',
+      purpose:
+        'Establish canonical institutional identity, core thesis, and live architecture status.',
+      sourceAuthority: 'TIER_1_CONSTITUTIONAL / TIER_4_CURRENT_SPEC',
+      componentType: 'HeroSection',
+      containerWidth: 'reading',
+      background: 'primary',
+      spacing: 'lg',
+      contentKey: 'identity',
+    },
+    {
+      order: 2,
+      id: 'thesis-worldview',
+      title: 'The Core Thesis',
+      eyebrow: 'First Principles',
+      purpose:
+        'Explain the fundamental problem with ephemeral AI and why durable sovereign architecture is required.',
+      sourceAuthority: 'TIER_1_CONSTITUTIONAL',
+      componentType: 'ThesisSection',
+      containerWidth: 'reading',
+      background: 'secondary',
+      spacing: 'md',
+      contentKey: 'thesis',
+    },
+    {
+      order: 3,
+      id: 'mission-scope',
+      title: 'Institutional Mission',
+      eyebrow: 'Scope & Mandate',
+      purpose:
+        'Define the formal mission and clear boundary between foundational research and downstream products.',
+      sourceAuthority: 'TIER_1_CONSTITUTIONAL',
+      componentType: 'MissionSection',
+      containerWidth: 'reading',
+      background: 'primary',
+      spacing: 'md',
+      contentKey: 'identity.missionStatement',
+    },
+    {
+      order: 4,
+      id: 'innovation-engine',
+      title: 'The Innovation Engine',
+      eyebrow: 'Operational Mechanism',
+      purpose:
+        'Illustrate the repeatable institutional engine converting unsolved problems into durable capabilities.',
+      sourceAuthority: 'TIER_2_ENGINEERING',
+      componentType: 'InnovationEngineSection',
+      containerWidth: 'content',
+      background: 'secondary',
+      spacing: 'lg',
+      contentKey: 'innovationEngine',
+    },
+    {
+      order: 5,
+      id: 'nsem-methodology',
+      title: 'NSEM Methodology',
+      eyebrow: 'Engineering Framework',
+      purpose:
+        'Present the 5-Stage Macro Lifecycle alongside the 8-Step Iterative Micro Engineering Loop.',
+      sourceAuthority: 'TIER_2_ENGINEERING',
+      componentType: 'MethodologySection',
+      containerWidth: 'content',
+      background: 'primary',
+      spacing: 'md',
+      contentKey: 'innovationEngine.macroLifecycle',
+    },
+    {
+      order: 6,
+      id: 'architectural-hierarchy',
+      title: 'System Architecture',
+      eyebrow: 'Roots to Fruits',
+      purpose:
+        'Explain the 4-tier structural hierarchy uniting beliefs, methodology, research branches, and validated outputs.',
+      sourceAuthority: 'TIER_2_ENGINEERING / TIER_4_CURRENT_SPEC',
+      componentType: 'ArchitectureSection',
+      containerWidth: 'wide',
+      background: 'secondary',
+      spacing: 'lg',
+      contentKey: 'architectureNodes',
+    },
+    {
+      order: 7,
+      id: 'research-programs',
+      title: 'Core Research Programs',
+      eyebrow: 'Active Investigations',
+      purpose:
+        'Present NALA, AMP, RTA-GUARD, and COSMOS with honest, multi-axis maturity and evidence states.',
+      sourceAuthority: 'TIER_3_VERIFIED_EVIDENCE / TIER_4_CURRENT_SPEC',
+      componentType: 'ResearchProgramsSection',
+      containerWidth: 'content',
+      background: 'primary',
+      spacing: 'lg',
+      contentKey: 'researchPrograms',
+    },
+    {
+      order: 8,
+      id: 'evidence-validation',
+      title: 'Empirical Evidence & Validation',
+      eyebrow: 'Epistemic Proof',
+      purpose:
+        'Display reproducible execution artifacts, chaos soak tests, and test-suite evidence records.',
+      sourceAuthority: 'TIER_3_VERIFIED_EVIDENCE',
+      componentType: 'EvidenceSection',
+      containerWidth: 'content',
+      background: 'secondary',
+      spacing: 'md',
+      contentKey: 'claims',
+    },
+    {
+      order: 9,
+      id: 'state-matrix',
+      title: 'Maturity & Epistemic Boundaries',
+      eyebrow: 'Truth Table',
+      purpose:
+        'Communicate what is implemented vs experimental vs planned with explicit limitations and audit notes.',
+      sourceAuthority: 'TIER_2_ENGINEERING / TIER_3_VERIFIED_EVIDENCE',
+      componentType: 'StateMatrixSection',
+      containerWidth: 'content',
+      background: 'primary',
+      spacing: 'md',
+      contentKey: 'researchPrograms',
+    },
+    {
+      order: 10,
+      id: 'system-exploration',
+      title: 'Explore the Dossier',
+      eyebrow: 'Deeper Investigation',
+      purpose:
+        'Direct technical visitors to specialized dossiers (Research, Technology, Evidence, Philosophy, Future).',
+      sourceAuthority: 'TIER_4_CURRENT_SPEC',
+      componentType: 'ExplorationSection',
+      containerWidth: 'content',
+      background: 'secondary',
+      spacing: 'lg',
+      contentKey: 'routes',
+    },
+  ],
+};
