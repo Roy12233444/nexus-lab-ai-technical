@@ -36,10 +36,6 @@ export const ResearchHeroSection: React.FC<ResearchHeroSectionProps> = ({
             </span>
             <span>RESEARCH TRACK : ACTIVE</span>
           </div>
-
-          <div className="hidden font-mono text-xs text-slate-500 sm:block">
-            <span>GOVERNANCE: DOCS-04B.2 // CANONICAL REGISTER</span>
-          </div>
         </div>
 
         {/* Central Identity & Lead Typography */}

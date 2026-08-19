@@ -56,17 +56,10 @@ export const ResearchEvidenceMatrixSection: React.FC = () => {
           </thead>
           <tbody className="divide-y divide-slate-100 font-sans">
             {CANONICAL_RESEARCH_PROJECTS.map((project: CanonicalResearchProject) => (
-              <tr
-                key={project.identity.id}
-                className="transition hover:bg-sky-50/40"
-              >
+              <tr key={project.identity.id} className="transition hover:bg-sky-50/40">
                 <td className="px-6 py-4">
-                  <div className="font-bold text-slate-900">
-                    {project.identity.acronym}
-                  </div>
-                  <div className="font-mono text-xs text-slate-500">
-                    {project.identity.name}
-                  </div>
+                  <div className="font-bold text-slate-900">{project.identity.acronym}</div>
+                  <div className="font-mono text-xs text-slate-500">{project.identity.name}</div>
                 </td>
                 <td className="px-6 py-4">
                   <span
@@ -110,16 +103,10 @@ export const ResearchEvidenceMatrixSection: React.FC = () => {
             className="rounded-xl border border-slate-200 bg-white p-5 shadow-xs"
           >
             <div className="flex items-center justify-between">
-              <span className="text-lg font-bold text-slate-900">
-                {project.identity.acronym}
-              </span>
-              <span className="font-mono text-xs text-slate-500">
-                {project.state.temporal}
-              </span>
+              <span className="text-lg font-bold text-slate-900">{project.identity.acronym}</span>
+              <span className="font-mono text-xs text-slate-500">{project.state.temporal}</span>
             </div>
-            <div className="mt-1 text-xs text-slate-500">
-              {project.identity.name}
-            </div>
+            <div className="mt-1 text-xs text-slate-500">{project.identity.name}</div>
 
             <div className="mt-3 flex flex-wrap gap-2">
               <span

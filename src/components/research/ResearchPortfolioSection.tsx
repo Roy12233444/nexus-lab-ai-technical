@@ -59,9 +59,7 @@ export const ResearchPortfolioSection: React.FC<ResearchPortfolioSectionProps> =
           <div>
             {/* Card Header: Index & Domain */}
             <div className="flex items-center justify-between border-b border-slate-100 pb-4">
-              <span className="font-mono text-xs font-bold text-sky-700">
-                VECTOR 0{idx + 1}
-              </span>
+              <span className="font-mono text-xs font-bold text-sky-700">VECTOR 0{idx + 1}</span>
               <span className="rounded-full bg-slate-100 px-3 py-1 font-mono text-xs font-medium text-slate-700">
                 {getDomainLabel(project.identity.domain)}
               </span>
@@ -72,9 +70,7 @@ export const ResearchPortfolioSection: React.FC<ResearchPortfolioSectionProps> =
               <h3 className="text-2xl font-bold tracking-tight text-slate-900">
                 {project.identity.acronym}
               </h3>
-              <div className="mt-1 font-mono text-xs text-slate-500">
-                {project.identity.name}
-              </div>
+              <div className="mt-1 font-mono text-xs text-slate-500">{project.identity.name}</div>
               <p className="mt-3 text-sm leading-relaxed text-slate-600">
                 {project.identity.tagline}
               </p>
@@ -88,7 +84,7 @@ export const ResearchPortfolioSection: React.FC<ResearchPortfolioSectionProps> =
 
             {/* Architecture Subsystems */}
             <div className="mt-5">
-              <div className="font-mono text-xs font-semibold text-slate-500 uppercase tracking-wider">
+              <div className="font-mono text-xs font-semibold tracking-wider text-slate-500 uppercase">
                 Core Subsystems
               </div>
               <ul className="mt-2 space-y-1.5 text-xs text-slate-600">
@@ -96,8 +92,7 @@ export const ResearchPortfolioSection: React.FC<ResearchPortfolioSectionProps> =
                   <li key={subsystem.name} className="flex items-start gap-2">
                     <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500"></span>
                     <span>
-                      <strong className="text-slate-800">{subsystem.name}:</strong>{' '}
-                      {subsystem.role}
+                      <strong className="text-slate-800">{subsystem.name}:</strong> {subsystem.role}
                     </span>
                   </li>
                 ))}

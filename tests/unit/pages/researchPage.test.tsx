@@ -10,9 +10,7 @@ describe('Research Page UI Implementation (Phase 04B.5)', () => {
       render(<Research />);
 
       // Section 01: Hero
-      expect(
-        screen.getByRole('heading', { level: 1, name: /Sovereign Research/i })
-      ).toBeDefined();
+      expect(screen.getByRole('heading', { level: 1, name: /Sovereign Research/i })).toBeDefined();
 
       // Section 02: Thesis
       expect(screen.getAllByText('Why We Research').length).toBeGreaterThan(0);
@@ -22,24 +20,16 @@ describe('Research Page UI Implementation (Phase 04B.5)', () => {
       expect(screen.getAllByText('Core Research Vectors').length).toBeGreaterThan(0);
 
       // Section 04: Domains
-      expect(
-        screen.getAllByText('Research Domains & Territories').length
-      ).toBeGreaterThan(0);
+      expect(screen.getAllByText('Research Domains & Territories').length).toBeGreaterThan(0);
 
       // Section 05: Evidence Matrix
-      expect(
-        screen.getAllByText('Epistemic Maturity & Evidence Matrix').length
-      ).toBeGreaterThan(0);
+      expect(screen.getAllByText('Epistemic Maturity & Evidence Matrix').length).toBeGreaterThan(0);
 
       // Section 06: Boundaries
-      expect(
-        screen.getAllByText('Research Boundaries & Non-Claims').length
-      ).toBeGreaterThan(0);
+      expect(screen.getAllByText('Research Boundaries & Non-Claims').length).toBeGreaterThan(0);
 
       // Section 07: Gateways
-      expect(
-        screen.getAllByText('Program Technical Dossiers').length
-      ).toBeGreaterThan(0);
+      expect(screen.getAllByText('Program Technical Dossiers').length).toBeGreaterThan(0);
 
       // Section 08: Closing
       expect(screen.getAllByText('Roots Before Fruits').length).toBeGreaterThan(0);
@@ -67,9 +57,9 @@ describe('Research Page UI Implementation (Phase 04B.5)', () => {
     it('renders research boundaries with explicit quarantined non-claims', () => {
       render(<Research />);
 
-      expect(
-        screen.getAllByText(/Explicit Non-Claims \(Quarantined\):/i).length
-      ).toBeGreaterThan(0);
+      expect(screen.getAllByText(/Explicit Non-Claims \(Quarantined\):/i).length).toBeGreaterThan(
+        0
+      );
       expect(screen.getAllByText(/BOUNDED SCOPE/i).length).toBeGreaterThan(0);
     });
 

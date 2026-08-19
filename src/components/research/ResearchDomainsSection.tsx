@@ -7,7 +7,8 @@ export const ResearchDomainsSection: React.FC = () => {
       title: 'Agent Execution & Orchestration',
       program: 'NALA',
       tag: 'RUNTIME SUBSTRATE',
-      challenge: 'Multi-step process collapse and crash recovery failure in long-running autonomous workflows.',
+      challenge:
+        'Multi-step process collapse and crash recovery failure in long-running autonomous workflows.',
       capabilities: [
         'Multi-timescale loop orchestration',
         'Transactional state checkpointing',
@@ -20,7 +21,8 @@ export const ResearchDomainsSection: React.FC = () => {
       title: 'Durable Memory & Identity',
       program: 'AMP',
       tag: 'COGNITIVE PERSISTENCE',
-      challenge: 'Stateless session loss, context buffer exhaustion, and catastrophic semantic amnesia in LLMs.',
+      challenge:
+        'Stateless session loss, context buffer exhaustion, and catastrophic semantic amnesia in LLMs.',
       capabilities: [
         'Working & episodic memory tiers',
         'Cryptographic state parameter hashing',
@@ -33,7 +35,8 @@ export const ResearchDomainsSection: React.FC = () => {
       title: 'Constitutional Safety & Governance',
       program: 'RTA-GUARD',
       tag: 'INTERCEPTION MIDDLEWARE',
-      challenge: 'Autonomous tool misfires, privilege escalation, and runtime divergence from invariant safety rules.',
+      challenge:
+        'Autonomous tool misfires, privilege escalation, and runtime divergence from invariant safety rules.',
       capabilities: [
         'Synchronous pre-execution action gating',
         'Constitutional policy rule verification',
@@ -46,7 +49,8 @@ export const ResearchDomainsSection: React.FC = () => {
       title: 'Distributed Multi-Orbital Systems',
       program: 'COSMOS',
       tag: 'SPACE-GRADE ARCHITECTURE',
-      challenge: 'Deep-space latency, radiation faults, and intermittent ground connectivity in satellite swarms.',
+      challenge:
+        'Deep-space latency, radiation faults, and intermittent ground connectivity in satellite swarms.',
       capabilities: [
         'Delay-Tolerant Networking (DTN)',
         'Autonomous orbital edge station-keeping',
@@ -65,27 +69,21 @@ export const ResearchDomainsSection: React.FC = () => {
         >
           <div>
             <div className="flex items-center justify-between">
-              <span className="font-mono text-xs font-bold text-sky-700">
-                {d.num}
-              </span>
+              <span className="font-mono text-xs font-bold text-sky-700">{d.num}</span>
               <span className="rounded bg-sky-50 px-2 py-0.5 font-mono text-[10px] font-semibold text-sky-800">
                 {d.program}
               </span>
             </div>
 
-            <h3 className="mt-4 text-lg font-bold text-slate-900">
-              {d.title}
-            </h3>
+            <h3 className="mt-4 text-lg font-bold text-slate-900">{d.title}</h3>
             <div className="mt-1 font-mono text-[11px] font-semibold tracking-wide text-slate-400 uppercase">
               {d.tag}
             </div>
 
-            <p className="mt-3 text-xs leading-relaxed text-slate-600">
-              {d.challenge}
-            </p>
+            <p className="mt-3 text-xs leading-relaxed text-slate-600">{d.challenge}</p>
 
             <div className="mt-4 border-t border-slate-100 pt-3">
-              <div className="font-mono text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+              <div className="font-mono text-[11px] font-semibold tracking-wider text-slate-500 uppercase">
                 Target Capabilities
               </div>
               <ul className="mt-2 space-y-1 text-xs text-slate-600">

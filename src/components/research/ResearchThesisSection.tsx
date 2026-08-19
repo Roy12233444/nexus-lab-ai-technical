@@ -17,7 +17,8 @@ export const ResearchThesisSection: React.FC = () => {
     {
       num: '03',
       failure: 'Unchecked Action Execution',
-      solution: 'Pre-execution synchronous action interception enforcing constitutional invariants.',
+      solution:
+        'Pre-execution synchronous action interception enforcing constitutional invariants.',
       vector: 'RTA-GUARD',
     },
     {
@@ -36,10 +37,13 @@ export const ResearchThesisSection: React.FC = () => {
           Why Ephemeral AI Wrappers Fail
         </h3>
         <p className="mt-4 text-base leading-relaxed text-slate-600">
-          Contemporary foundation models operate predominantly as stateless inference engines. When extended into autonomous workflows, they suffer rapid context exhaustion, memory amnesia, non-deterministic action side effects, and catastrophic failure under network partitions.
+          Contemporary foundation models operate predominantly as stateless inference engines. When
+          extended into autonomous workflows, they suffer rapid context exhaustion, memory amnesia,
+          non-deterministic action side effects, and catastrophic failure under network partitions.
         </p>
         <p className="mt-4 text-base leading-relaxed text-slate-600">
-          Nexus LAB AI investigates the foundational substrate required to transform fragile prompt loops into durable, verified, sovereign intelligent systems.
+          Nexus LAB AI investigates the foundational substrate required to transform fragile prompt
+          loops into durable, verified, sovereign intelligent systems.
         </p>
       </div>
 
@@ -55,9 +59,7 @@ export const ResearchThesisSection: React.FC = () => {
             </div>
             <div className="flex-1">
               <div className="flex items-center justify-between gap-2">
-                <span className="text-sm font-semibold text-slate-900">
-                  {pillar.failure}
-                </span>
+                <span className="text-sm font-semibold text-slate-900">{pillar.failure}</span>
                 <span className="rounded bg-slate-100 px-2 py-0.5 font-mono text-xs font-medium text-slate-600">
                   {pillar.vector}
                 </span>

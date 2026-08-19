@@ -27,9 +27,7 @@ export const ResearchGatewaysSection: React.FC<ResearchGatewaysSectionProps> = (
               <span className="font-mono text-xs font-bold text-sky-700">
                 {project.identity.acronym}
               </span>
-              <span className="font-mono text-[10px] text-slate-400">
-                DOSSIER →
-              </span>
+              <span className="font-mono text-[10px] text-slate-400">DOSSIER →</span>
             </div>
 
             <h3 className="mt-3 text-lg font-bold text-slate-900 group-hover:text-sky-700">
@@ -43,9 +41,7 @@ export const ResearchGatewaysSection: React.FC<ResearchGatewaysSectionProps> = (
 
           <div className="mt-6 flex items-center justify-between border-t border-slate-100 pt-4 font-mono text-xs font-semibold text-sky-700">
             <span>Open Specification</span>
-            <span className="transition-transform duration-200 group-hover:translate-x-1">
-              →
-            </span>
+            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
           </div>
         </a>
       ))}
