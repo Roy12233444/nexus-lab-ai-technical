@@ -3,6 +3,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Overview } from '@/pages/Overview/Overview';
 import { Research } from '@/pages/Research/Research';
+import { Technology } from '@/pages/Technology/Technology';
 import { ROUTES } from '@/lib/routes';
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
   };
 
   const renderCurrentPage = () => {
+    if (currentPath === ROUTES.TECHNOLOGY || currentPath.startsWith('/technology')) {
+      return <Technology onNavigate={handleNavigate} />;
+    }
     if (currentPath === ROUTES.RESEARCH || currentPath.startsWith('/research')) {
       return <Research onNavigate={handleNavigate} />;
     }
