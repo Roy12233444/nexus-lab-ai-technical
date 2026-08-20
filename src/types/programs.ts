@@ -52,28 +52,13 @@ export type ProgramId =
   | 'PROG-SYNAPTICODE-SPEC';
 
 export type ProgramMaturityState =
-  | 'CONCEPTUAL'
-  | 'SPECIFIED'
-  | 'PLANNED'
-  | 'IMPLEMENTED'
-  | 'EXPERIMENTAL'
-  | 'NOT_STARTED';
+  'CONCEPTUAL' | 'SPECIFIED' | 'PLANNED' | 'IMPLEMENTED' | 'EXPERIMENTAL' | 'NOT_STARTED';
 
 export type ProgramEvidenceState =
-  | 'UNKNOWN'
-  | 'DOCUMENTED'
-  | 'REPORTED'
-  | 'OBSERVED'
-  | 'VERIFIED'
-  | 'UNVERIFIED';
+  'UNKNOWN' | 'DOCUMENTED' | 'REPORTED' | 'OBSERVED' | 'VERIFIED' | 'UNVERIFIED';
 
 export type ProgramTemporalState =
-  | 'CURRENT'
-  | 'HISTORICAL'
-  | 'FUTURE'
-  | 'RETROSPECTIVE'
-  | 'DEFERRED'
-  | 'UNKNOWN';
+  'CURRENT' | 'HISTORICAL' | 'FUTURE' | 'RETROSPECTIVE' | 'DEFERRED' | 'UNKNOWN';
 
 export interface ProgramIdentity {
   id: ProgramId;

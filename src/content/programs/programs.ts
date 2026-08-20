@@ -5,11 +5,7 @@
  * Source Authority: docs/04D.2_AUTHORITATIVE_PROGRAMS_INFORMATION.md
  */
 
-import {
-  CanonicalProgramsRegistry,
-  CanonicalProgram,
-  ProgramClaim,
-} from '@/types/programs';
+import { CanonicalProgramsRegistry, CanonicalProgram, ProgramClaim } from '@/types/programs';
 
 export const CANONICAL_PROGRAMS_REGISTRY: CanonicalProgramsRegistry = {
   identity: {

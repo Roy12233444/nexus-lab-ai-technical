@@ -1,0 +1,135 @@
+import { ProgramsPageBlueprint } from '@/types/programSection';
+
+/**
+ * Nexus LAB AI — Canonical Programs Page Architecture Blueprint
+ * Phase 04D.4 — 8-Section Narrative & Engineering Systems Composition
+ */
+export const PROGRAMS_PAGE_BLUEPRINT: ProgramsPageBlueprint = {
+  pageId: 'programs',
+  route: '/programs',
+  title: 'Nexus LAB AI Programs Track',
+  description:
+    'Major Sovereign Systems Engineering Initiatives — Sovereign research and engineering programs architected from first principles across autonomous execution, durable cognitive memory, real-time safety middleware, System-2 reasoning, and distributed space infrastructure.',
+  sections: [
+    {
+      order: 1,
+      id: 'programs-hero',
+      title: 'Sovereign Engineering Initiatives',
+      eyebrow: 'Nexus LAB AI Programs',
+      purpose:
+        'Establish Nexus LAB AI Programs identity: major sovereign systems engineering initiatives built around fundamental challenges in autonomous intelligence, memory persistence, safety middleware, and space operating systems.',
+      sourceAuthority: 'TIER_1_CONSTITUTIONAL / TIER_2_ENGINEERING',
+      componentType: 'ProgramsHeroSection',
+      containerWidth: 'full',
+      background: 'primary',
+      spacing: 'none',
+      contentKey: 'identity',
+      dataSource: 'getPublicPrimaryPrograms',
+    },
+    {
+      order: 2,
+      id: 'programs-thesis',
+      title: 'The Architecture of a Program',
+      eyebrow: 'Institutional Mandate',
+      purpose:
+        'Articulate the distinction between Research (Inquiry/Why), Technology (Substrates/How), and Programs (Major Initiatives/What We Build), reinforcing that programs are long-horizon engineering initiatives, not commercial SaaS products.',
+      sourceAuthority: 'TIER_1_CONSTITUTIONAL / TIER_2_ENGINEERING',
+      componentType: 'ProgramsThesisSection',
+      containerWidth: 'content',
+      background: 'secondary',
+      spacing: 'md',
+      contentKey: 'identity',
+      dataSource: 'CANONICAL_PROGRAMS_REGISTRY',
+    },
+    {
+      order: 3,
+      id: 'programs-core',
+      title: 'Core Sovereign Programs',
+      eyebrow: 'Flagship Initiatives',
+      purpose:
+        'Present the four primary sovereign programs (NALA, AMP, RTA-GUARD, COSMOS) as independent technical vehicles with first-principles problem statements, architectural substrates, and decoupled 4-axis truth badges.',
+      sourceAuthority: 'TIER_2_ENGINEERING / TIER_3_VERIFIED_EVIDENCE / TIER_4_CURRENT_SPEC',
+      componentType: 'ProgramsCoreSection',
+      containerWidth: 'wide',
+      background: 'primary',
+      spacing: 'lg',
+      contentKey: 'programs',
+      dataSource: 'getPublicPrimaryPrograms',
+    },
+    {
+      order: 4,
+      id: 'programs-state',
+      title: 'Program State & Epistemic Reality Matrix',
+      eyebrow: 'Rigorous Epistemic Accounting',
+      purpose:
+        'Provide an uncompromised multi-axis accounting of all public programs, explicitly separating Maturity (Implemented/Specified/Planned/Experimental), Evidence Level (Verified/Reported/Documented), Temporal Horizon (Current/Future), and Public Tier.',
+      sourceAuthority: 'TIER_1_CONSTITUTIONAL / TIER_3_VERIFIED_EVIDENCE',
+      componentType: 'ProgramsStateSection',
+      containerWidth: 'wide',
+      background: 'secondary',
+      spacing: 'md',
+      contentKey: 'programs',
+      dataSource: 'getAllPublicPrograms',
+    },
+    {
+      order: 5,
+      id: 'programs-supporting',
+      title: 'Supporting Systems & Foundational Kernels',
+      eyebrow: 'Architectural Substrates',
+      purpose:
+        'Detail the supporting initiatives (CHAITANYA/SAPTACORE, PHANTAKSHA, RFA) that provide foundational reasoning primitives, memory-safe terminal relays, and non-orchestrated multi-agent coordination research.',
+      sourceAuthority: 'TIER_2_ENGINEERING / TIER_3_VERIFIED_EVIDENCE',
+      componentType: 'ProgramsSupportingSection',
+      containerWidth: 'wide',
+      background: 'primary',
+      spacing: 'lg',
+      contentKey: 'programs',
+      dataSource: 'getPublicSupportingPrograms',
+    },
+    {
+      order: 6,
+      id: 'programs-context',
+      title: 'Applied Systems Exploration',
+      eyebrow: 'Context-Bound Demonstration',
+      purpose:
+        'Present GRAMVANI with explicit contextual framing as an applied regional-language agronomy demonstration build developed for the Google Gen AI Academy APAC program.',
+      sourceAuthority: 'TIER_5_PORTFOLIO',
+      componentType: 'ProgramsContextSection',
+      containerWidth: 'content',
+      background: 'secondary',
+      spacing: 'md',
+      contentKey: 'programs',
+      dataSource: 'getPublicContextPrograms',
+    },
+    {
+      order: 7,
+      id: 'programs-boundaries',
+      title: 'Program Boundaries & Explicit Non-Claims',
+      eyebrow: 'Epistemic Firewall',
+      purpose:
+        'Expose explicit negative bounds and non-claims: zero claims of infinite unmonitored autonomy, universal memory solved, 100% exploit prevention, active orbital deployments, or commercial SaaS packaging.',
+      sourceAuthority: 'TIER_1_CONSTITUTIONAL',
+      componentType: 'ProgramsBoundariesSection',
+      containerWidth: 'content',
+      background: 'primary',
+      spacing: 'lg',
+      contentKey: 'quarantinedClaims',
+      dataSource: 'CANONICAL_PROGRAMS_REGISTRY',
+    },
+    {
+      order: 8,
+      id: 'programs-closing',
+      title: 'Engineering the Systems Frontier',
+      eyebrow: 'Long-Horizon Trajectory',
+      purpose:
+        'Synthesize the long-horizon direction of Nexus LAB AI programs: building sovereign, verified systems from first principles, testing under adversarial conditions, and methodically expanding the frontier of machine intelligence.',
+      sourceAuthority: 'TIER_1_CONSTITUTIONAL / TIER_2_ENGINEERING',
+      componentType: 'ProgramsClosingSection',
+      containerWidth: 'narrow',
+      background: 'secondary',
+      spacing: 'lg',
+      contentKey: 'identity',
+      dataSource: 'CANONICAL_PROGRAMS_REGISTRY',
+    },
+  ],
+};
