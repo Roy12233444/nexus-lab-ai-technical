@@ -11,9 +11,7 @@ export const TechnologyProjectMapSection: React.FC<TechnologyProjectMapSectionPr
   const projects = Object.values(CANONICAL_TECHNOLOGY_REGISTRY.projects);
 
   return (
-    <div
-      className="w-full border-b border-slate-200 bg-white py-20 lg:py-28"
-    >
+    <div className="w-full border-b border-slate-200 bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
         {/* Section Header */}
         <div className="mb-16 max-w-3xl space-y-3">

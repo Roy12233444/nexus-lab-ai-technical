@@ -36,11 +36,21 @@ describe('Phase 04C.5 — Technology Page UI Assembly & Component Suite', () => 
     expect(substratesSection).toBeDefined();
 
     expect(screen.getAllByText('CHAITANYA Sovereign Transformer Blocks').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('DHI Anderson-Accelerated Fixed-Point Solver').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('NALA 4-Layer Autonomous Execution Harness').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('AMP Chiranjeevi Rust Persistence Substrate').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('ARIES Transactional Crash Recovery Substrate').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('RTA-GUARD Pre-Execution Action Interceptor').length).toBeGreaterThan(0);
+    expect(
+      screen.getAllByText('DHI Anderson-Accelerated Fixed-Point Solver').length
+    ).toBeGreaterThan(0);
+    expect(screen.getAllByText('NALA 4-Layer Autonomous Execution Harness').length).toBeGreaterThan(
+      0
+    );
+    expect(
+      screen.getAllByText('AMP Chiranjeevi Rust Persistence Substrate').length
+    ).toBeGreaterThan(0);
+    expect(
+      screen.getAllByText('ARIES Transactional Crash Recovery Substrate').length
+    ).toBeGreaterThan(0);
+    expect(
+      screen.getAllByText('RTA-GUARD Pre-Execution Action Interceptor').length
+    ).toBeGreaterThan(0);
   });
 
   it('preserves sovereign project independence in the project map', () => {

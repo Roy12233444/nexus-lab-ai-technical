@@ -5,9 +5,7 @@ export const TechnologyDomainsSection: React.FC = () => {
   const domains = getPublicTechnologyDomains();
 
   return (
-    <div
-      className="w-full border-b border-slate-200 bg-slate-50 py-20 lg:py-28"
-    >
+    <div className="w-full border-b border-slate-200 bg-slate-50 py-20 lg:py-28">
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-16 max-w-3xl space-y-3">

@@ -10,9 +10,7 @@ export const TechnologyHeroSection: React.FC<TechnologyHeroSectionProps> = ({ on
   const { identity } = CANONICAL_TECHNOLOGY_REGISTRY;
 
   return (
-    <div
-      className="relative w-full border-b border-slate-200 bg-white py-16 lg:py-24 overflow-hidden"
-    >
+    <div className="relative w-full overflow-hidden border-b border-slate-200 bg-white py-16 lg:py-24">
       {/* Background Subtle Coordinate Grid */}
       <div
         aria-hidden="true"
@@ -56,9 +54,11 @@ export const TechnologyHeroSection: React.FC<TechnologyHeroSectionProps> = ({ on
                 href="#technology-architecture"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.getElementById('technology-architecture')?.scrollIntoView({ behavior: 'smooth' });
+                  document
+                    .getElementById('technology-architecture')
+                    ?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
               >
                 Explore 3-Tier Architecture
                 <span aria-hidden="true">↓</span>
@@ -69,10 +69,12 @@ export const TechnologyHeroSection: React.FC<TechnologyHeroSectionProps> = ({ on
                   if (onNavigate) {
                     onNavigate('/research');
                   } else {
-                    document.getElementById('technology-domains')?.scrollIntoView({ behavior: 'smooth' });
+                    document
+                      .getElementById('technology-domains')
+                      ?.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:border-slate-400 transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-400 hover:bg-slate-50"
               >
                 Research Vectors
                 <span aria-hidden="true">→</span>

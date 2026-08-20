@@ -18,9 +18,7 @@ export const TechnologyCapabilitiesSection: React.FC = () => {
       : allCapabilities.filter((c) => c.domainId === selectedDomain);
 
   return (
-    <div
-      className="w-full border-b border-slate-200 bg-white py-20 lg:py-28"
-    >
+    <div className="w-full border-b border-slate-200 bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
         {/* Section Header */}
         <div className="mb-12 max-w-3xl space-y-3">

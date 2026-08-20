@@ -5,9 +5,7 @@ export const TechnologySubstratesSection: React.FC = () => {
   const substrates = getPublicTechnologySubstrates();
 
   return (
-    <div
-      className="w-full border-b border-slate-200 bg-slate-50 py-20 lg:py-28"
-    >
+    <div className="w-full border-b border-slate-200 bg-slate-50 py-20 lg:py-28">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
         {/* Section Header */}
         <div className="mb-16 max-w-3xl space-y-3">
