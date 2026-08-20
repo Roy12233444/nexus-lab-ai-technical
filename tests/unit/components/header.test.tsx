@@ -16,12 +16,31 @@ describe('Header & Navigation System (Phase 03A)', () => {
       expect(brandLink.getAttribute('href')).toBe('/');
     });
 
-    it('renders all primary navigation routes in desktop nav', () => {
+    it('renders all primary navigation routes in desktop nav with exact sequence', () => {
       render(<Header currentPath="/" />);
-      PRIMARY_NAV_ITEMS.forEach((item) => {
-        const links = screen.getAllByRole('link', { name: item.label });
+      const expectedLabels = [
+        'Overview',
+        'Research',
+        'Technology',
+        'Programs',
+        'Philosophy',
+        'Future',
+        'Challenge',
+      ];
+
+      expect(PRIMARY_NAV_ITEMS.map((item) => item.label)).toEqual(expectedLabels);
+
+      expectedLabels.forEach((label) => {
+        const links = screen.getAllByRole('link', { name: label });
         expect(links.length).toBeGreaterThan(0);
       });
+    });
+
+    it('strictly excludes Evidence and Products from primary navigation', () => {
+      render(<Header currentPath="/" />);
+      const navEl = screen.getByRole('navigation', { name: /primary navigation/i });
+      expect(navEl.textContent).not.toContain('Evidence');
+      expect(navEl.textContent).not.toContain('Products');
     });
 
     it('displays active state for current path', () => {
