@@ -1,84 +1,64 @@
 import React from 'react';
-import { Card } from '@/components/ui/Card';
-import { Badge, BadgeVariant } from '@/components/ui/Badge';
 import { OVERVIEW_CONTENT } from '@/content/overview/overview';
-import { ResearchProgramRecord } from '@/types/overview';
+import { CheckCircle2, Clock } from 'lucide-react';
 
 export const StateMatrixSection: React.FC = () => {
   const { researchPrograms } = OVERVIEW_CONTENT;
 
-  const getBadgeVariant = (evidence: ResearchProgramRecord['evidence']): BadgeVariant => {
-    switch (evidence) {
-      case 'VERIFIED':
-        return 'verified';
-      case 'REPORTED':
-        return 'hypothesis';
-      case 'DOCUMENTED':
-        return 'default';
-      case 'OBSERVED':
-        return 'experimental';
-      default:
-        return 'default';
-    }
-  };
-
   return (
-    <Card
-      variant="bordered"
-      padding="none"
-      className="overflow-hidden bg-[var(--nexus-bg-primary)]"
-    >
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse text-left text-xs">
-          <thead>
-            <tr className="border-b border-[var(--nexus-border-default)] bg-[var(--nexus-bg-secondary)]">
-              <th className="px-4 py-3 font-semibold text-[var(--nexus-text-primary)]">Program</th>
-              <th className="px-4 py-3 font-semibold text-[var(--nexus-text-primary)]">
-                Maturity State
-              </th>
-              <th className="px-4 py-3 font-semibold text-[var(--nexus-text-primary)]">
-                Evidence Level
-              </th>
-              <th className="px-4 py-3 font-semibold text-[var(--nexus-text-primary)]">
-                Temporal Scope
-              </th>
-              <th className="px-4 py-3 font-semibold text-[var(--nexus-text-primary)]">
-                Public Role
-              </th>
+    <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <table className="w-full text-left text-xs sm:text-sm">
+        <thead className="border-b border-slate-200 bg-slate-50 font-mono text-[11px] font-bold text-slate-700 uppercase">
+          <tr>
+            <th className="px-6 py-4">Program & Vector</th>
+            <th className="px-6 py-4">Maturity State</th>
+            <th className="px-6 py-4">Evidence Level</th>
+            <th className="px-6 py-4">Temporal Scope</th>
+            <th className="px-6 py-4">Public Mandate</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-slate-100 font-sans">
+          {researchPrograms.map((prog) => (
+            <tr key={prog.id} className="transition-colors hover:bg-slate-50/80">
+              <td className="px-6 py-4">
+                <div className="space-y-0.5">
+                  <span className="font-bold text-slate-900">{prog.name}</span>
+                  <span className="block font-mono text-[10px] text-slate-500">{prog.tagline}</span>
+                </div>
+              </td>
+              <td className="px-6 py-4">
+                <span className="rounded bg-slate-900 px-2 py-0.5 font-mono text-[10px] font-bold text-white">
+                  {prog.maturity}
+                </span>
+              </td>
+              <td className="px-6 py-4">
+                <span
+                  className={`inline-flex items-center gap-1 rounded px-2.5 py-1 font-mono text-[10px] font-bold uppercase ${
+                    prog.evidence === 'VERIFIED'
+                      ? 'border border-emerald-300 bg-emerald-100 text-emerald-900'
+                      : prog.evidence === 'REPORTED'
+                        ? 'border border-indigo-300 bg-indigo-100 text-indigo-900'
+                        : 'border border-amber-300 bg-amber-100 text-amber-900'
+                  }`}
+                >
+                  <CheckCircle2 className="h-3 w-3" />
+                  <span>{prog.evidence}</span>
+                </span>
+              </td>
+              <td className="px-6 py-4 font-mono text-xs text-slate-600">
+                <span className="inline-flex items-center gap-1">
+                  <Clock className="h-3 w-3 text-slate-400" />
+                  <span>{prog.temporalState}</span>
+                </span>
+              </td>
+              <td className="px-6 py-4 leading-relaxed font-medium text-slate-700">
+                {prog.publicRelevance}
+              </td>
             </tr>
-          </thead>
-          <tbody className="divide-y divide-[var(--nexus-border-default)]">
-            {researchPrograms.map((prog) => (
-              <tr
-                key={prog.id}
-                className="nexus-transition-fast hover:bg-[var(--nexus-bg-secondary)]"
-              >
-                <td className="px-4 py-3.5 font-semibold text-[var(--nexus-text-primary)]">
-                  {prog.name}
-                  <span className="block text-[11px] font-normal text-[var(--nexus-text-muted)]">
-                    {prog.tagline}
-                  </span>
-                </td>
-                <td className="px-4 py-3.5">
-                  <span className="nexus-code-inline text-[11px]">{prog.maturity}</span>
-                </td>
-                <td className="px-4 py-3.5">
-                  <Badge variant={getBadgeVariant(prog.evidence)} size="sm">
-                    {prog.evidence}
-                  </Badge>
-                </td>
-                <td className="px-4 py-3.5 text-[var(--nexus-text-secondary)]">
-                  {prog.temporalState}
-                </td>
-                <td className="px-4 py-3.5 font-medium text-[var(--nexus-text-secondary)]">
-                  {prog.publicRelevance}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </Card>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

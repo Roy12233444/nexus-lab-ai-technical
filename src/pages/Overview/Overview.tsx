@@ -28,7 +28,7 @@ export const Overview: React.FC<OverviewProps> = ({ onNavigate }) => {
       <Section
         id="thesis-worldview"
         spacing="md"
-        width="reading"
+        width="content"
         background="secondary"
         eyebrow="First Principles"
         title="The Core Thesis"
@@ -41,7 +41,7 @@ export const Overview: React.FC<OverviewProps> = ({ onNavigate }) => {
       <Section
         id="mission-scope"
         spacing="md"
-        width="reading"
+        width="content"
         background="primary"
         eyebrow="Scope & Mandate"
         title="Institutional Mission"

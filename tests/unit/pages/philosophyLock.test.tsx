@@ -23,11 +23,7 @@ import {
 } from '@/content/philosophy/philosophy';
 import { PHILOSOPHY_PAGE_BLUEPRINT } from '@/content/philosophy/sectionArchitecture';
 import { validatePhilosophyContent } from '@/lib/validation/philosophyContentValidation';
-import {
-  CanonicalPhilosophyRegistry,
-  ConceptId,
-  HypothesisStatus,
-} from '@/types/philosophy';
+import { CanonicalPhilosophyRegistry, ConceptId, HypothesisStatus } from '@/types/philosophy';
 
 describe('Phase 04E.6 — Philosophy Verification & Adversarial Lock Audit Suite', () => {
   // =========================================================================
@@ -232,9 +228,9 @@ describe('Phase 04E.6 — Philosophy Verification & Adversarial Lock Audit Suite
 
       const result = validatePhilosophyContent(hostileRegistry);
       expect(result.isValid).toBe(false);
-      expect(
-        result.errors.some((e) => e.includes('asserts VERIFIED production benchmark'))
-      ).toBe(true);
+      expect(result.errors.some((e) => e.includes('asserts VERIFIED production benchmark'))).toBe(
+        true
+      );
     });
 
     it('KC-PLOCK-06: Deletion of concept nonClaims[] is blocked by validation', () => {
