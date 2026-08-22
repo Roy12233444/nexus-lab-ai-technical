@@ -42,12 +42,6 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, c
             >
               <NexusBrandLogo size="sm" />
             </a>
-
-            {/* Version / Research Tag */}
-            <div className="hidden items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 font-mono text-[10px] font-bold text-slate-500 xl:flex">
-              <span className="h-1.5 w-1.5 rounded-full bg-sky-500" />
-              <span>R&D 2026</span>
-            </div>
           </div>
 
           {/* Center: Desktop Pill Navigation */}
