@@ -16,7 +16,9 @@ describe('Phase 04F.5 — Physical Future UI Implementation (`/future`)', () => 
       });
 
       // Verify exact linear sequence in DOM
-      const sectionElements = document.querySelectorAll('section[id^="future-"], div[id^="future-"]');
+      const sectionElements = document.querySelectorAll(
+        'section[id^="future-"], div[id^="future-"]'
+      );
       const renderedIds = Array.from(sectionElements)
         .map((el) => el.id)
         .filter((id) => id.startsWith('future-'));

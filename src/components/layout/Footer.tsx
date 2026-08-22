@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { FOOTER_NAV_GROUPS, ROUTES } from '@/lib/routes';
-import { SITE_CONFIG, SYSTEM_MILESTONES } from '@/lib/constants';
+import { SITE_CONFIG } from '@/lib/constants';
 import { StatusIndicator } from '@/components/ui/StatusIndicator';
 import { NexusBrandLogo } from '@/components/ui/NexusBrandLogo';
 
@@ -79,22 +79,6 @@ export const Footer: React.FC<FooterProps> = ({ className, onNavigate }) => {
                 </ul>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Milestone Indicators */}
-        <div className="mt-12 flex flex-wrap items-center gap-4 border-t border-[var(--nexus-border-default)] pt-8 text-xs text-[var(--nexus-text-muted)]">
-          <div className="flex items-center gap-1.5 font-mono text-[11px]">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            <span>01 {SYSTEM_MILESTONES.foundation}</span>
-          </div>
-          <div className="flex items-center gap-1.5 font-mono text-[11px]">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            <span>02 {SYSTEM_MILESTONES.designSystem}</span>
-          </div>
-          <div className="flex items-center gap-1.5 font-mono text-[11px]">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            <span>03 {SYSTEM_MILESTONES.shell}</span>
           </div>
         </div>
 

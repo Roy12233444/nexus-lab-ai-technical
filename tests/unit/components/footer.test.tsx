@@ -49,12 +49,5 @@ describe('Footer & Legal/Meta System (Phase 03B)', () => {
       expect(screen.getByText(new RegExp(`${SITE_CONFIG.year}`))).toBeDefined();
       expect(screen.getByText(SITE_CONFIG.license)).toBeDefined();
     });
-
-    it('renders system milestone status indicators', () => {
-      render(<Footer />);
-      expect(screen.getByText(/01 locked/i)).toBeDefined();
-      expect(screen.getByText(/02 locked/i)).toBeDefined();
-      expect(screen.getByText(/03 locked/i)).toBeDefined();
-    });
   });
 });
