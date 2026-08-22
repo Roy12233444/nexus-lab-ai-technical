@@ -9,21 +9,6 @@ export const PhilosophyMappingSection: React.FC = () => {
 
   return (
     <div className="space-y-8">
-      {/* Subheader */}
-      <div className="max-w-3xl space-y-2">
-        <span className="font-mono text-xs font-bold tracking-widest text-sky-700 uppercase">
-          01.08 Nexus Mapping
-        </span>
-        <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-          Nexus Architectural Alignment Matrix
-        </h2>
-        <p className="font-sans text-base leading-relaxed text-slate-600">
-          How classical concepts translate into active Nexus LAB AI engineering initiatives.
-          Mappings are strictly categorized into Direct architectural components, Research
-          hypotheses, and Conceptual analogies.
-        </p>
-      </div>
-
       {/* Alignment Matrix Table */}
       <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
         <table className="w-full text-left text-xs sm:text-sm">

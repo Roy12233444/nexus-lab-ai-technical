@@ -16,12 +16,6 @@ export const PhilosophyClosingSection: React.FC<PhilosophyClosingSectionProps> =
     <div className="mx-auto max-w-3xl space-y-8 text-center">
       {/* Narrative Synthesis */}
       <div className="space-y-4">
-        <span className="font-mono text-xs font-bold tracking-widest text-sky-700 uppercase">
-          Long-Horizon Trajectory
-        </span>
-        <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-          An Enduring Framework for Verifiable Cognition
-        </h2>
         <p className="font-sans text-base leading-relaxed text-slate-600 sm:text-lg">
           {identity.mandate}
         </p>

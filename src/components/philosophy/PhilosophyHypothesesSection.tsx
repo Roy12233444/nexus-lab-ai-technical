@@ -7,21 +7,6 @@ export const PhilosophyHypothesesSection: React.FC = () => {
 
   return (
     <div className="space-y-8">
-      {/* Subheader */}
-      <div className="max-w-3xl space-y-2">
-        <span className="font-mono text-xs font-bold tracking-widest text-sky-700 uppercase">
-          01.07 AI Hypotheses
-        </span>
-        <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-          Testable AI Research Hypotheses
-        </h2>
-        <p className="font-sans text-base leading-relaxed text-slate-600">
-          Rigorous computational conjectures derived from classical Indian philosophy. Every
-          hypothesis is explicitly designated as an unproven conjecture subject to rigorous
-          empirical falsification.
-        </p>
-      </div>
-
       {/* 8 Hypotheses Grid */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {hypotheses.map((h) => (

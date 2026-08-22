@@ -7,21 +7,6 @@ export const PhilosophyBoundariesSection: React.FC = () => {
 
   return (
     <div className="space-y-10">
-      {/* Subheader */}
-      <div className="max-w-3xl space-y-2">
-        <span className="font-mono text-xs font-bold tracking-widest text-amber-700 uppercase">
-          Epistemic Safeguards
-        </span>
-        <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-          Epistemic Firewall & Explicit Non-Claims
-        </h2>
-        <p className="font-sans text-base leading-relaxed text-slate-600">
-          The public boundary layer establishing what Nexus LAB AI does NOT claim. Classical Indian
-          traditions are treated as profound intellectual frameworks for inquiry, not ancient
-          blueprints for modern electronics.
-        </p>
-      </div>
-
       {/* Claims vs Non-Claims Comparative Grid */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {/* What Nexus LAB AI Claims */}

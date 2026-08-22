@@ -4,20 +4,6 @@ import { CheckCircle2, Sparkles, XCircle, ShieldAlert } from 'lucide-react';
 export const PhilosophyFormalizationSection: React.FC = () => {
   return (
     <div className="space-y-8">
-      {/* Subheader */}
-      <div className="max-w-3xl space-y-2">
-        <span className="font-mono text-xs font-bold tracking-widest text-sky-700 uppercase">
-          01.06 Formalization
-        </span>
-        <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-          The Formalization Frontier
-        </h2>
-        <p className="font-sans text-base leading-relaxed text-slate-600">
-          What can legitimately be translated into computation? Nexus LAB AI establishes three
-          strict zones of computational tractability, preventing metaphysical cargo-culting.
-        </p>
-      </div>
-
       {/* 3 Zones Grid */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {/* Zone 1 */}

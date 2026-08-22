@@ -7,20 +7,6 @@ export const PhilosophyPrinciplesSection: React.FC = () => {
 
   return (
     <div className="space-y-8">
-      {/* Section Subheader */}
-      <div className="max-w-3xl space-y-2">
-        <span className="font-mono text-xs font-bold tracking-widest text-sky-700 uppercase">
-          Public Epistemic Constitution
-        </span>
-        <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-          The Eight Foundational Principles
-        </h2>
-        <p className="font-sans text-base leading-relaxed text-slate-600">
-          The non-negotiable intellectual constitution governing all Nexus LAB AI research,
-          formalization, and systems engineering.
-        </p>
-      </div>
-
       {/* 8 Principles Responsive Grid */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {principles.map((p) => (
@@ -36,7 +22,7 @@ export const PhilosophyPrinciplesSection: React.FC = () => {
                   <span className="rounded bg-slate-900 px-2 py-0.5 text-white">0{p.order}</span>
                   <span className="text-slate-500">{p.id}</span>
                 </div>
-                <div className="flex items-center gap-1 font-mono text-xs font-semibold text-sky-700 uppercase">
+                <div className="flex items-center gap-1.5 font-mono text-xs font-semibold text-sky-700 uppercase">
                   <Sparkles className="h-3.5 w-3.5 text-sky-500" />
                   <span>{p.sanskritAnchor}</span>
                 </div>
@@ -73,17 +59,18 @@ export const PhilosophyPrinciplesSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Engineering Consequence */}
-            <div className="mt-6 space-y-1.5 border-t border-slate-100 pt-4">
+            {/* Concrete Engineering Consequence with Lucide CPU Icon */}
+            <div className="mt-6 space-y-2 border-t border-slate-100 pt-4">
               <div className="flex items-center gap-1.5">
                 <Cpu className="h-4 w-4 text-sky-700" />
                 <span className="block font-mono text-[10px] font-bold tracking-wider text-sky-800 uppercase">
                   Concrete Engineering Consequence
                 </span>
               </div>
-              <p className="font-sans text-xs font-medium text-slate-900 sm:text-sm">
-                ⚙️ {p.engineeringConsequence}
-              </p>
+              <div className="flex items-start gap-2 text-xs font-medium text-slate-900 sm:text-sm">
+                <Cpu className="mt-0.5 h-4 w-4 shrink-0 text-sky-600" />
+                <span>{p.engineeringConsequence}</span>
+              </div>
             </div>
           </article>
         ))}
