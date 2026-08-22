@@ -11,7 +11,10 @@ import {
   CANONICAL_CHALLENGE_IDS,
   CANONICAL_PRESSURE_DIMENSIONS,
 } from '../../../src/lib/validation/challengeContentValidation';
-import { getAllChallenges, getGlobalChallengeNegativeBoundaries } from '../../../src/content/challenge/challenge';
+import {
+  getAllChallenges,
+  getGlobalChallengeNegativeBoundaries,
+} from '../../../src/content/challenge/challenge';
 
 describe('Phase 04G.5 — Physical Challenge Page UI (/challenge)', () => {
   it('PAGE-01: Renders all 10 canonical sections in exact sequential order', () => {
@@ -78,7 +81,9 @@ describe('Phase 04G.5 — Physical Challenge Page UI (/challenge)', () => {
     const struckElements = container.querySelectorAll('.line-through');
     expect(struckElements.length).toBeGreaterThanOrEqual(3);
 
-    const quarantinedText = screen.getByText(/Nexus LAB AI has completely solved autonomous multi-agent deadlock/);
+    const quarantinedText = screen.getByText(
+      /Nexus LAB AI has completely solved autonomous multi-agent deadlock/
+    );
     expect(quarantinedText).toBeDefined();
   });
 
@@ -111,7 +116,7 @@ describe('Phase 04G.5 — Physical Challenge Page UI (/challenge)', () => {
     const onNavigateMock = vi.fn();
     render(<Challenge onNavigate={onNavigateMock} />);
 
-    const programButtons = screen.getAllByRole('button', { name: /Explore Track →/i });
+    const programButtons = screen.getAllByRole('button', { name: /Explore Track/i });
     fireEvent.click(programButtons[0]);
 
     expect(onNavigateMock).toHaveBeenCalled();
@@ -158,7 +163,9 @@ describe('Phase 04G.5 — Kill-Critic Hostile UI Attack Defense', () => {
   it('KC-GUI-04: Guarantees multi-agent coordination does not claim unlimited swarm scaling', () => {
     render(<Challenge />);
     expect(
-      screen.getByText(/Nexus LAB AI does not claim general autonomous recovery, zero-hallucination models, or unlimited multi-agent scaling are solved/i),
+      screen.getByText(
+        /Nexus LAB AI does not claim general autonomous recovery, zero-hallucination models, or unlimited multi-agent scaling are solved/i
+      )
     ).toBeDefined();
   });
 
