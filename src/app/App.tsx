@@ -5,6 +5,7 @@ import { Overview } from '@/pages/Overview/Overview';
 import { Research } from '@/pages/Research/Research';
 import { Technology } from '@/pages/Technology/Technology';
 import { Programs } from '@/pages/Programs/Programs';
+import { Philosophy } from '@/pages/Philosophy/Philosophy';
 import { ROUTES } from '@/lib/routes';
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
   };
 
   const renderCurrentPage = () => {
+    if (currentPath === ROUTES.PHILOSOPHY || currentPath.startsWith('/philosophy')) {
+      return <Philosophy onNavigate={handleNavigate} />;
+    }
     if (currentPath === ROUTES.PROGRAMS || currentPath.startsWith('/programs')) {
       return <Programs onNavigate={handleNavigate} />;
     }
