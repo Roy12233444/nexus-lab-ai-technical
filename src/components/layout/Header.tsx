@@ -4,6 +4,7 @@ import { Menu } from 'lucide-react';
 import { Navigation } from './Navigation';
 import { MobileNavigation } from '@/components/navigation/MobileNavigation';
 import { StatusIndicator } from '@/components/ui/StatusIndicator';
+import { NexusBrandLogo } from '@/components/ui/NexusBrandLogo';
 import { ROUTES } from '@/lib/routes';
 
 export interface HeaderProps {
@@ -19,12 +20,12 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, c
     <header
       role="banner"
       className={clsx(
-        'nexus-transition-fast fixed top-0 right-0 left-0 z-[var(--nexus-z-header)] w-full border-b border-[var(--nexus-border-default)] bg-[var(--nexus-bg-primary)]/90 shadow-2xs backdrop-blur-md',
+        'nexus-transition-fast fixed top-0 right-0 left-0 z-[var(--nexus-z-header)] w-full border-b border-[var(--nexus-border-default)] bg-[var(--nexus-bg-primary)]/95 shadow-2xs backdrop-blur-md',
         className
       )}
     >
       <div className="nexus-container flex h-16 items-center justify-between">
-        {/* Left: Brand Identity (Text-only without separate icon logo) */}
+        {/* Left: Custom Geometric Brand Wordmark */}
         <div className="flex items-center gap-6">
           <a
             href={ROUTES.HOME}
@@ -35,20 +36,13 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, c
               }
             }}
             aria-label="Nexus LAB AI Home"
-            className="flex items-center gap-2 rounded-[var(--nexus-radius-sm)] select-none focus-visible:ring-2 focus-visible:ring-[var(--nexus-text-primary)] focus-visible:outline-none"
+            className="flex items-center rounded-[var(--nexus-radius-sm)] select-none focus-visible:ring-2 focus-visible:ring-[var(--nexus-text-primary)] focus-visible:outline-none"
           >
-            <div className="flex flex-col">
-              <span className="text-sm font-black tracking-tight text-[var(--nexus-text-primary)]">
-                NEXUS LAB AI
-              </span>
-              <span className="text-[10px] font-medium tracking-wider text-[var(--nexus-text-muted)] uppercase">
-                AI SYSTEMS INNOVATION COMPANY
-              </span>
-            </div>
+            <NexusBrandLogo size="sm" />
           </a>
         </div>
 
-        {/* Center: Desktop Navigation (Overview, Research, Technology, Evidence, Products, Philosophy, Future, Challenge) */}
+        {/* Center: Desktop Navigation */}
         <Navigation currentPath={currentPath} onNavigate={onNavigate} />
 
         {/* Right: Technical State & Mobile Trigger */}

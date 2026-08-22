@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { FOOTER_NAV_GROUPS, ROUTES } from '@/lib/routes';
 import { SITE_CONFIG, SYSTEM_MILESTONES } from '@/lib/constants';
 import { StatusIndicator } from '@/components/ui/StatusIndicator';
+import { NexusBrandLogo } from '@/components/ui/NexusBrandLogo';
 
 export interface FooterProps {
   className?: string;
@@ -33,14 +34,9 @@ export const Footer: React.FC<FooterProps> = ({ className, onNavigate }) => {
                 }
               }}
               aria-label="Nexus LAB AI Home"
-              className="inline-flex w-fit items-center gap-2.5 rounded-[var(--nexus-radius-sm)] select-none focus-visible:ring-2 focus-visible:ring-[var(--nexus-text-primary)] focus-visible:outline-none"
+              className="inline-flex w-fit items-center rounded-[var(--nexus-radius-sm)] select-none focus-visible:ring-2 focus-visible:ring-[var(--nexus-text-primary)] focus-visible:outline-none"
             >
-              <div className="flex h-7 w-7 items-center justify-center rounded-[var(--nexus-radius-sm)] bg-[var(--nexus-text-primary)] text-xs font-bold text-[var(--nexus-text-inverse)]">
-                N
-              </div>
-              <span className="text-sm font-bold tracking-tight text-[var(--nexus-text-primary)]">
-                NEXUS<span className="ml-1 font-normal text-[var(--nexus-text-muted)]">LAB AI</span>
-              </span>
+              <NexusBrandLogo size="md" />
             </a>
 
             <p className="nexus-meta-label text-xs text-[var(--nexus-text-muted)]">
@@ -60,13 +56,12 @@ export const Footer: React.FC<FooterProps> = ({ className, onNavigate }) => {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:col-span-3">
             {FOOTER_NAV_GROUPS.map((group) => (
               <div key={group.title} className="flex flex-col gap-3">
-                <span className="nexus-meta-label text-xs font-semibold text-[var(--nexus-text-primary)]">
+                <h4 className="nexus-meta-label text-xs font-semibold text-[var(--nexus-text-primary)] uppercase">
                   {group.title}
-                </span>
-
-                <ul className="m-0 flex list-none flex-col gap-2 p-0" role="list">
+                </h4>
+                <ul className="flex flex-col gap-2">
                   {group.items.map((item) => (
-                    <li key={item.href}>
+                    <li key={item.label}>
                       <a
                         href={item.href}
                         onClick={(e) => {
@@ -75,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({ className, onNavigate }) => {
                             onNavigate(item.href);
                           }
                         }}
-                        className="nexus-body-sm nexus-transition-fast rounded-[var(--nexus-radius-sm)] text-[var(--nexus-text-secondary)] hover:text-[var(--nexus-text-primary)] focus-visible:ring-2 focus-visible:ring-[var(--nexus-text-primary)] focus-visible:outline-none"
+                        className="nexus-body-sm text-[var(--nexus-text-muted)] hover:text-[var(--nexus-text-primary)] focus-visible:ring-1 focus-visible:ring-[var(--nexus-text-primary)] focus-visible:outline-none"
                       >
                         {item.label}
                       </a>
@@ -87,23 +82,34 @@ export const Footer: React.FC<FooterProps> = ({ className, onNavigate }) => {
           </div>
         </div>
 
-        {/* Bottom Bar: Legal & System Metadata */}
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-[var(--nexus-border-default)] pt-8 sm:flex-row">
-          <div className="flex flex-wrap items-center gap-4 text-xs text-[var(--nexus-text-muted)]">
-            <span>
-              &copy; {SITE_CONFIG.year} {SITE_CONFIG.name}. All rights reserved.
-            </span>
-            <span>&bull;</span>
-            <span className="nexus-meta-label text-[10px]">{SITE_CONFIG.license}</span>
+        {/* Milestone Indicators */}
+        <div className="mt-12 flex flex-wrap items-center gap-4 border-t border-[var(--nexus-border-default)] pt-8 text-xs text-[var(--nexus-text-muted)]">
+          <div className="flex items-center gap-1.5 font-mono text-[11px]">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            <span>01 {SYSTEM_MILESTONES.foundation}</span>
+          </div>
+          <div className="flex items-center gap-1.5 font-mono text-[11px]">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            <span>02 {SYSTEM_MILESTONES.designSystem}</span>
+          </div>
+          <div className="flex items-center gap-1.5 font-mono text-[11px]">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            <span>03 {SYSTEM_MILESTONES.shell}</span>
+          </div>
+        </div>
+
+        {/* Bottom Bar: License & Copyright */}
+        <div className="mt-6 flex flex-col items-center justify-between gap-4 border-t border-[var(--nexus-border-default)] pt-6 text-xs text-[var(--nexus-text-muted)] sm:flex-row">
+          <div className="flex flex-wrap items-center gap-4">
+            <span>© {SITE_CONFIG.year} {SITE_CONFIG.name}. All rights reserved.</span>
+            <span className="text-[var(--nexus-border-strong)]">•</span>
+            <span>{SITE_CONFIG.license}</span>
+            <span className="text-[var(--nexus-border-strong)]">•</span>
+            <span>Technical Foundation v{SITE_CONFIG.version}</span>
           </div>
 
-          {/* System Milestone Status Chips */}
-          <div className="flex flex-wrap items-center gap-2 text-xs">
-            <span className="nexus-code-inline text-[11px]">01 {SYSTEM_MILESTONES.foundation}</span>
-            <span className="nexus-code-inline text-[11px]">
-              02 {SYSTEM_MILESTONES.designSystem}
-            </span>
-            <span className="nexus-code-inline text-[11px]">03 {SYSTEM_MILESTONES.shell}</span>
+          <div className="flex items-center gap-4">
+            <span>Security: SAIF Compliant</span>
           </div>
         </div>
       </div>
