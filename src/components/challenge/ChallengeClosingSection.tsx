@@ -17,7 +17,7 @@ interface TrackGateway {
 const TRACK_GATEWAYS: TrackGateway[] = [
   {
     title: 'Research Programs',
-    track: '04D',
+    track: 'PROGRAMS',
     route: '/programs',
     description: 'Explore the 4 sovereign programs: NALA, AMP, RTA-GUARD, and COSMOS.',
     tag: 'SYSTEMS',
@@ -25,7 +25,7 @@ const TRACK_GATEWAYS: TrackGateway[] = [
   },
   {
     title: 'Foundational Philosophy',
-    track: '04E',
+    track: 'PHILOSOPHY',
     route: '/philosophy',
     description:
       'Investigate Pramāṇa epistemology, agency, resilient state, and cognitive foundations.',
@@ -34,7 +34,7 @@ const TRACK_GATEWAYS: TrackGateway[] = [
   },
   {
     title: 'Strategic Future Track',
-    track: '04F',
+    track: 'FUTURE',
     route: '/future',
     description:
       'Examine research horizons, systems evolution, and sovereign long-range trajectories.',
@@ -43,7 +43,7 @@ const TRACK_GATEWAYS: TrackGateway[] = [
   },
   {
     title: 'Technology Substrates',
-    track: '04C',
+    track: 'TECHNOLOGY',
     route: '/technology',
     description: 'Review sovereign technology domains, runtime substrates, and execution engines.',
     tag: 'PLATFORM',
