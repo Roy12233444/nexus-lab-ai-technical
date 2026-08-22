@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, c
     <header
       role="banner"
       className={clsx(
-        'nexus-transition-fast sticky top-0 z-[var(--nexus-z-header)] w-full border-b border-[var(--nexus-border-default)] bg-[var(--nexus-bg-primary)]/90 backdrop-blur-md',
+        'nexus-transition-fast fixed top-0 right-0 left-0 z-[var(--nexus-z-header)] w-full border-b border-[var(--nexus-border-default)] bg-[var(--nexus-bg-primary)]/90 shadow-2xs backdrop-blur-md',
         className
       )}
     >
@@ -60,18 +60,17 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, c
           {/* Mobile Menu Trigger */}
           <button
             type="button"
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-navigation"
-            aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             onClick={() => setIsMobileMenuOpen(true)}
-            className="nexus-transition-fast flex rounded-[var(--nexus-radius-md)] p-2 text-[var(--nexus-text-muted)] hover:bg-[var(--nexus-bg-tertiary)] hover:text-[var(--nexus-text-primary)] focus-visible:ring-2 focus-visible:ring-[var(--nexus-text-primary)] focus-visible:outline-none md:hidden"
+            aria-label="Open navigation menu"
+            aria-expanded={isMobileMenuOpen}
+            className="flex h-9 w-9 items-center justify-center rounded-[var(--nexus-radius-md)] border border-[var(--nexus-border-default)] text-[var(--nexus-text-secondary)] hover:border-[var(--nexus-border-strong)] hover:text-[var(--nexus-text-primary)] focus-visible:ring-2 focus-visible:ring-[var(--nexus-text-primary)] focus-visible:outline-none lg:hidden"
           >
             <Menu className="h-5 w-5" />
           </button>
         </div>
       </div>
 
-      {/* Mobile Navigation Drawer */}
+      {/* Mobile Drawer */}
       <MobileNavigation
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
