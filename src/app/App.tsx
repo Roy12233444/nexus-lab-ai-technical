@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="flex min-h-screen flex-col bg-[var(--nexus-bg-primary)] text-[var(--nexus-text-primary)]">
       <Header currentPath={currentPath} onNavigate={handleNavigate} />
-      <main className="flex-1 pt-16">{renderCurrentPage()}</main>
+      <main className="flex-1 pt-18 sm:pt-20">{renderCurrentPage()}</main>
       <Footer onNavigate={handleNavigate} />
     </div>
   );

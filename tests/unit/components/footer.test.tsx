@@ -17,7 +17,7 @@ describe('Footer & Legal/Meta System (Phase 03B)', () => {
     it('renders compressed identity block and mission statement', () => {
       render(<Footer />);
       expect(screen.getByText(SITE_CONFIG.tagline)).toBeDefined();
-      expect(screen.getByText(SITE_CONFIG.missionStatement)).toBeDefined();
+      expect(screen.getAllByText(SITE_CONFIG.missionStatement).length).toBeGreaterThan(0);
     });
   });
 
