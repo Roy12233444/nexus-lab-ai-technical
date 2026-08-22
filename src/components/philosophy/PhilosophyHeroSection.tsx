@@ -1,6 +1,7 @@
 import React from 'react';
 import { CANONICAL_PHILOSOPHY_REGISTRY } from '@/content/philosophy/philosophy';
 import { PhilosophyHeroVisual } from './PhilosophyHeroVisual';
+import { Compass, Network, Layers, BookMarked, ShieldCheck, Sparkles } from 'lucide-react';
 
 export const PhilosophyHeroSection: React.FC = () => {
   const { identity, metadata } = CANONICAL_PHILOSOPHY_REGISTRY;
@@ -44,27 +45,31 @@ export const PhilosophyHeroSection: React.FC = () => {
               {identity.declaration}
             </p>
 
-            {/* Structural Metrics Ticker */}
+            {/* Structural Metrics Ticker with Lucide Icons */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <div className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2">
+                <Layers className="h-4 w-4 text-sky-600" />
                 <span className="font-mono text-lg font-bold text-slate-900">
                   {metadata.totalConcepts}
                 </span>
                 <span className="font-mono text-xs text-slate-600 uppercase">Concepts</span>
               </div>
               <div className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2">
+                <BookMarked className="h-4 w-4 text-sky-600" />
                 <span className="font-mono text-lg font-bold text-slate-900">
                   0{metadata.principlesCount}
                 </span>
                 <span className="font-mono text-xs text-slate-600 uppercase">Principles</span>
               </div>
               <div className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2">
+                <ShieldCheck className="h-4 w-4 text-sky-600" />
                 <span className="font-mono text-lg font-bold text-slate-900">
                   {metadata.claimsCount}
                 </span>
                 <span className="font-mono text-xs text-slate-600 uppercase">Public Claims</span>
               </div>
               <div className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2">
+                <Sparkles className="h-4 w-4 text-sky-600" />
                 <span className="font-mono text-lg font-bold text-slate-900">
                   0{metadata.hypothesesCount}
                 </span>
@@ -72,7 +77,7 @@ export const PhilosophyHeroSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Action Buttons */}
+            {/* Action Buttons with Lucide Icons */}
             <div className="flex flex-wrap items-center gap-4 pt-4">
               <a
                 href="#philosophy-principles"
@@ -82,8 +87,9 @@ export const PhilosophyHeroSection: React.FC = () => {
                     .getElementById('philosophy-principles')
                     ?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center justify-center rounded-lg bg-slate-900 px-6 py-3 font-sans text-sm font-semibold text-white shadow-sm transition-all hover:bg-slate-800 hover:shadow"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-sans text-sm font-semibold text-white shadow-sm transition-all hover:bg-slate-800 hover:shadow"
               >
+                <Compass className="h-4 w-4" />
                 Explore Foundational Principles
               </a>
               <a
@@ -94,8 +100,9 @@ export const PhilosophyHeroSection: React.FC = () => {
                     .getElementById('philosophy-mapping')
                     ?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3 font-sans text-sm font-semibold text-slate-700 shadow-sm transition-all hover:bg-slate-50"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 font-sans text-sm font-semibold text-slate-700 shadow-sm transition-all hover:bg-slate-50"
               >
+                <Network className="h-4 w-4 text-slate-500" />
                 View Systems Alignment Matrix
               </a>
             </div>

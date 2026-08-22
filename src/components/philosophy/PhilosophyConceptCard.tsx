@@ -1,5 +1,6 @@
 import React from 'react';
 import { PhilosophyConcept } from '@/types/philosophy';
+import { ShieldAlert, Sparkles, BookOpen, Layers, CheckCircle2 } from 'lucide-react';
 
 interface PhilosophyConceptCardProps {
   concept: PhilosophyConcept;
@@ -41,7 +42,7 @@ export const PhilosophyConceptCard: React.FC<PhilosophyConceptCardProps> = ({ co
           <div className="flex flex-wrap items-center gap-1.5 font-mono text-[10px] font-semibold">
             {/* Mapping Badge */}
             <span
-              className={`rounded px-2 py-0.5 ${
+              className={`inline-flex items-center gap-1 rounded px-2 py-0.5 ${
                 nexusMapping.category === 'DIRECT'
                   ? 'border border-emerald-200 bg-emerald-50 text-emerald-800'
                   : nexusMapping.category === 'RESEARCH'
@@ -49,16 +50,19 @@ export const PhilosophyConceptCard: React.FC<PhilosophyConceptCardProps> = ({ co
                     : 'border border-purple-200 bg-purple-50 text-purple-800'
               }`}
             >
+              <Layers className="h-3 w-3" />
               {nexusMapping.category}: {nexusMapping.target}
             </span>
 
             {/* Evidence Badge */}
-            <span className="rounded border border-slate-200 bg-slate-50 px-2 py-0.5 text-slate-700">
+            <span className="inline-flex items-center gap-1 rounded border border-slate-200 bg-slate-50 px-2 py-0.5 text-slate-700">
+              <CheckCircle2 className="h-3 w-3 text-slate-500" />
               {evidenceState.philosophicalSource}
             </span>
 
             {hypothesisId && (
-              <span className="rounded border border-indigo-200 bg-indigo-50 px-2 py-0.5 text-indigo-700">
+              <span className="inline-flex items-center gap-1 rounded border border-indigo-200 bg-indigo-50 px-2 py-0.5 text-indigo-700">
+                <Sparkles className="h-3 w-3 text-indigo-500" />
                 {hypothesisId}
               </span>
             )}
@@ -77,9 +81,12 @@ export const PhilosophyConceptCard: React.FC<PhilosophyConceptCardProps> = ({ co
 
         {/* Philosophical Question (Layer 2) */}
         <div className="space-y-1 rounded-xl border border-sky-100 bg-sky-50/50 p-4">
-          <span className="block font-mono text-[10px] font-bold tracking-wider text-sky-900 uppercase">
-            Fundamental Philosophical Question
-          </span>
+          <div className="flex items-center gap-1.5">
+            <BookOpen className="h-3.5 w-3.5 text-sky-700" />
+            <span className="block font-mono text-[10px] font-bold tracking-wider text-sky-900 uppercase">
+              Fundamental Philosophical Question
+            </span>
+          </div>
           <p className="font-sans text-xs font-medium text-sky-950 italic sm:text-sm">
             "{philosophicalQuestion}"
           </p>
@@ -109,13 +116,16 @@ export const PhilosophyConceptCard: React.FC<PhilosophyConceptCardProps> = ({ co
       {/* Explicit Negative Non-Claims (Layer 8) */}
       {nonClaims.length > 0 && (
         <div className="mt-6 space-y-2 border-t border-slate-100 pt-4">
-          <span className="block font-mono text-[10px] font-bold tracking-wider text-amber-900 uppercase">
-            Explicit Negative Boundaries
-          </span>
-          <ul className="space-y-1">
+          <div className="flex items-center gap-1.5">
+            <ShieldAlert className="h-3.5 w-3.5 text-amber-700" />
+            <span className="block font-mono text-[10px] font-bold tracking-wider text-amber-900 uppercase">
+              Explicit Negative Boundaries
+            </span>
+          </div>
+          <ul className="space-y-1.5">
             {nonClaims.map((nc, idx) => (
-              <li key={idx} className="flex items-start gap-2 font-sans text-xs text-slate-500">
-                <span className="font-bold text-amber-600 select-none">🛡️</span>
+              <li key={idx} className="flex items-start gap-2 font-sans text-xs text-slate-600">
+                <ShieldAlert className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-600" />
                 <span className="italic">{nc}</span>
               </li>
             ))}

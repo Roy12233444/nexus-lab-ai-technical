@@ -1,5 +1,6 @@
 import React from 'react';
 import { CANONICAL_PHILOSOPHY_REGISTRY } from '@/content/philosophy/philosophy';
+import { Activity, Microscope } from 'lucide-react';
 
 export const PhilosophyHypothesesSection: React.FC = () => {
   const hypotheses = Object.values(CANONICAL_PHILOSOPHY_REGISTRY.hypotheses);
@@ -38,9 +39,10 @@ export const PhilosophyHypothesesSection: React.FC = () => {
                   </span>
                   <span className="font-mono text-xs text-slate-500">{h.conceptId}</span>
                 </div>
-                <span className="rounded border border-indigo-200 bg-indigo-50 px-2 py-0.5 font-mono text-[10px] font-bold text-indigo-700 uppercase">
-                  ● {h.status}
-                </span>
+                <div className="inline-flex items-center gap-1 rounded border border-indigo-200 bg-indigo-50 px-2 py-0.5 font-mono text-[10px] font-bold text-indigo-700 uppercase">
+                  <Activity className="h-3 w-3 text-indigo-600" />
+                  <span>{h.status}</span>
+                </div>
               </div>
 
               {/* Title & Core Hypothesis Statement */}
@@ -64,11 +66,14 @@ export const PhilosophyHypothesesSection: React.FC = () => {
 
             {/* Falsification Invariant */}
             <div className="mt-6 space-y-1 border-t border-slate-100 pt-4">
-              <span className="block font-mono text-[10px] font-bold text-amber-900 uppercase">
-                Epistemic Classification
-              </span>
+              <div className="flex items-center gap-1.5">
+                <Microscope className="h-3.5 w-3.5 text-amber-700" />
+                <span className="block font-mono text-[10px] font-bold text-amber-900 uppercase">
+                  Epistemic Classification
+                </span>
+              </div>
               <p className="font-sans text-xs text-slate-600 italic">
-                🔬 Subject to rigorous empirical falsification in production benchmarks
+                Subject to rigorous empirical falsification in production benchmarks
               </p>
             </div>
           </article>

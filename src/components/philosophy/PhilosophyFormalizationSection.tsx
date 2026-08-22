@@ -1,4 +1,5 @@
 import React from 'react';
+import { CheckCircle2, Sparkles, XCircle, ShieldAlert } from 'lucide-react';
 
 export const PhilosophyFormalizationSection: React.FC = () => {
   return (
@@ -20,33 +21,35 @@ export const PhilosophyFormalizationSection: React.FC = () => {
       {/* 3 Zones Grid */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {/* Zone 1 */}
-        <div className="flex flex-col justify-between space-y-4 rounded-2xl border border-emerald-200 bg-emerald-50/40 p-6 sm:p-8">
+        <div className="flex flex-col justify-between space-y-4 rounded-2xl border border-emerald-200 bg-emerald-50/40 p-6 shadow-2xs sm:p-8">
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <span className="font-mono text-[10px] font-bold tracking-wider text-emerald-800 uppercase">
                 ZONE 01 : TRACTABLE
               </span>
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
+              <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
             </div>
             <h3 className="text-xl font-bold text-slate-900">Computationally Representable</h3>
             <p className="text-xs leading-relaxed text-slate-700">
               Discrete formal structures directly encodable into software architectures and formal
               verification algorithms.
             </p>
-            <ul className="space-y-1.5 pt-2 text-xs font-medium text-slate-800">
+            <ul className="space-y-2 pt-2 text-xs font-medium text-slate-800">
               <li className="flex items-center gap-2">
-                <span className="font-bold text-emerald-600">✓</span> Pañcāvayava 5-Step Proof Trees
+                <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600" />
+                <span>Pañcāvayava 5-Step Proof Trees</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="font-bold text-emerald-600">✓</span> Pramāṇa Provenance Tagging
+                <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600" />
+                <span>Pramāṇa Provenance Tagging</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="font-bold text-emerald-600">✓</span> Svadharma Constraint
-                Boundaries
+                <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600" />
+                <span>Svadharma Constraint Boundaries</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="font-bold text-emerald-600">✓</span> Adhikāra Pre-Flight
-                Verification
+                <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600" />
+                <span>Adhikāra Pre-Flight Verification</span>
               </li>
             </ul>
           </div>
@@ -56,31 +59,35 @@ export const PhilosophyFormalizationSection: React.FC = () => {
         </div>
 
         {/* Zone 2 */}
-        <div className="flex flex-col justify-between space-y-4 rounded-2xl border border-sky-200 bg-sky-50/40 p-6 sm:p-8">
+        <div className="flex flex-col justify-between space-y-4 rounded-2xl border border-sky-200 bg-sky-50/40 p-6 shadow-2xs sm:p-8">
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <span className="font-mono text-[10px] font-bold tracking-wider text-sky-800 uppercase">
                 ZONE 02 : EXPLORATORY
               </span>
-              <span className="h-2 w-2 rounded-full bg-sky-500" />
+              <span className="h-2.5 w-2.5 rounded-full bg-sky-500" />
             </div>
             <h3 className="text-xl font-bold text-slate-900">Computationally Approximable</h3>
             <p className="text-xs leading-relaxed text-slate-700">
               Continuous or heuristic cognitive dynamics requiring empirical approximation and
               neural-symbolic benchmarking.
             </p>
-            <ul className="space-y-1.5 pt-2 text-xs font-medium text-slate-800">
+            <ul className="space-y-2 pt-2 text-xs font-medium text-slate-800">
               <li className="flex items-center gap-2">
-                <span className="font-bold text-sky-600">◈</span> Antaḥkaraṇa Multi-Tier Stack
+                <Sparkles className="h-4 w-4 shrink-0 text-sky-600" />
+                <span>Antaḥkaraṇa Multi-Tier Stack</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="font-bold text-sky-600">◈</span> Saṃskāra Latent Memory Traces
+                <Sparkles className="h-4 w-4 shrink-0 text-sky-600" />
+                <span>Saṃskāra Latent Memory Traces</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="font-bold text-sky-600">◈</span> Cittavṛtti Attention Gating
+                <Sparkles className="h-4 w-4 shrink-0 text-sky-600" />
+                <span>Cittavṛtti Attention Gating</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="font-bold text-sky-600">◈</span> Syādvāda Multi-Perspective Logic
+                <Sparkles className="h-4 w-4 shrink-0 text-sky-600" />
+                <span>Syādvāda Multi-Perspective Logic</span>
               </li>
             </ul>
           </div>
@@ -90,32 +97,35 @@ export const PhilosophyFormalizationSection: React.FC = () => {
         </div>
 
         {/* Zone 3 */}
-        <div className="flex flex-col justify-between space-y-4 rounded-2xl border border-amber-200 bg-amber-50/40 p-6 sm:p-8">
+        <div className="flex flex-col justify-between space-y-4 rounded-2xl border border-amber-200 bg-amber-50/40 p-6 shadow-2xs sm:p-8">
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <span className="font-mono text-[10px] font-bold tracking-wider text-amber-800 uppercase">
                 ZONE 03 : FIREWALLED
               </span>
-              <span className="h-2 w-2 rounded-full bg-amber-500" />
+              <ShieldAlert className="h-4 w-4 text-amber-600" />
             </div>
             <h3 className="text-xl font-bold text-slate-900">Philosophically Open</h3>
             <p className="text-xs leading-relaxed text-slate-700">
               Metaphysical and conscious experiential domains strictly quarantined from
               computational equivalence claims.
             </p>
-            <ul className="space-y-1.5 pt-2 text-xs font-medium text-slate-800">
+            <ul className="space-y-2 pt-2 text-xs font-medium text-slate-800">
               <li className="flex items-center gap-2">
-                <span className="font-bold text-amber-600">✕</span> Subjective Conscious Qualia
+                <XCircle className="h-4 w-4 shrink-0 text-amber-700" />
+                <span>Subjective Conscious Qualia</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="font-bold text-amber-600">✕</span> Puruṣa (Pure Witnessing
-                Sentience)
+                <XCircle className="h-4 w-4 shrink-0 text-amber-700" />
+                <span>Puruṣa (Pure Witnessing Sentience)</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="font-bold text-amber-600">✕</span> Mokṣa / Liberation Metaphysics
+                <XCircle className="h-4 w-4 shrink-0 text-amber-700" />
+                <span>Mokṣa / Liberation Metaphysics</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="font-bold text-amber-600">✕</span> Cosmological Speculations
+                <XCircle className="h-4 w-4 shrink-0 text-amber-700" />
+                <span>Cosmological Speculations</span>
               </li>
             </ul>
           </div>

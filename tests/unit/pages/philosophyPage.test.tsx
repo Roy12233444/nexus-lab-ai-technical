@@ -56,7 +56,7 @@ describe('Phase 04E.5 — Philosophy Page UI Implementation', () => {
 
       principles.forEach((p) => {
         expect(screen.getByText(p.title)).toBeDefined();
-        expect(screen.getByText(`⚙️ ${p.engineeringConsequence}`)).toBeDefined();
+        expect(screen.getByText(new RegExp(p.engineeringConsequence, 'i'))).toBeDefined();
       });
     });
 
@@ -81,7 +81,7 @@ describe('Phase 04E.5 — Philosophy Page UI Implementation', () => {
 
       hypotheses.forEach((h) => {
         expect(screen.getByText(h.title)).toBeDefined();
-        expect(screen.getAllByText(`● ${h.status}`).length).toBeGreaterThan(0);
+        expect(screen.getAllByText(h.status).length).toBeGreaterThan(0);
       });
     });
   });
@@ -105,7 +105,7 @@ describe('Phase 04E.5 — Philosophy Page UI Implementation', () => {
 
     it('KC-UI-02: Guarantees zero hypotheses render as proven engineering facts', () => {
       render(<Philosophy />);
-      const provenBadges = screen.queryByText(/● PROVEN_FACT/i);
+      const provenBadges = screen.queryByText(/PROVEN_FACT/i);
       expect(provenBadges).toBeNull();
     });
 
