@@ -21,10 +21,7 @@ import {
   CANONICAL_CHALLENGE_IDS,
   CANONICAL_PRESSURE_DIMENSIONS,
 } from '../../../src/lib/validation/challengeContentValidation';
-import {
-  ChallengeContentModel,
-  ChallengeId,
-} from '../../../src/types/challenge';
+import { ChallengeContentModel, ChallengeId } from '../../../src/types/challenge';
 
 describe('Phase 04G.2 — Authoritative Challenge Content Model & Invariant Engine', () => {
   it('validates that CANONICAL_CHALLENGE_CONTENT satisfies all validation rules with 0 errors', () => {
