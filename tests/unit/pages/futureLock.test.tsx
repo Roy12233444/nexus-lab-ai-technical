@@ -95,9 +95,7 @@ describe('Phase 04F.6 — Hostile Verification & Immutable Lock (`/future`)', ()
 
       // 02: Thesis -> 2.png
       const thesisSection = document.getElementById('future-thesis');
-      expect(thesisSection?.querySelector('img')?.getAttribute('src')).toBe(
-        '/images/future/2.png'
-      );
+      expect(thesisSection?.querySelector('img')?.getAttribute('src')).toBe('/images/future/2.png');
 
       // 03: Directions -> 3.png
       const dirSection = document.getElementById('future-directions');
