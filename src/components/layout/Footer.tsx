@@ -101,7 +101,9 @@ export const Footer: React.FC<FooterProps> = ({ className, onNavigate }) => {
         {/* Bottom Bar: License & Copyright */}
         <div className="mt-6 flex flex-col items-center justify-between gap-4 border-t border-[var(--nexus-border-default)] pt-6 text-xs text-[var(--nexus-text-muted)] sm:flex-row">
           <div className="flex flex-wrap items-center gap-4">
-            <span>© {SITE_CONFIG.year} {SITE_CONFIG.name}. All rights reserved.</span>
+            <span>
+              © {SITE_CONFIG.year} {SITE_CONFIG.name}. All rights reserved.
+            </span>
             <span className="text-[var(--nexus-border-strong)]">•</span>
             <span>{SITE_CONFIG.license}</span>
             <span className="text-[var(--nexus-border-strong)]">•</span>
