@@ -7,6 +7,7 @@ import { Technology } from '@/pages/Technology/Technology';
 import { Programs } from '@/pages/Programs/Programs';
 import { Philosophy } from '@/pages/Philosophy/Philosophy';
 import { Future } from '@/pages/Future/Future';
+import { Challenge } from '@/pages/Challenge/Challenge';
 import { ROUTES } from '@/lib/routes';
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
   };
 
   const renderCurrentPage = () => {
+    if (currentPath === ROUTES.CHALLENGE || currentPath.startsWith('/challenge')) {
+      return <Challenge onNavigate={handleNavigate} />;
+    }
     if (currentPath === ROUTES.FUTURE || currentPath.startsWith('/future')) {
       return <Future onNavigate={handleNavigate} />;
     }
