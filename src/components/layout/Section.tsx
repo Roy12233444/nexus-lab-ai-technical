@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import clsx from 'clsx';
+import { motion, useReducedMotion } from 'framer-motion';
 
 export interface SectionProps extends React.HTMLAttributes<HTMLElement> {
   spacing?: 'none' | 'sm' | 'md' | 'lg';
@@ -8,6 +9,7 @@ export interface SectionProps extends React.HTMLAttributes<HTMLElement> {
   eyebrow?: string;
   title?: string;
   description?: string;
+  animateOnScroll?: boolean;
 }
 
 export const Section = forwardRef<HTMLElement, SectionProps>(
@@ -19,12 +21,17 @@ export const Section = forwardRef<HTMLElement, SectionProps>(
       eyebrow,
       title,
       description,
+      animateOnScroll = true,
       className,
       children,
       ...props
     },
     ref
   ) => {
+    const shouldReduceMotion = useReducedMotion();
+    const isTest = typeof process !== 'undefined' && process.env.NODE_ENV === 'test';
+    const enableMotion = animateOnScroll && !shouldReduceMotion && !isTest;
+
     const spacingStyles = {
       none: 'py-0',
       sm: 'nexus-section-sm',
@@ -48,26 +55,41 @@ export const Section = forwardRef<HTMLElement, SectionProps>(
 
     const hasHeader = Boolean(eyebrow || title || description);
 
+    const innerContent = (
+      <div className={widthStyles[width]}>
+        {hasHeader && (
+          <div className="mb-10 flex flex-col gap-2">
+            {eyebrow && <p className="nexus-meta-label">{eyebrow}</p>}
+            {title && <h2 className="nexus-h2 font-semibold tracking-tight">{title}</h2>}
+            {description && (
+              <p className="nexus-body-lg mt-1 max-w-3xl text-[var(--nexus-text-secondary)]">
+                {description}
+              </p>
+            )}
+          </div>
+        )}
+        {children}
+      </div>
+    );
+
     return (
       <section
         ref={ref}
         className={clsx(backgroundStyles[background], spacingStyles[spacing], className)}
         {...props}
       >
-        <div className={widthStyles[width]}>
-          {hasHeader && (
-            <div className="mb-10 flex flex-col gap-2">
-              {eyebrow && <p className="nexus-meta-label">{eyebrow}</p>}
-              {title && <h2 className="nexus-h2 font-semibold tracking-tight">{title}</h2>}
-              {description && (
-                <p className="nexus-body-lg mt-1 max-w-3xl text-[var(--nexus-text-secondary)]">
-                  {description}
-                </p>
-              )}
-            </div>
-          )}
-          {children}
-        </div>
+        {enableMotion ? (
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.45, ease: [0.2, 0, 0, 1] }}
+          >
+            {innerContent}
+          </motion.div>
+        ) : (
+          innerContent
+        )}
       </section>
     );
   }

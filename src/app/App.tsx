@@ -9,6 +9,8 @@ import { Philosophy } from '@/pages/Philosophy/Philosophy';
 import { Future } from '@/pages/Future/Future';
 import { Challenge } from '@/pages/Challenge/Challenge';
 import { ROUTES } from '@/lib/routes';
+import { ScrollProgress } from '@/components/motion/ScrollProgress';
+import { ScrollToTop } from '@/components/motion/ScrollToTop';
 
 function App() {
   const [currentPath, setCurrentPath] = useState<string>(() => {
@@ -54,9 +56,11 @@ function App() {
 
   return (
     <div className="flex min-h-screen flex-col bg-[var(--nexus-bg-primary)] text-[var(--nexus-text-primary)]">
+      <ScrollProgress />
       <Header currentPath={currentPath} onNavigate={handleNavigate} />
       <main className="flex-1 pt-18 sm:pt-20">{renderCurrentPage()}</main>
       <Footer onNavigate={handleNavigate} />
+      <ScrollToTop />
     </div>
   );
 }
