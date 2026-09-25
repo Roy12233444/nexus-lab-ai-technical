@@ -8,6 +8,7 @@ import { Programs } from '@/pages/Programs/Programs';
 import { Philosophy } from '@/pages/Philosophy/Philosophy';
 import { Future } from '@/pages/Future/Future';
 import { Challenge } from '@/pages/Challenge/Challenge';
+import { Constitution } from '@/pages/Constitution/Constitution';
 import { ROUTES } from '@/lib/routes';
 import { ScrollProgress } from '@/components/motion/ScrollProgress';
 import { ScrollToTop } from '@/components/motion/ScrollToTop';
@@ -38,6 +39,9 @@ function App() {
     }
     if (currentPath === ROUTES.FUTURE || currentPath.startsWith('/future')) {
       return <Future onNavigate={handleNavigate} />;
+    }
+    if (currentPath === ROUTES.CONSTITUTION || currentPath.startsWith('/constitution')) {
+      return <Constitution onNavigate={handleNavigate} />;
     }
     if (currentPath === ROUTES.PHILOSOPHY || currentPath.startsWith('/philosophy')) {
       return <Philosophy onNavigate={handleNavigate} />;

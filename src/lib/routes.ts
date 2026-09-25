@@ -21,6 +21,7 @@ export const ROUTES = {
   FUTURE: '/future',
   CHALLENGE: '/challenge',
   INNOVATION_ENGINE: '/innovation-engine',
+  CONSTITUTION: '/constitution',
 } as const;
 
 export interface NavItem {
@@ -39,6 +40,7 @@ export const PRIMARY_NAV_ITEMS: NavItem[] = [
   { label: 'Overview', href: ROUTES.HOME },
   { label: 'Research', href: ROUTES.RESEARCH },
   { label: 'Technology', href: ROUTES.TECHNOLOGY },
+  { label: 'Constitution', href: ROUTES.CONSTITUTION },
   { label: 'Programs', href: ROUTES.PROGRAMS },
   { label: 'Philosophy', href: ROUTES.PHILOSOPHY },
   { label: 'Future', href: ROUTES.FUTURE },
@@ -52,6 +54,7 @@ export const FOOTER_NAV_GROUPS: NavGroup[] = [
       { label: 'Overview', href: ROUTES.HOME },
       { label: 'Research Programs', href: ROUTES.RESEARCH },
       { label: 'Technology Capabilities', href: ROUTES.TECHNOLOGY },
+      { label: 'Architecture Constitution', href: ROUTES.CONSTITUTION },
       { label: 'Programs', href: ROUTES.PROGRAMS },
     ],
   },
@@ -68,6 +71,7 @@ export const FOOTER_NAV_GROUPS: NavGroup[] = [
   {
     title: 'Systems & Architecture',
     items: [
+      { label: 'Architecture Constitution', href: ROUTES.CONSTITUTION },
       { label: 'Engineering Philosophy', href: ROUTES.PHILOSOPHY },
       { label: 'Horizon & Roadmap', href: ROUTES.FUTURE },
       { label: 'Technical Challenge', href: ROUTES.CHALLENGE },
