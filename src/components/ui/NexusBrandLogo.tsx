@@ -25,9 +25,9 @@ export const NexusBrandLogo: React.FC<NexusBrandLogoProps> = ({
     md: {
       container: 'h-12',
       iconSize: 'w-11 h-11 sm:w-12 sm:h-12',
-      titleHeight: 25,
-      subtitleSize: 'text-[10.5px] sm:text-[11px] tracking-normal',
-      gap: 'gap-3 sm:gap-3.5',
+      titleHeight: 24,
+      subtitleSize: 'text-[9px] sm:text-[10px] tracking-tight',
+      gap: 'gap-2.5 sm:gap-3',
     },
     lg: {
       container: 'h-16',

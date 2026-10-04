@@ -25,10 +25,10 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, c
         className
       )}
     >
-      <div className="mx-auto max-w-7xl">
-        <div className="flex h-14 items-center justify-between rounded-2xl border border-slate-200/80 bg-white/90 px-4 shadow-sm shadow-slate-900/5 backdrop-blur-xl transition-all sm:h-16 sm:px-6">
-          {/* Left: Custom Geometric Brand Wordmark */}
-          <div className="flex items-center gap-4 sm:gap-6">
+      <div className="mx-auto max-w-7xl 2xl:max-w-[1440px]">
+        <div className="flex h-14 items-center justify-between rounded-2xl border border-slate-200/80 bg-white/90 px-3 sm:px-5 lg:px-6 shadow-sm shadow-slate-900/5 backdrop-blur-xl transition-all sm:h-16">
+          {/* Left: Custom Geometric Brand Wordmark (Kept Prominent & Bold) */}
+          <div className="flex items-center shrink-0">
             <a
               href={ROUTES.HOME}
               onClick={(e) => {
@@ -48,9 +48,9 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, c
           <Navigation currentPath={currentPath} onNavigate={onNavigate} />
 
           {/* Right: Technical State & Action Portal */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
             {/* Status Beacon Indicator */}
-            <div className="hidden items-center rounded-xl border border-slate-200/80 bg-slate-50/80 px-3 py-1.5 sm:flex">
+            <div className="hidden items-center rounded-xl border border-slate-200/80 bg-slate-50/80 px-3 py-1.5 sm:flex whitespace-nowrap shrink-0">
               <StatusIndicator status="active" label="CORE SYSTEM" size="sm" pulse />
             </div>
 
@@ -63,7 +63,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, c
                   onNavigate(ROUTES.RESEARCH);
                 }
               }}
-              className="group hidden items-center gap-1.5 rounded-xl bg-slate-900 px-3.5 py-1.5 font-sans text-xs font-bold text-white shadow-xs transition-all duration-200 hover:bg-slate-800 hover:shadow-sm md:inline-flex"
+              className="group hidden items-center gap-1.5 rounded-xl bg-slate-900 px-3.5 py-1.5 font-sans text-xs font-bold text-white shadow-xs transition-all duration-200 hover:bg-slate-800 hover:shadow-sm md:inline-flex whitespace-nowrap shrink-0"
             >
               <span>Explore Lab</span>
               <ArrowUpRight className="h-3.5 w-3.5 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" />

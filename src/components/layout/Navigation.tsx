@@ -17,7 +17,7 @@ export const Navigation: React.FC<NavigationProps> = ({
     <nav
       aria-label="Primary Navigation"
       className={clsx(
-        'hidden items-center gap-1 rounded-xl border border-slate-200/60 bg-slate-100/80 p-1 backdrop-blur-sm lg:flex',
+        'hidden items-center gap-0.5 xl:gap-1 rounded-xl border border-slate-200/60 bg-slate-100/80 p-1 backdrop-blur-sm lg:flex shrink-0',
         className
       )}
     >
@@ -37,7 +37,7 @@ export const Navigation: React.FC<NavigationProps> = ({
               }
             }}
             className={clsx(
-              'relative rounded-lg px-3.5 py-1.5 font-sans text-xs font-semibold tracking-tight transition-all duration-200 select-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:outline-none',
+              'relative rounded-lg px-2.5 xl:px-3.5 py-1.5 font-sans text-xs font-semibold tracking-tight transition-all duration-200 select-none whitespace-nowrap focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:outline-none',
               isActive
                 ? 'border border-slate-200/80 bg-white font-bold text-slate-900 shadow-xs'
                 : 'text-slate-600 hover:bg-white/60 hover:text-slate-900'
