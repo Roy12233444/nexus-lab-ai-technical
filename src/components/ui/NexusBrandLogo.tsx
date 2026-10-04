@@ -16,25 +16,25 @@ export const NexusBrandLogo: React.FC<NexusBrandLogoProps> = ({
 }) => {
   const sizeStyles = {
     sm: {
-      container: 'h-8',
-      iconSize: 'w-7 h-7 sm:w-8 sm:h-8',
-      titleHeight: 18,
-      subtitleSize: 'text-[9px] tracking-tight',
-      gap: 'gap-2 sm:gap-2.5',
-    },
-    md: {
       container: 'h-10',
       iconSize: 'w-9 h-9 sm:w-10 sm:h-10',
-      titleHeight: 22,
-      subtitleSize: 'text-[10px] tracking-normal',
+      titleHeight: 21,
+      subtitleSize: 'text-[9.5px] sm:text-[10px] tracking-tight',
       gap: 'gap-2.5 sm:gap-3',
     },
-    lg: {
-      container: 'h-14',
-      iconSize: 'w-12 h-12',
-      titleHeight: 30,
-      subtitleSize: 'text-xs tracking-wide',
+    md: {
+      container: 'h-12',
+      iconSize: 'w-11 h-11 sm:w-12 sm:h-12',
+      titleHeight: 25,
+      subtitleSize: 'text-[10.5px] sm:text-[11px] tracking-normal',
       gap: 'gap-3 sm:gap-3.5',
+    },
+    lg: {
+      container: 'h-16',
+      iconSize: 'w-14 h-14 sm:w-16 sm:h-16',
+      titleHeight: 32,
+      subtitleSize: 'text-xs sm:text-sm tracking-wide',
+      gap: 'gap-3.5 sm:gap-4',
     },
   };
 
@@ -49,9 +49,10 @@ export const NexusBrandLogo: React.FC<NexusBrandLogoProps> = ({
             src="/images/nexus-logo-white-icon.png"
             alt="Nexus LAB AI Minimalist White App Icon"
             className={clsx(
-              'rounded-lg sm:rounded-xl border border-slate-200/90 bg-white object-contain shadow-2xs transition-transform duration-200 group-hover:scale-105',
+              'rounded-xl border border-slate-200/90 bg-white object-contain shadow-2xs transition-transform duration-200 group-hover:scale-105',
               currentSize.iconSize
             )}
+            style={{ imageRendering: '-webkit-optimize-contrast' }}
           />
         </div>
       )}
