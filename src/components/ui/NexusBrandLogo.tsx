@@ -48,10 +48,7 @@ export const NexusBrandLogo: React.FC<NexusBrandLogoProps> = ({
           <img
             src="/images/nexus-logo-white-icon.png"
             alt="Nexus LAB AI Minimalist White App Icon"
-            className={clsx(
-              'rounded-xl border border-slate-200/90 bg-white object-contain shadow-2xs',
-              currentSize.iconSize
-            )}
+            className={clsx('object-contain', currentSize.iconSize)}
             style={{ imageRendering: '-webkit-optimize-contrast' }}
           />
         </div>
