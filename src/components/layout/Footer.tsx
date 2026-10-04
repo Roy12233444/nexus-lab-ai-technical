@@ -78,7 +78,7 @@ export const Footer: React.FC<FooterProps> = ({ className, onNavigate }) => {
                 }
               }}
               aria-label="Nexus LAB AI Home"
-              className="inline-flex w-fit items-center rounded-lg transition-transform select-none hover:scale-[1.01] focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:outline-none"
+              className="inline-flex w-fit items-center rounded-lg select-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:outline-none"
             >
               <NexusBrandLogo size="md" />
             </a>

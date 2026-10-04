@@ -38,7 +38,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, c
                 }
               }}
               aria-label="Nexus LAB AI Home"
-              className="group flex items-center rounded-lg transition-transform duration-200 select-none hover:scale-[1.01] focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:outline-none"
+              className="flex items-center rounded-lg select-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:outline-none"
             >
               <NexusBrandLogo size="md" />
             </a>
